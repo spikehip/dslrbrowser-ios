@@ -67,7 +67,7 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                 let assetIdentifier = creationRequest?.placeholderForCreatedAsset?.localIdentifier
                 let assets = PHAsset.fetchAssets(withLocalIdentifiers: [assetIdentifier!], options: nil)
                 if ( assets.count > 0 ) {
-                    let asset = assets[0] as! PHAsset
+                    let asset = assets[0] 
                     print("created: \(asset.creationDate)")
                     print("modified: \(asset.modificationDate)")
                     if ( asset.canPerform(PHAssetEditOperation.properties)) {

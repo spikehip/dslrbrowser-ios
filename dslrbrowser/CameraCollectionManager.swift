@@ -14,11 +14,14 @@ open class CameraCollectionManager {
     static var devices = [String : MediaServer1Device]()
     static var downloads = [String: [String]]()
     
-    static func getItemCollectionFor(cameraKey:String) -> MediaServer1BasicObjectCollection {
+    static func initializeItemCollectionFor(cameraKey:String) {
         if ( !cameras.keys.contains(cameraKey)) {
             cameras[cameraKey] = MediaServer1BasicObjectCollection.init(withCameraKey: cameraKey)
         }
-        
+    }
+    
+    static func getItemCollectionFor(cameraKey:String) -> MediaServer1BasicObjectCollection {
+        initializeItemCollectionFor(cameraKey: cameraKey)
         return cameras[cameraKey]!
     }
     

@@ -148,11 +148,11 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                     else {
                         //start browsing
                         //cameras[deviceBaseUrl] = (device as! MediaServer1Device)
-                        CameraCollectionManager.getItemCollectionFor(cameraKey: deviceBaseUrl)
+                        CameraCollectionManager.initializeItemCollectionFor(cameraKey: deviceBaseUrl)
                         CameraCollectionManager.devices[deviceBaseUrl] = (device as! MediaServer1Device)
                         camerasAlreadyBrowsing.append(deviceBaseUrl)
-                        let priority = DispatchQueue.GlobalQueuePriority.default
-                        DispatchQueue.global(priority: priority).async {
+                        
+                        DispatchQueue.global().async {
                             let recursiveCDBrowser : RecursiveContentDirectoryBrowser = RecursiveContentDirectoryBrowser.init(withContentDirectory: (device as AnyObject).contentDirectory, deviceBaseUrl: deviceBaseUrl)
                             
                             recursiveCDBrowser.browseTree()
@@ -227,10 +227,9 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
-        if let
-         indexPath : IndexPath = self.tableView.indexPath(for: cell)!,
+        if let indexPath : IndexPath = self.tableView.indexPath(for: cell),
          let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: (indexPath as NSIndexPath).section),
-         let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection]!
+         let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection]
         {
             let detailViewController = segue.destination as! CameraDetailViewController
             detailViewController.cameraKey = cameraKeyForSection
