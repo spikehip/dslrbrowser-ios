@@ -35,7 +35,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
     let manager = UPnPManager.getInstance()
     //var cameras : [String : MediaServer1Device] = [String : MediaServer1Device]()
     var camerasAlreadyBrowsing : [String] = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,10 +58,32 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
             }
         })
         
+        super.viewDidLoad()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(CameraTableViewController.refreshView), for: UIControlEvents.valueChanged)
+        self.tableView.addSubview(refreshControl!)
+        
         let db: UPnPDB = manager!.db
         db.add(self)
         let response = manager?.ssdp.searchSSDP
-        print(response ?? 0)
+        print("manager?.ssdp.searchSSDP response:", response ?? 0)
+    }
+    
+    func refreshView(sender:AnyObject) {
+        let response = manager?.ssdp.searchSSDP
+        print("refresh: manager?.ssdp.searchSSDP response:", response ?? 0)
+        
+        for key in CameraCollectionManager.devices.keys {
+            print("Refreshing Device Contents", key)
+            let device:MediaServer1Device = CameraCollectionManager.devices[key]!
+            browseCamera(device: device, deviceBaseUrl: key)
+        }
+        
+        reloadAllCollectionViews()
+        
+        refreshControl?.endRefreshing()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -152,22 +174,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                         CameraCollectionManager.devices[deviceBaseUrl] = (device as! MediaServer1Device)
                         camerasAlreadyBrowsing.append(deviceBaseUrl)
                         
-                        DispatchQueue.global().async {
-                            let recursiveCDBrowser : RecursiveContentDirectoryBrowser = RecursiveContentDirectoryBrowser.init(withContentDirectory: (device as AnyObject).contentDirectory, deviceBaseUrl: deviceBaseUrl)
-                            
-                            recursiveCDBrowser.browseTree()
-                            
-                            DispatchQueue.main.async {
-                                let badgeValue = CameraCollectionManager.getImageCountFor(cameraKey: deviceBaseUrl)
-                                if (self.tabBarController?.selectedIndex != 1) {
-                                    let tabArray = self.tabBarController?.tabBar.items as NSArray!
-                                    let tabItem = tabArray?.object(at: 1) as! UITabBarItem
-                                    tabItem.badgeValue = String(badgeValue)
-                                }
-                                self.camerasAlreadyBrowsing.remove(at: self.camerasAlreadyBrowsing.index(of: deviceBaseUrl)!)
-                                self.tableView.reloadData()
-                            }
-                        }
+                        browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
                     }
                     
                 }
@@ -187,6 +194,31 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         }
         
         //UPnPManager.GetInstance().DB.removeObserver(self)
+        reloadAllCollectionViews()
+    }
+    
+    func browseCamera(device: MediaServer1Device, deviceBaseUrl: String) {
+        DispatchQueue.global().async {
+            let recursiveCDBrowser : RecursiveContentDirectoryBrowser = RecursiveContentDirectoryBrowser.init(withContentDirectory: (device as AnyObject).contentDirectory, deviceBaseUrl: deviceBaseUrl)
+            
+            recursiveCDBrowser.browseTree()
+            
+            DispatchQueue.main.async {
+                let badgeValue = CameraCollectionManager.getImageCountFor(cameraKey: deviceBaseUrl)
+                if (self.tabBarController?.selectedIndex != 1) {
+                    let tabArray = self.tabBarController?.tabBar.items as NSArray!
+                    let tabItem = tabArray?.object(at: 1) as! UITabBarItem
+                    tabItem.badgeValue = String(badgeValue)
+                }
+                if ( self.camerasAlreadyBrowsing.contains(deviceBaseUrl)) {
+                    self.camerasAlreadyBrowsing.remove(at: self.camerasAlreadyBrowsing.index(of: deviceBaseUrl)!)
+                }
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func reloadAllCollectionViews() {
         DispatchQueue.main.async {
             //reload tab1 camera table view data
             self.tableView.reloadData()
