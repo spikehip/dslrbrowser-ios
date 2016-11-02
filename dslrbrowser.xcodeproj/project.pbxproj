@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13FE9E4E7F9501C51A206711 /* libPods-dslrbrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 098EA38C004B2D3F023003B0 /* libPods-dslrbrowser.a */; };
+		A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */; };
 		A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */; };
-		A723198D1BCAD5DD00C82A38 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723198C1BCAD5DD00C82A38 /* FirstViewController.swift */; };
 		A723198F1BCAD5DD00C82A38 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723198E1BCAD5DD00C82A38 /* SecondViewController.swift */; };
 		A72319921BCAD5DD00C82A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72319901BCAD5DD00C82A38 /* Main.storyboard */; };
 		A72319941BCAD5DD00C82A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72319931BCAD5DD00C82A38 /* Assets.xcassets */; };
 		A72319971BCAD5DD00C82A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72319951BCAD5DD00C82A38 /* LaunchScreen.storyboard */; };
 		A72319A21BCAD5DD00C82A38 /* dslrbrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72319A11BCAD5DD00C82A38 /* dslrbrowserTests.swift */; };
 		A72319AD1BCAD5DD00C82A38 /* dslrbrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72319AC1BCAD5DD00C82A38 /* dslrbrowserUITests.swift */; };
+		A72A882E1C31780F00CB0D97 /* DownloadProgressNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A882D1C31780F00CB0D97 /* DownloadProgressNotification.swift */; };
+		A7415F601C2DE67B009F54E9 /* DownloadSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7415F5F1C2DE67B009F54E9 /* DownloadSessionDelegate.swift */; };
+		A75EAA031C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAA021C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift */; };
+		A7736D001C35276A00B2C2CA /* CameraDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */; };
+		A78A2ABB1C27462F0016204E /* DownloadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A2ABA1C27462F0016204E /* DownloadItem.swift */; };
+		A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79739461C178CCB005B236C /* CameraCollectionManager.swift */; };
+		A79739491C1794AB005B236C /* ImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79739481C1794AB005B236C /* ImageQuality.swift */; };
+		A7AB123C1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */; };
+		A7AB123D1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */; };
+		A7AB123E1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */; };
+		A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF69761C125260001F9417 /* CameraTableViewController.swift */; };
+		A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */; };
+		A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		098EA38C004B2D3F023003B0 /* libPods-dslrbrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dslrbrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		132C8E88C13E99F2D45CCD8D /* Pods-dslrbrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dslrbrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dslrbrowser/Pods-dslrbrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		A72319871BCAD5DC00C82A38 /* dslrbrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dslrbrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A723198C1BCAD5DD00C82A38 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		A723198E1BCAD5DD00C82A38 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A72319911BCAD5DD00C82A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A72319931BCAD5DD00C82A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +65,20 @@
 		A72319A81BCAD5DD00C82A38 /* dslrbrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dslrbrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72319AC1BCAD5DD00C82A38 /* dslrbrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dslrbrowserUITests.swift; sourceTree = "<group>"; };
 		A72319AE1BCAD5DD00C82A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72A882D1C31780F00CB0D97 /* DownloadProgressNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadProgressNotification.swift; sourceTree = "<group>"; };
+		A7415F5F1C2DE67B009F54E9 /* DownloadSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadSessionDelegate.swift; sourceTree = "<group>"; };
+		A75EAA021C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadSessionDelegateFactory.swift; sourceTree = "<group>"; };
+		A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraDetailViewController.swift; sourceTree = "<group>"; };
+		A78A2ABA1C27462F0016204E /* DownloadItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadItem.swift; sourceTree = "<group>"; };
+		A79739461C178CCB005B236C /* CameraCollectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCollectionManager.swift; sourceTree = "<group>"; };
+		A79739481C1794AB005B236C /* ImageQuality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageQuality.swift; sourceTree = "<group>"; };
+		A7A048A71C0B354900F79D6D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Build/Products/Debug-iphonesimulator/libPods.a"; sourceTree = "<group>"; };
+		A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		A7AB123F1BCDB96A001D03B6 /* dslrbrowser-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dslrbrowser-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7AF69761C125260001F9417 /* CameraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTableViewController.swift; sourceTree = "<group>"; };
+		A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaServer1BasicObjectCollection.swift; sourceTree = "<group>"; };
+		A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveContentDirectoryBrowser.swift; sourceTree = "<group>"; };
+		EFBDA158EF9EBCCA3F818FC2 /* Pods-dslrbrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dslrbrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-dslrbrowser/Pods-dslrbrowser.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FE9E4E7F9501C51A206711 /* libPods-dslrbrowser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A653917928CA282A5C49B62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				132C8E88C13E99F2D45CCD8D /* Pods-dslrbrowser.debug.xcconfig */,
+				EFBDA158EF9EBCCA3F818FC2 /* Pods-dslrbrowser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A723197E1BCAD5DC00C82A38 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				A72319A01BCAD5DD00C82A38 /* dslrbrowserTests */,
 				A72319AB1BCAD5DD00C82A38 /* dslrbrowserUITests */,
 				A72319881BCAD5DC00C82A38 /* Products */,
+				F78EAC66D554823E507F869C /* Frameworks */,
+				0A653917928CA282A5C49B62 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +142,24 @@
 			isa = PBXGroup;
 			children = (
 				A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */,
-				A723198C1BCAD5DD00C82A38 /* FirstViewController.swift */,
 				A723198E1BCAD5DD00C82A38 /* SecondViewController.swift */,
 				A72319901BCAD5DD00C82A38 /* Main.storyboard */,
 				A72319931BCAD5DD00C82A38 /* Assets.xcassets */,
 				A72319951BCAD5DD00C82A38 /* LaunchScreen.storyboard */,
 				A72319981BCAD5DD00C82A38 /* Info.plist */,
+				A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */,
+				A7AB123F1BCDB96A001D03B6 /* dslrbrowser-Bridging-Header.h */,
+				A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */,
+				A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */,
+				A7AF69761C125260001F9417 /* CameraTableViewController.swift */,
+				A79739461C178CCB005B236C /* CameraCollectionManager.swift */,
+				A79739481C1794AB005B236C /* ImageQuality.swift */,
+				A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */,
+				A78A2ABA1C27462F0016204E /* DownloadItem.swift */,
+				A7415F5F1C2DE67B009F54E9 /* DownloadSessionDelegate.swift */,
+				A75EAA021C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift */,
+				A72A882D1C31780F00CB0D97 /* DownloadProgressNotification.swift */,
+				A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */,
 			);
 			path = dslrbrowser;
 			sourceTree = "<group>";
@@ -128,6 +182,15 @@
 			path = dslrbrowserUITests;
 			sourceTree = "<group>";
 		};
+		F78EAC66D554823E507F869C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7A048A71C0B354900F79D6D /* libPods.a */,
+				098EA38C004B2D3F023003B0 /* libPods-dslrbrowser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A72319B11BCAD5DD00C82A38 /* Build configuration list for PBXNativeTarget "dslrbrowser" */;
 			buildPhases = (
+				DEE81F933DFEC1403ECA5D34 /* [CP] Check Pods Manifest.lock */,
 				A72319831BCAD5DC00C82A38 /* Sources */,
 				A72319841BCAD5DC00C82A38 /* Frameworks */,
 				A72319851BCAD5DC00C82A38 /* Resources */,
+				03CB4AD75D7014CDF5F0B912 /* [CP] Embed Pods Frameworks */,
+				96243291C1AF348FB40ADBE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,18 +256,27 @@
 		A723197F1BCAD5DC00C82A38 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Andras Bekesi";
 				TargetAttributes = {
 					A72319861BCAD5DC00C82A38 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = UAD5KHP9UP;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A723199C1BCAD5DD00C82A38 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A72319861BCAD5DC00C82A38;
 					};
 					A72319A71BCAD5DD00C82A38 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A72319861BCAD5DC00C82A38;
 					};
 				};
@@ -253,14 +328,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03CB4AD75D7014CDF5F0B912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dslrbrowser/Pods-dslrbrowser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96243291C1AF348FB40ADBE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dslrbrowser/Pods-dslrbrowser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEE81F933DFEC1403ECA5D34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A72319831BCAD5DC00C82A38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7736D001C35276A00B2C2CA /* CameraDetailViewController.swift in Sources */,
+				A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */,
+				A79739491C1794AB005B236C /* ImageQuality.swift in Sources */,
+				A7415F601C2DE67B009F54E9 /* DownloadSessionDelegate.swift in Sources */,
 				A723198F1BCAD5DD00C82A38 /* SecondViewController.swift in Sources */,
 				A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */,
-				A723198D1BCAD5DD00C82A38 /* FirstViewController.swift in Sources */,
+				A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */,
+				A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */,
+				A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */,
+				A72A882E1C31780F00CB0D97 /* DownloadProgressNotification.swift in Sources */,
+				A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */,
+				A75EAA031C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift in Sources */,
+				A7AB123C1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */,
+				A78A2ABB1C27462F0016204E /* DownloadItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72319A21BCAD5DD00C82A38 /* dslrbrowserTests.swift in Sources */,
+				A7AB123D1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72319AD1BCAD5DD00C82A38 /* dslrbrowserUITests.swift in Sources */,
+				A7AB123E1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,8 +464,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,8 +510,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -392,29 +532,54 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		A72319B21BCAD5DD00C82A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132C8E88C13E99F2D45CCD8D /* Pods-dslrbrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UAD5KHP9UP;
 				INFOPLIST_FILE = dslrbrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "dslrbrowser/dslrbrowser-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A72319B31BCAD5DD00C82A38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFBDA158EF9EBCCA3F818FC2 /* Pods-dslrbrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UAD5KHP9UP;
 				INFOPLIST_FILE = dslrbrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "dslrbrowser/dslrbrowser-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -426,6 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dslrbrowser.app/dslrbrowser";
 			};
 			name = Debug;
@@ -438,6 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dslrbrowser.app/dslrbrowser";
 			};
 			name = Release;
@@ -449,6 +616,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowserUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = dslrbrowser;
 				USES_XCTRUNNER = YES;
 			};
@@ -461,6 +629,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowserUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = dslrbrowser;
 				USES_XCTRUNNER = YES;
 			};
@@ -485,6 +654,7 @@
 				A72319B31BCAD5DD00C82A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A72319B41BCAD5DD00C82A38 /* Build configuration list for PBXNativeTarget "dslrbrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +663,7 @@
 				A72319B61BCAD5DD00C82A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A72319B71BCAD5DD00C82A38 /* Build configuration list for PBXNativeTarget "dslrbrowserUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +672,7 @@
 				A72319B91BCAD5DD00C82A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

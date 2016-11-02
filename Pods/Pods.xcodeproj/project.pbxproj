@@ -1,0 +1,1544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052354B9798A06EB8E4BE5703EA78F5F /* SoapActionsWANIPConnection2.m in Sources */ = {isa = PBXBuildFile; fileRef = BB06E1E42B932F71F6F19CCE974F0AA7 /* SoapActionsWANIPConnection2.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		059E5520E51B22FB35DF6EBD708005E5 /* SoapActionsDimming1.h in Headers */ = {isa = PBXBuildFile; fileRef = 2104B311A87B1CC366618F04EF6357C2 /* SoapActionsDimming1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0753EBA116671FE4557ACBF0F1735CEF /* WANConnection2Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC71DC728546BC1DBBFDE4121C0D2C /* WANConnection2Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		09ED2FC69A699FCAFEB57803E45E051D /* TelephonyServer1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = E24329F2B1BC32496E76FC6FF79B4F22 /* TelephonyServer1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C12CCB32F09AAB397EA700D9BA75621 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41ECBC79AC74CD61863FB28AC6299D60 /* tools.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0D76A44F20E38B90B13AC4E67CB79266 /* ssdpmsearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB40A0256787F60A459411CE9210FCCB /* ssdpmsearch.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0D8C0A37A21A1FC8B22EB4B1E243845C /* SoapActionsCallManagement1.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C2F0BF32CE4529A9416568C0DCC7112 /* SoapActionsCallManagement1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EC7BFBA1B6BB52CC1B6E80446C57951 /* ssdpmsearch.h in Headers */ = {isa = PBXBuildFile; fileRef = BA2C448DD94FEA933148D58F419AF496 /* ssdpmsearch.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1058D98C346C8D2AA079BD6B137587DB /* MediaServer1ItemObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C0BCAFF3C022FEB8CC0D5785C123B628 /* MediaServer1ItemObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10DFF9F55C8EA4BE5D135AA923B67777 /* LAN1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EB984B0E8838693FCB5D170E2B657 /* LAN1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		122A32F73463D17B1E30A779B20475E2 /* ssdptools.h in Headers */ = {isa = PBXBuildFile; fileRef = FC1D9121AF6D59D30272DC89B6201716 /* ssdptools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1341A7AC2439CB63D459D32EF985A414 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 80CC90FA4D739EEC7C08BC0805F09A56 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15CF5A2CEC221BA35682D522528BC257 /* Pods-dslrbrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DE05ED29938D5A04ED20C02872ACC9 /* Pods-dslrbrowser-dummy.m */; };
+		18DD571D951B58DD820CE063B022A0E6 /* UPnPServiceConstantsContentDirectory1.m in Sources */ = {isa = PBXBuildFile; fileRef = DF89413F0406163E84CB2D2B19ABC22F /* UPnPServiceConstantsContentDirectory1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		192F295A50702B7223EEB5E55A70CFF6 /* SocketServer_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2868BAA30F8B59C33900F14A458283 /* SocketServer_ObjC.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1949930AD670A5F2CA8E417AB05437CC /* BasicParserAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C4B3D846B960A2577B1D48C2D61BAD /* BasicParserAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		19BEBE643A7479F76A2E82C3A71D080D /* basichttpserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ECDD0A90660AD44F7F6F876F7790096 /* basichttpserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B84ADA6F03FBD876CA9BE1548024E60 /* DeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7F4802519890B79CDC2049CB32C7BD /* DeviceFactory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1C2FCEE7C508AFD90B152A6177BEF1C8 /* UPnPEventParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F6580EF42101B470E37328D74276E /* UPnPEventParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1D92BB1C9FCC526E5023A95C50E0C33A /* SoapActionsLayer3Forwarding1.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AF12886C20F3D6F870CD82AC3D52D /* SoapActionsLayer3Forwarding1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20030B207037052FAB318A3122FD7EAA /* TelephonyClient1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 5551958482B1A4006B8F46C85A393D60 /* TelephonyClient1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21409640ED0DB1D39B8AE1EE0FF60524 /* osal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDBA0FE9122546D66CB636ABB90D510 /* osal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		22114F0C11CCB31254676FC0ACD05E11 /* WAN2Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC7D35E83A0104D37A32DF35C025BCC /* WAN2Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2579663181BFA8F7DA4B5D7CF8537FC0 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B268D54302F4BE3AF78D88C3EC5E0F /* UIActivityIndicatorView+AFNetworking.m */; };
+		25B0EA52EE0CFE13B7F47F4D7765D781 /* UPnPServiceConstantsConnectionManager1.m in Sources */ = {isa = PBXBuildFile; fileRef = A138725ABBFA72A7A4FED953A7C32A59 /* UPnPServiceConstantsConnectionManager1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2605FD35D73ECA005AE0A4C8610984C1 /* SoapActionsDeviceProtection1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF526A4583A8B85C79A806C5ECA2D3F /* SoapActionsDeviceProtection1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26A93728F91A28531DB6F0BB742AC199 /* MediaRenderer1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BC4B104A75B0A9B8FE7EA74F072A93 /* MediaRenderer1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2843898C40D365BC1361BF1CD832E9B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CB4FD24578B35484925C4D9A27FC62 /* CoreGraphics.framework */; };
+		295127CE50151B9540124F5F4BF7B18F /* SoapActionsConfigurationManagement1.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE372B4225FDABF6CDE875A17D25440 /* SoapActionsConfigurationManagement1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1D855C971147DD7F3B9871D327A460 /* SoapActionsMediaManagement1.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E661ABD61C78E61DD77DE7C9EA0452 /* SoapActionsMediaManagement1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C34AA8A3E314C2BCE96C48E56B22A94 /* MediaServerBasicObjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0301F0A4142E4AC01CFE838ECAB2EA /* MediaServerBasicObjectParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E6FDBA46C32B4554BC7DEA8EA545D92 /* SoapActionsLANHostConfigManagement1.m in Sources */ = {isa = PBXBuildFile; fileRef = B28EBE8FA0F2D8B1735C6C41A666DD28 /* SoapActionsLANHostConfigManagement1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2EBAA518CB8B2DAF89A63637091D4615 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D2343B9C0F63DDC790F94A30F7B364 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ED75B443A8EA15FA7017BC01F8071A3 /* httpsession.h in Headers */ = {isa = PBXBuildFile; fileRef = 620747E66ED6EEB13499D3460F9CF8F7 /* httpsession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F4068F6B9D0C879F833957EF1067BE3 /* socketserverconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39F2A037D5650C7E8E1981F62960B022 /* socketserverconnection.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2FA1A2FA3F87463A1C1F55BA72D533C5 /* SoapActionsWANIPConnection1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B238E0E44AA73D8FFF145D2B9556500 /* SoapActionsWANIPConnection1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3031CCE7D55DD18838EF30F479230AA7 /* SoapActionsWANEthernetLinkConfig1.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6C15A800207B2888254EEBA33D38D0 /* SoapActionsWANEthernetLinkConfig1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31ED9BD97AF9E62874AF3CDF2F8090CF /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB518286B39DD37CD95B70C4EE4B88A /* AFNetworkActivityIndicatorManager.m */; };
+		33306A5C4FFC163EAF1C54DBE9898390 /* BasicHTTPServer_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 36404A745C8453883875A629768FA2A0 /* BasicHTTPServer_ObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34F54B47193253FB1E2CE0984FB12479 /* SoapActionsWANCableLinkConfig1.h in Headers */ = {isa = PBXBuildFile; fileRef = 31FA4356292D1CE389925E6F6FBAAB7B /* SoapActionsWANCableLinkConfig1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35359833D21AE2E87F56112299E0DDF6 /* BasicDeviceParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A77C1245C89651AF3653F3ED04DFB813 /* BasicDeviceParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35BEE5ED50771B2295B908D0837B9205 /* SoapActionsDigitalSecurityCameraSettings1.h in Headers */ = {isa = PBXBuildFile; fileRef = AC56CD4A700D364149651ECA8728A96B /* SoapActionsDigitalSecurityCameraSettings1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3608F1E4E5B072337BBE01B4FFE69257 /* SoapActionsWANEthernetLinkConfig1.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A5112713781057F62EFA4CE5E64EA0 /* SoapActionsWANEthernetLinkConfig1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		361982F63CB004082EAB2105C632A347 /* ssdpmessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C8976096759D3560C1DAE6A3337EA02D /* ssdpmessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3833096ED98ABD895F78B2D7B836B5C4 /* SoapActionsContentDirectory1.h in Headers */ = {isa = PBXBuildFile; fileRef = 26212A2D81939D10D6314100AC9CAF96 /* SoapActionsContentDirectory1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		383427D7BC40DFD37C7819F4A975E5D6 /* WAN2Device.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2C176AABAD266EAE6420FA1F0F525 /* WAN2Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3A033B214DB57073342015ADBC50F62B /* UPnPServiceConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D74BCF0380287CD77F0207D1373FC786 /* UPnPServiceConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DD853D8FE9300E69E80E5EF6DF491D8 /* MediaServer1ItemRes.m in Sources */ = {isa = PBXBuildFile; fileRef = 31574039DDF166C78C92DCA5E9B0C7A7 /* MediaServer1ItemRes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3EC001AEE40032647DE0886D76D3C8E9 /* SoapActionsWANDSLLinkConfig1.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CF2CEFC5FE0B5598BDA6484A3C38C2 /* SoapActionsWANDSLLinkConfig1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4183B03D420C1D6FD5C5A79FD2A74AA3 /* StateVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DF5BCF5D235BBA6516010CF80E8F6CE /* StateVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451064C72FC45C9ECD2448AA23C5D455 /* SoapActionsRenderingControl1.h in Headers */ = {isa = PBXBuildFile; fileRef = 950DCAA42B26E003262B9BAFD12E8F23 /* SoapActionsRenderingControl1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4577B82E603336C17A8EEEDE1ADD6E88 /* BasicParserAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = 67D1BF7673BBC5E06E75E89228EC86C6 /* BasicParserAsset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B89B7C4C6B8130A2526BFBA47249A6 /* SoapActionsConnectionManager1.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D714AA7B04B22DDE481C3CE9994013 /* SoapActionsConnectionManager1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		46401F3C7FF0B0CFE2E9B14914780835 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9FF80AAF25472749A3B3AB5B478E02 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49BE751B4EF82EA875B5496BAECC6F09 /* BasicUPnPService.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B12C88C048A1CECF399A0B5A4BC4C0 /* BasicUPnPService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C932672A266F0F855A925D883DF75F0 /* DimmableLigh1tDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B488202843A065ED9B9B3B55BE5CCF82 /* DimmableLigh1tDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4E3F78C68B892ED7D8EEDC3CFE6434B2 /* ssdpsearchreq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D0077E9074BD2EFB64DB7B6A8D418 /* ssdpsearchreq.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		50CB630517A9489C592A9F470A6D674F /* UPnPServiceConstantsAVTransport1.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E551672BE6EE69EE5F837F133CC719C /* UPnPServiceConstantsAVTransport1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5235248F8B63826CAB86AC00BF0CCB81 /* DimmableLight1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D71FCBD79FB090F4181E6324991FCBC /* DimmableLight1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53B28A25761B718066E4DDB34A66C8E0 /* ssdpsearchresp.h in Headers */ = {isa = PBXBuildFile; fileRef = E659E8352DD64B51E531E7A68BB2F5AF /* ssdpsearchresp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5401D6DF5B31B6E4AB68AED9025E45B0 /* ssdpparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A91B1E7095F5FB79A5512E2CBD5D0B2 /* ssdpparser.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		56455F85D2D89EEA8C9389F2954F1452 /* SoapActionsConfigurationManagement1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F82954AE3A4C563C16928283D4758 /* SoapActionsConfigurationManagement1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		565809B286F5CBA236B4E2F239054169 /* ssdpparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF8C2659AD79E87C4285DBD1F781274 /* ssdpparser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5719F06B809080CDEF7E6BC75DEA1A3C /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = FFD71430819C4F82634E6213855D58B9 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5893D90ECDF4434A9A1137A1046C6097 /* SoapActionsWANPOTSLinkConfig1.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DD5DCF59543552EB4EC793CE6CF170 /* SoapActionsWANPOTSLinkConfig1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5945033488F9995134DBB7014DE2412F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C55DC0AF25E39BD2835622EE41E /* AFURLRequestSerialization.m */; };
+		5946A00528606C1B0247B1CBFE1F087C /* ssdpnotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A0CB62552DD014195F41E1492581D5 /* ssdpnotify.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		595E429C4EACAB065837159137CE6F69 /* MediaServer1ContainerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1001376F41F5BB1513B05C58AA45F4F /* MediaServer1ContainerObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59BCAD384C339639A0A10EC8C2774464 /* MediaRenderer1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = CCE39C7040D1DBD75309FD4C79D2DFEB /* MediaRenderer1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AC82A58ADD3722F2E15F76A6EFF65F1 /* SoapActionsInputConfig1.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A603FFB3DBA06F06F13328B890C7DBB /* SoapActionsInputConfig1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C0696B2AD1DC23F6473F5A19FAB6296 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FBA1D3A6BD5F5553D797796C3BA1F3 /* AFImageDownloader.m */; };
+		5C6BDA5D977AE32751490EFF39BCCD67 /* SoapActionsDigitalSecurityCameraStillImage1.h in Headers */ = {isa = PBXBuildFile; fileRef = FB6CD82CE0399C64445E56166B24A942 /* SoapActionsDigitalSecurityCameraStillImage1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CB67F46333F5EC4DC3B04CB1A993ECA /* UPnPServiceConstantsAVTransport1.m in Sources */ = {isa = PBXBuildFile; fileRef = 840D394297A2B6FC206189872A335E23 /* UPnPServiceConstantsAVTransport1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5CF68437BBEE6E58D6073D17D3759180 /* ssdphttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 820A84E476497A21BB84653B4F70DF25 /* ssdphttp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		648E220B06621A1F211BD315AA5137FD /* UPnPServiceConstantsRenderingControl1.h in Headers */ = {isa = PBXBuildFile; fileRef = AA052A99392B5B92E8E9FE7B929E62A5 /* UPnPServiceConstantsRenderingControl1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6595BDCA8CF1866C5FE376854B9ED2AD /* SoapActionsDigitalSecurityCameraSettings1.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C2AE11905ABB39EF225CAFF267A585 /* SoapActionsDigitalSecurityCameraSettings1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		664178637E5AB8471B58B5A48847A310 /* SoapActionsWANIPConnection1.h in Headers */ = {isa = PBXBuildFile; fileRef = C115472B628F5E81182B2CE56E06FE29 /* SoapActionsWANIPConnection1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66635EAAE52FF5571DBCDC626FB8CA86 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F6F6B0E4F1CCDD21FD4EBD5192FE8DAE /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66686AC6BF3FDFD3377E03162AE4B86D /* UPnPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F44EE0663072D0D40B1FC2067FC50160 /* UPnPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66A12F387D8C8E8E88856879AC58A11E /* MediaServer1ItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8837DBD16A6101ECA2E04F286B586A45 /* MediaServer1ItemObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C945F93CF6CACEB141FC87061C50345F /* AFSecurityPolicy.m */; };
+		67100204FC5D247BBC98322A354C1958 /* SoapActionsLayer3Forwarding1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD902200748AF4D047319C5CD4787BE /* SoapActionsLayer3Forwarding1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		67CD973ACDBE768C44D97A24749189A0 /* ssdphttp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A5E3BE7A0A384F202B0AEB5878B014 /* ssdphttp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		682B0E603612B6ADBCCF30580F9A4B09 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B705E525A0256E7B53DFFA369BC15755 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		686ABC3315B6226A4DCA8F274BBD0661 /* SoapActionsMediaManagement1.m in Sources */ = {isa = PBXBuildFile; fileRef = 793E9F1A427DDE602AD6BD27BFE2B1BC /* SoapActionsMediaManagement1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		68AAD59A8CD15BEF4098C2AB0337920F /* NSString+UPnPExtentions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8914E8BC477BC59CA5E0B24F170F818B /* NSString+UPnPExtentions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B4E8DAD135EB641277E003BF5707F0F /* socketserverconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA640F5F73501CE9DC8BD3FC6AB6684 /* socketserverconnection.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6B71CE5BA32574F407349C1DA20605B4 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BFBE0C9739A94759BAD839D458DF8B01 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BC0569C0772ECFA1129642598A992EF /* socketserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 37101CCAF46844C53590C04E67242CF5 /* socketserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6DFC9D30A42C1881461F1A1D4B3EBF7B /* SSDPDB_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 0704A76F3976E5F542A18B189DDF98F7 /* SSDPDB_ObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EF3CB4A2B98366C1A855CAD902264E5 /* SoapAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EB23F2274C78461116948039F2A4340 /* SoapAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FB74580604F864FCFC41BB7EAFB43AA /* SSDPDB_ObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E96BA10C8244BB9E6A0A0CCF43553B7 /* SSDPDB_ObjC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		707E818332E5033501DF2D7826C639DF /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = F1376B17CE0474FD601A298D8A8B274A /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70E9BAA0D5E899767069E7BF832D9EAE /* ssdpnotifyupdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 19753884E6681E45CAB2936159C6DF45 /* ssdpnotifyupdate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7182329B2EFE41A92B9452375646F295 /* ssdpobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A9C384BB2E2EA0BEA9657A8B3C22DD2 /* ssdpobserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		72113E170B344C8F0E74EFFEA13643F3 /* UPnPEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E696767CD6B4B42579C510F900F0A9 /* UPnPEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72B5853982C994717EFAE829E5866AB2 /* MediaPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 029AB030D501C315B5B9E80948954C02 /* MediaPlaylist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72E97D3A561C9BD8DEDD521F0DE50628 /* DeviceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A2CD0F6DF335195F315D5AD30D2B29 /* DeviceFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE48FE3B7AEE57738D4C8064EF9EDCF /* AFHTTPSessionManager.m */; };
+		74A124EBBD873BB58B3DC3ECF5B1DB4D /* iphoneport.h in Headers */ = {isa = PBXBuildFile; fileRef = A390DBC13810F5EBE2CC6FE3BEE3E613 /* iphoneport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		761C1569DFC8468B62C98DF81E6F6263 /* UPnPServiceConstantsRenderingControl1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF66A21912B2984BE8CA9C619C197F5 /* UPnPServiceConstantsRenderingControl1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		762C4A0DB5E4A7FA3F640CCF6DBA8359 /* socketServerobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = F504C0C0AAFEAD8DB7D57766327608CF /* socketServerobserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		775CE7A8107457BDE59F113D40020839 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A195120B8903AA057ACD7FBBCDEC72F9 /* AFAutoPurgingImageCache.m */; };
+		7C278913AB3BA7A757B574B10482C570 /* SoapActionsCallManagement1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC02B23AF0973BFCC39DC4E516E089 /* SoapActionsCallManagement1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7EF6187163D4615D2E08907FAE637702 /* MediaServer1BasicObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 94BD2A19F301295AE752DA85B8EBA3A0 /* MediaServer1BasicObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F773435B0B547FA8D0FA1198E1B0012 /* SoapActionsWANCableLinkConfig1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B99E19530B910319ED51B839713B711 /* SoapActionsWANCableLinkConfig1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8012728EFEF41E94CDFF5A6C7D5262E1 /* UPnPEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 2103A273F2CDB73688699ED4BC6C104F /* UPnPEvents.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8042DE6FABC633304568F524B94E9E7A /* ssdpnotifyalive.h in Headers */ = {isa = PBXBuildFile; fileRef = 58163F7C0EB9D9D24D0030DDA0195DA1 /* ssdpnotifyalive.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81E3F92199F49298400FD15584E1F356 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350C35CE98CADF9A34D2C30568D2C89C /* Foundation.framework */; };
+		85D30678FF4F0AB306399A368EAA46B2 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA7B99EEF041573BD13B49D10CDC32 /* AFURLResponseSerialization.m */; };
+		88CBCE99C7385C3C25E9673A54701F37 /* InternetGateway2Device.h in Headers */ = {isa = PBXBuildFile; fileRef = FB0E56708BA79020662D55DA33E0C3BA /* InternetGateway2Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8958F2453EEBAF71BFEBD78FB48986EC /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 613964D928238A1B914A10B65D684A1A /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A11BC129391632CD8AE1B29C7248EE3 /* httpsession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F811587FA033E8E8B18C14DC9691A28A /* httpsession.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8B1E1A45E0B423395CE2A513BB1B1010 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268F47AC608D1CB011B9CAEAEA7B8824 /* MobileCoreServices.framework */; };
+		8DC092A5E3D66F54E0078AD4CDF05849 /* InternetGateway2Device.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3130DACCB63B977B7C80BA21A6D2D9 /* InternetGateway2Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E0C0199BE9AEDCE5D49535D6974087E /* TelephonyServer1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED16F1491C2BEFA2E38BC552182A04 /* TelephonyServer1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8E74D2465B44801ACF84CCD26CF9D29C /* MediaServer1ContainerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FFD71EBF1D071B5BE60A895830CFF251 /* MediaServer1ContainerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91A99C54D5F49B8A4F89EB622464FBC3 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E427848A15F870335DD388159CACE4 /* OrderedDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9318427353B53650E63B1F77C695BA1D /* StateVariableRange.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F55B552B383D38B8978B37F83BFBB1 /* StateVariableRange.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93E1DD4E2E346CFE8A8F72E2AEB8AAEB /* ssdpnotifyalive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17C72B0F3CEE776318EA2E301E29F23D /* ssdpnotifyalive.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		942B5850DD810226A1E28B007C320B5A /* BasicParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D120C0215C066ABF4994C60B812C5D /* BasicParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94740AE8C02CE2893C689BB6CEEF132B /* StateVariableList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1074265603EFE900E2F665E3E6D19 /* StateVariableList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		95D67C892BFA88ABE4E9309BBCB7E5FD /* UPnPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF67FD2BF8486C3F574E5198E86D752 /* UPnPManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		968C415BFD9A2F19E1750FD8446107DC /* ssdpdbdevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C87029280E0D47FB74BAB1FFC9A8C119 /* ssdpdbdevice.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C21F0A83F68B7592E4CCB2AB4ECD861 /* AFNetworking-dummy.m */; };
+		97C4EAF6749F1396644523862B529729 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B83234AAFF1B05F5CC253FD8D6DDB4B5 /* main.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		982732CF6C9D72E0D288F959801D1D93 /* ssdpnotifybye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97EEDC8EDC9977DB973DF8368C22972E /* ssdpnotifybye.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98DB564D98E784A95C675D60329DCD38 /* UPnPDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 14B5B9AFF33B37EE232450AD44726168 /* UPnPDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		998C20C179D76B9B9F7930DBAABB88A3 /* SoapActionsDimming1.m in Sources */ = {isa = PBXBuildFile; fileRef = 569F51530A690B80DBF33AB9549B57F5 /* SoapActionsDimming1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9B635113C1646303E773FAF6006E94E9 /* DigitalSecurityCamera1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B349D0B1CEDFA26E8FD8B3C73C39B0 /* DigitalSecurityCamera1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C87AF396D3502C19F346CE4F0C4D910 /* CocoaTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F105FB137D80395E333122C9A8B41280 /* CocoaTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9DD56C67AC5221599B1126A17D9EA800 /* ssdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99F1239D54B8EBA98A8B409279605F65 /* ssdp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35896E88685E9FB22016E53163D62A09 /* AFURLSessionManager.m */; };
+		9FE696C244453F068202D482BED29037 /* MediaServerBasicObjectParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9333B0959DD4D2D9CB11EBAA4D88B313 /* MediaServerBasicObjectParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A07D15A4DC95DDEB7BACBD56A21A4A92 /* UPnPServiceConstantsConnectionManager1.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F9B0CFAB65286C3C08201F02B8939B /* UPnPServiceConstantsConnectionManager1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0D46BFCC3F7B7006F225A9F69DFB011 /* SoapActionsContentDirectory1.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9D005B73D8AFC709BAF32A0DE1C5AC /* SoapActionsContentDirectory1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1B30BEBEF6E7A437C6A7A0CBB522DAC /* SoapActionsDigitalSecurityCameraMotionImage1.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DE78587E74F97C81C786BBA30FE2C5 /* SoapActionsDigitalSecurityCameraMotionImage1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1D24DBF637B497A836F1F84C73D59BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350C35CE98CADF9A34D2C30568D2C89C /* Foundation.framework */; };
+		A277AD9070E44BED5A7DE0B1D64D6F15 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA8E4A131D23DD8CE0898E810220F0 /* UIImageView+AFNetworking.m */; };
+		A5A58F2FDCCE37FD1FEBAD9CE45C4370 /* StateVariableList.h in Headers */ = {isa = PBXBuildFile; fileRef = 3462C46EACC0F16E861EF827E6215793 /* StateVariableList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5AD392B171FC0BBE764478EF8DB2B6D /* ssdpdb.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F8A3AC67E0AAE29062DB9319EE3870 /* ssdpdb.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A7B6ACD9C0D63A1E5BF01D9198A215E7 /* SoapActionsWANIPConnection2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2448486B006F2571321344134FBDE1E0 /* SoapActionsWANIPConnection2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7F7FDCD36E2DD8D8E346DB19452CC03 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3B353B277EF82B680CA814A2B6FD6 /* UIWebView+AFNetworking.m */; };
+		A9C345C2FF4DDB24461F8CB6875AA473 /* SoapActionsSwitchPower1.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA9A0129AF91EB6E487F6A7D72C604C /* SoapActionsSwitchPower1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA20738FE9D087349B2593DF3687D58A /* BasicUPnPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 8640F567C2F78682C9D1D25D6A1F96D1 /* BasicUPnPDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE1E5D9E7A54C858FFBA57F6B3E6F93 /* SoapActionsDigitalSecurityCameraStillImage1.m in Sources */ = {isa = PBXBuildFile; fileRef = AC04D180AF26DC9C6EC7FA9E19AE981E /* SoapActionsDigitalSecurityCameraStillImage1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB65ECC81A42508CD47395E87CC52782 /* UPnPDB.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7F7BCF27B5F90EA1FA18EF5C9EA3D3 /* UPnPDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB8E6ED2324F5B43A4A23D17012E469A /* UPnPEventParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 72C4A7F2A71EFB12CD1BEA566CFA5AF6 /* UPnPEventParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD52E236854796461599921463378E3D /* StateVariableRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 5124912607DACF22BAEE0CD6DF75F1C4 /* StateVariableRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD716E770681C5A4639BB23E751EC929 /* ssdpsearchresp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47358A7D7B29B5834BFB201FD00421E4 /* ssdpsearchresp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ADDC126210AE79CAA010E4302F2AA9CC /* SoapActionsWANPPPConnection1.m in Sources */ = {isa = PBXBuildFile; fileRef = A3129672CA8E7202550FEAF0B80EA0B1 /* SoapActionsWANPPPConnection1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFD0634B4D580C7C585C242BE0008A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350C35CE98CADF9A34D2C30568D2C89C /* Foundation.framework */; };
+		AFD0B04AEBB89FD8CA72FF9C3E7E8530 /* LastChangeParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FC1E2D6EF1F5AA839708962342BC2D98 /* LastChangeParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1BDAF050A5669B673557BA64CC541DB /* BasicServiceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F98C5DFB25805B3C574A73E7368D86E3 /* BasicServiceParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B40756412613B53C80EE77C4C223990F /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 48287A079CC5705E58866C2C0F231D6D /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B43BCAF3C963DF303C8356E7089860DE /* MediaServer1BasicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1707783D1F7462AAE57BABFBEDEC8188 /* MediaServer1BasicObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B611F2E822C8E62D09AF24DEDB0FF1E1 /* SoapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB40A845BCF803E16282980CE98A846 /* SoapAction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B64AD2280BD577CB8B40AF51ACA4848E /* WANConnection1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 633841023F272B2212E8121DB7D1E3F2 /* WANConnection1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B84CD33084C9867E67BD56E47B7BFC04 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AA241C405B0EA85E107EA821B94613 /* UIRefreshControl+AFNetworking.m */; };
+		B871934E70C173A959F78BA387D1AF75 /* SocketServer_ObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C40FBF43DEB979758699CC79E0D2454 /* SocketServer_ObjC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B99BC76110D1FA1AC54A3011C120D906 /* ssdpmessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77AE955813B6599299DE74AE383AA35A /* ssdpmessage.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BA1F730A7196ADD554CC49D01AA6AE96 /* ssdpsearchreq.h in Headers */ = {isa = PBXBuildFile; fileRef = 207DE4BBAF4BB44B922D8D3E21F62635 /* ssdpsearchreq.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA960B947CB4E095C227DC5FA39E417B /* MediaServer1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F1EF47603880496D33443E5891755D /* MediaServer1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC61993A356F30936D445D9CDF92741D /* BasicHTTPServer_ObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54429AB5A6D01C0FAD619A479960B46A /* BasicHTTPServer_ObjC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC7C4E86013F93501833CCF2CB30E689 /* MediaPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D741D85DB81412D19EE30367689DAE5 /* MediaPlaylist.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BF97663470BBC6EFB042A6FB25DDEA70 /* ssdptools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9D6BE20E1DBCF50C0BC0504D22FAB6C /* ssdptools.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C1B8DC826B11F0CD7D212492BA0AD2F1 /* MediaServer1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 759CAB19299FA3E37359F0E64D95EE51 /* MediaServer1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C1C0D7C93BF3DE14A26757273598D0FA /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = E940F65D2A277F0A9FF10E705CE3C4BE /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2F3A93054412B7B58D6CF2B9E29AB86 /* SoapActionsDigitalSecurityCameraMotionImage1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32FA5078A2C0FF0E4A3C242A59B482 /* SoapActionsDigitalSecurityCameraMotionImage1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C47694F9B21C64EF65F3355566199FB7 /* ssdpnotifybye.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF33436D0B9CB220A6AA64792420C75 /* ssdpnotifybye.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C47D431E2C75126C59559777EE29C615 /* SoapActionsSwitchPower1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4775CD682207008934304B7839DE60B5 /* SoapActionsSwitchPower1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C48D1278573BD1C30FBA02E6065FB3EA /* SoapActionsWANCommonInterfaceConfig1.h in Headers */ = {isa = PBXBuildFile; fileRef = C015FE873CD364AF42E82831033D22BB /* SoapActionsWANCommonInterfaceConfig1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C49E45F702202002CB808B050E288696 /* SoapActionsRenderingControl1.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1DF1F31CF48DE6B9F030F2698D2414 /* SoapActionsRenderingControl1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4E557413E79BA188FABA92A3613C53F /* basichttpobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8ECF30DD13EBE7FF21221844FA598F /* basichttpobserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C5507BA81CD681E9DEDFF3714DDF794A /* SoapActionsAVTransport1.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD4F6A5B23E6EEC4CE269EB1369D82B /* SoapActionsAVTransport1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5A306BD29B3CC350CF6615A3E220063 /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B39B434B5AD21C1FE64FBABD2981F6C /* OrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C773AB34E4DCBDA63D12A92EA32CD6DD /* upnp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16DE854BE0735D988559C6830D6F7D41 /* upnp.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C87698A0B2B109195E528BABA49FDFCC /* BasicServiceParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F4B69EF86CF277B96634C21F70AAF7 /* BasicServiceParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAED67E90B2D9E5890132264A93041FD /* StateVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DAB9533C7358F155C645166C70AD5E /* StateVariable.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CC55FD5E68F0033F37E5F86EC58947D8 /* SoapActionsRendering.h in Headers */ = {isa = PBXBuildFile; fileRef = A38FA53DE29ADCD4AFA37A68AD909B80 /* SoapActionsRendering.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF731057D09D47E7A5622DACD4EF3264 /* upnpx-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBA7F5D0C47F20F615B67F6BCEFB15 /* upnpx-dummy.m */; };
+		CF914C356E774DEC6944E0B8090A552D /* SoapActionsLANHostConfigManagement1.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D15341838042E55E174617B0299532 /* SoapActionsLANHostConfigManagement1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D070A4E85B4663D84062EFFB296DBF5F /* BinaryLight1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D50E326D266A2DF5289EFA08A01A38 /* BinaryLight1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DAF82A279E85A4C41599A173C63FFC /* UIButton+AFNetworking.m */; };
+		D163287C392CEDC1F467B997813DBAE0 /* BasicDeviceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 75552E03C428BC8F1B0F5B033457D600 /* BasicDeviceParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D4AA4704CA7863CC86E22AAF88635836 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2883E818E2AD41D18A1D224D9EE01AB8 /* UIProgressView+AFNetworking.m */; };
+		D50D8E7A6302737A1775DB467BB43ED0 /* SoapActionsMessaging1.h in Headers */ = {isa = PBXBuildFile; fileRef = 68BA80AA38D9897F17AEEFBED801DD08 /* SoapActionsMessaging1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D59FC98A74E440C4725B6FDC28F5951E /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 169D0265D67FD74926B1F4C98C83B732 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5CB999FB5FC80FC126A38AB4DF12227 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B68212984D597B8C5600B931EAAC4563 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6661D944DA4B5402DA6B57914542DF9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3076143126055C32B4622C7091B768 /* Security.framework */; };
+		D7A50B9077B0F21A82E4D02E5419BC27 /* DigitalSecurityCamera1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F00F55F98911A20ED60A1E1EE421BA /* DigitalSecurityCamera1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D7E3E3CB0F4DAA6F4BA82E1C7ED8B272 /* SoapActionsWANDSLLinkConfig1.h in Headers */ = {isa = PBXBuildFile; fileRef = 69149953D8CF566745CFF66747D9496E /* SoapActionsWANDSLLinkConfig1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8776D6EBCE28919350C1697A76587C7 /* SoapActionsWANIPv6FirewallControl1.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C8FA303CA26EDD373F047247A2863E /* SoapActionsWANIPv6FirewallControl1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D8FC48BF633EDD6D11C6D01B0994E20F /* basichttpserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB59583FFE28CD65EF6D792CE02F128 /* basichttpserver.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D960C721CE7A3D3BF5898A0E05FD31F3 /* SoapActionsWANIPv6FirewallControl1.h in Headers */ = {isa = PBXBuildFile; fileRef = A85E26AF91ADEFF8EC38D53B30E2256E /* SoapActionsWANIPv6FirewallControl1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAAE8AAEBC220C2A96D5305F26D2E9AD /* BasicUPnPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B522BA1B5F204C7D90EA7EBA832E62D9 /* BasicUPnPDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB4BD7B2D8C738AA5292A735CA164AB7 /* ssdpdbobserver.h in Headers */ = {isa = PBXBuildFile; fileRef = B789EE5AD0065B74E238094D8B52CA29 /* ssdpdbobserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD6E214DF098B91F7F2D44CDDE1B662D /* BasicUPnPService.m in Sources */ = {isa = PBXBuildFile; fileRef = CF364233439FF3F6E1F319F5CB34C10B /* BasicUPnPService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE31BBF6A7963C5871A19655EF5532BE /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BCFD56BAF9B1F3C8096C5C6BDB58C3 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE37D1619763348D9F0FE48BDE40FC1B /* ssdpdbdevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 21886B2364B8566E1E4D6C7A3E4E2BC1 /* ssdpdbdevice.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DEFAC2880881DAA7D754D194450D7BA9 /* UPnPServiceConstantsContentDirectory1.h in Headers */ = {isa = PBXBuildFile; fileRef = 838B6B3A373B8A8E82CCDFB6B7463D73 /* UPnPServiceConstantsContentDirectory1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EF330DB2D3521ED26E67B2E8687A2E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC80041EB2C58E455206F5EA73F51C8 /* AFNetworkReachabilityManager.m */; };
+		E216E302DDD64B5C979E149458076FCF /* ssdpdb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8E6CB09BD0F0B1230FA68B3730964BB /* ssdpdb.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E23884925DD91E3D759ADFFB398B8ECE /* ssdpnotify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AB840F12C0F666C1005B9161D0262E /* ssdpnotify.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E25181035A47EE7E7BF8AC18B4189B5C /* SoapActionsWANCommonInterfaceConfig1.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B58FB45FAAB4C30AFA9B2DCF07FC3 /* SoapActionsWANCommonInterfaceConfig1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2B370741F78EA7DC2E5F22B55036490 /* MediaServer1ItemRes.h in Headers */ = {isa = PBXBuildFile; fileRef = 51F7169FCCF122AF49CF8606AF8C2F91 /* MediaServer1ItemRes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E43D7F9DEACFA874DB0AEC84A0170030 /* SoapActionsWANPPPConnection1.h in Headers */ = {isa = PBXBuildFile; fileRef = A62BE2AB394924A9200B13BE24B9CD82 /* SoapActionsWANPPPConnection1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4A99A3316E5C8CE35DF08624033CC36 /* SoapActionsRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = 5884E31F55202DBD386E9E1BBC1DD6BA /* SoapActionsRendering.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E50C7AE1E18C267B36F61D9BDECBD930 /* WANConnection1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB30F06A363EFD9A2FF0DC6EAE99FD /* WANConnection1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E738C16AF8020F2D6948D867AA7109EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDEAF9A7B094320750DE7B89E4EC5B /* SystemConfiguration.framework */; };
+		E7B0270BEDCBE116DDD853F76E27B0BA /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9703480F0EA08DCFEA6F19AFA51CF750 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7EAD095C1EAB3B6A72C77DB5876E6E4 /* ssdpnotifyupdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B547C70B58281E9BF2EEB4278B7651DB /* ssdpnotifyupdate.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E98B8FA71716CDA08E7F812C6D9224CF /* LAN1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 0474F436A913F5FAB3E43C317913A2BF /* LAN1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9D627F91F17DE648CC060E726EE86B3 /* SoapActionsAVTransport1.m in Sources */ = {isa = PBXBuildFile; fileRef = F166778923B51D291039D7D950970F24 /* SoapActionsAVTransport1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA97634556CB4FE717FE3383B3827F2E /* socketserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4DFBE0212DAF9189F72F0E1D8B4274 /* socketserver.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA9EA153D7F40B2C3E4F8D2C5E991011 /* BinaryLight1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DC82C4A4C08CAF0BE91CE51EE069F9 /* BinaryLight1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EEDE809DFAAC47F098C5189BD13A0D73 /* upnp.h in Headers */ = {isa = PBXBuildFile; fileRef = 57CAA4B0898CF900F8414311134EE8F0 /* upnp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F099E5987DD80E8D78E909AF81D3C587 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D1D0C437EC757671164845BCDA41FE /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0CAE43A16963863419680202A6BD282 /* LastChangeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 392BCF40E08037066AA981C4CD02D459 /* LastChangeParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F1071D044B9BBF0D184050472F598F0E /* TelephonyClient1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = C5336D99E75A5BEC1D8FA0A433E14F05 /* TelephonyClient1Device.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F125A816CE46AF97BB2254D0D92D718B /* tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DA34DD648949068F976CC0602E6C44 /* tools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F13932CD53270D3FA950C60548D37DE9 /* SoapActionsWANPOTSLinkConfig1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C69247F33DC90B56C82DD770888FA5F /* SoapActionsWANPOTSLinkConfig1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F1F93EE1AA5E870F2CE81325CE9EB643 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CA92B5C01A2E5C6AF39461F050DAB3 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2BF7A51E70E2EBF972022753D9D363C /* SoapActionsDeviceProtection1.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DB8489F7F58D7D9DB1C94E29AE8E2D /* SoapActionsDeviceProtection1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F43666E57DC5310CAFBEDDE6CE93840A /* BasicParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2C4B58D2EE523C10162AC61DE3769B /* BasicParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4F68ECE034D83EE091D6BA8787F659F /* SoapActionsInputConfig1.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7B61EC55551631FCE42F6074452EC /* SoapActionsInputConfig1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F5CC06F3E0C232483A72DCCFAF393BE0 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C438914A2C588BCCF368F0522550B3C4 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7304D113174765272460C46AFD376DA /* SoapActionsMessaging1.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9EE245463C5FB5884F694BB8E0CFC8 /* SoapActionsMessaging1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FADDB53B6B112E384D6269A9AEC4DA76 /* SoapActionsConnectionManager1.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F84B4B9DFCB11AF72ED21C5E1EA1EDF /* SoapActionsConnectionManager1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC1394850F61F2740B7E1F8CC8B7DE7F /* ssdp.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D2EB5D388F2854FF135B820925C0161 /* ssdp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FDA98AD3C5E485F4782A8826DCA3B811 /* WANConnection2Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 26970931EF262AF95673B1F663DD5CB1 /* WANConnection2Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E1F1C2122ED70178006C6275354EC39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E033EDB5EC0819481B0546434FA577B;
+			remoteInfo = AFNetworking;
+		};
+		C7715E64458410E86A95374744C90DAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E841B9140FFBA078DE96C3D75944BD5;
+			remoteInfo = upnpx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A0CB62552DD014195F41E1492581D5 /* ssdpnotify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpnotify.h; path = src/ssdp/ssdpnotify.h; sourceTree = "<group>"; };
+		029AB030D501C315B5B9E80948954C02 /* MediaPlaylist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaPlaylist.h; path = src/api/MediaPlaylist.h; sourceTree = "<group>"; };
+		02F1EF47603880496D33443E5891755D /* MediaServer1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaServer1Device.h; path = src/api/MediaServer1Device.h; sourceTree = "<group>"; };
+		02F7B61EC55551631FCE42F6074452EC /* SoapActionsInputConfig1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsInputConfig1.m; path = src/upnp/SoapActionsInputConfig1.m; sourceTree = "<group>"; };
+		03C8FA303CA26EDD373F047247A2863E /* SoapActionsWANIPv6FirewallControl1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANIPv6FirewallControl1.m; path = src/upnp/SoapActionsWANIPv6FirewallControl1.m; sourceTree = "<group>"; };
+		0474F436A913F5FAB3E43C317913A2BF /* LAN1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LAN1Device.h; path = src/api/LAN1Device.h; sourceTree = "<group>"; };
+		06DB86A34FA905A7ADE04BE0645C2AFA /* Pods-dslrbrowser-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dslrbrowser-acknowledgements.plist"; sourceTree = "<group>"; };
+		0704A76F3976E5F542A18B189DDF98F7 /* SSDPDB_ObjC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSDPDB_ObjC.h; path = src/api/SSDPDB_ObjC.h; sourceTree = "<group>"; };
+		07DD5DCF59543552EB4EC793CE6CF170 /* SoapActionsWANPOTSLinkConfig1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANPOTSLinkConfig1.h; path = src/api/SoapActionsWANPOTSLinkConfig1.h; sourceTree = "<group>"; };
+		08D2343B9C0F63DDC790F94A30F7B364 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		08DE05ED29938D5A04ED20C02872ACC9 /* Pods-dslrbrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dslrbrowser-dummy.m"; sourceTree = "<group>"; };
+		09CA92B5C01A2E5C6AF39461F050DAB3 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
+		0A6C15A800207B2888254EEBA33D38D0 /* SoapActionsWANEthernetLinkConfig1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANEthernetLinkConfig1.h; path = src/api/SoapActionsWANEthernetLinkConfig1.h; sourceTree = "<group>"; };
+		0A91B1E7095F5FB79A5512E2CBD5D0B2 /* ssdpparser.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpparser.cpp; path = src/ssdp/ssdpparser.cpp; sourceTree = "<group>"; };
+		0AF66A21912B2984BE8CA9C619C197F5 /* UPnPServiceConstantsRenderingControl1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPServiceConstantsRenderingControl1.m; path = src/upnp/UPnPServiceConstantsRenderingControl1.m; sourceTree = "<group>"; };
+		0C69247F33DC90B56C82DD770888FA5F /* SoapActionsWANPOTSLinkConfig1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANPOTSLinkConfig1.m; path = src/upnp/SoapActionsWANPOTSLinkConfig1.m; sourceTree = "<group>"; };
+		0DB40A845BCF803E16282980CE98A846 /* SoapAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapAction.m; path = src/upnp/SoapAction.m; sourceTree = "<group>"; };
+		12D714AA7B04B22DDE481C3CE9994013 /* SoapActionsConnectionManager1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsConnectionManager1.m; path = src/upnp/SoapActionsConnectionManager1.m; sourceTree = "<group>"; };
+		148991C7C11D71232B23DA1D2B12FAC6 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		14A5112713781057F62EFA4CE5E64EA0 /* SoapActionsWANEthernetLinkConfig1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANEthernetLinkConfig1.m; path = src/upnp/SoapActionsWANEthernetLinkConfig1.m; sourceTree = "<group>"; };
+		14B5B9AFF33B37EE232450AD44726168 /* UPnPDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPDB.h; path = src/api/UPnPDB.h; sourceTree = "<group>"; };
+		169D0265D67FD74926B1F4C98C83B732 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		16DE854BE0735D988559C6830D6F7D41 /* upnp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = upnp.cpp; path = src/ssdp/upnp.cpp; sourceTree = "<group>"; };
+		1707783D1F7462AAE57BABFBEDEC8188 /* MediaServer1BasicObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaServer1BasicObject.m; path = src/upnp/MediaServer1BasicObject.m; sourceTree = "<group>"; };
+		17B349D0B1CEDFA26E8FD8B3C73C39B0 /* DigitalSecurityCamera1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DigitalSecurityCamera1Device.h; path = src/api/DigitalSecurityCamera1Device.h; sourceTree = "<group>"; };
+		17C72B0F3CEE776318EA2E301E29F23D /* ssdpnotifyalive.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpnotifyalive.cpp; path = src/ssdp/ssdpnotifyalive.cpp; sourceTree = "<group>"; };
+		19753884E6681E45CAB2936159C6DF45 /* ssdpnotifyupdate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpnotifyupdate.h; path = src/ssdp/ssdpnotifyupdate.h; sourceTree = "<group>"; };
+		1A603FFB3DBA06F06F13328B890C7DBB /* SoapActionsInputConfig1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsInputConfig1.h; path = src/api/SoapActionsInputConfig1.h; sourceTree = "<group>"; };
+		1BA1074265603EFE900E2F665E3E6D19 /* StateVariableList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StateVariableList.m; path = src/upnp/StateVariableList.m; sourceTree = "<group>"; };
+		1FC7D35E83A0104D37A32DF35C025BCC /* WAN2Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WAN2Device.h; path = src/api/WAN2Device.h; sourceTree = "<group>"; };
+		207DE4BBAF4BB44B922D8D3E21F62635 /* ssdpsearchreq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpsearchreq.h; path = src/ssdp/ssdpsearchreq.h; sourceTree = "<group>"; };
+		20B268D54302F4BE3AF78D88C3EC5E0F /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		20CB4FD24578B35484925C4D9A27FC62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2103A273F2CDB73688699ED4BC6C104F /* UPnPEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPEvents.m; path = src/upnp/UPnPEvents.m; sourceTree = "<group>"; };
+		2104B311A87B1CC366618F04EF6357C2 /* SoapActionsDimming1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsDimming1.h; path = src/api/SoapActionsDimming1.h; sourceTree = "<group>"; };
+		21886B2364B8566E1E4D6C7A3E4E2BC1 /* ssdpdbdevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpdbdevice.h; path = src/ssdp/ssdpdbdevice.h; sourceTree = "<group>"; };
+		21D50E326D266A2DF5289EFA08A01A38 /* BinaryLight1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryLight1Device.h; path = src/api/BinaryLight1Device.h; sourceTree = "<group>"; };
+		2448486B006F2571321344134FBDE1E0 /* SoapActionsWANIPConnection2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANIPConnection2.h; path = src/api/SoapActionsWANIPConnection2.h; sourceTree = "<group>"; };
+		26212A2D81939D10D6314100AC9CAF96 /* SoapActionsContentDirectory1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsContentDirectory1.h; path = src/api/SoapActionsContentDirectory1.h; sourceTree = "<group>"; };
+		268F47AC608D1CB011B9CAEAEA7B8824 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		26970931EF262AF95673B1F663DD5CB1 /* WANConnection2Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WANConnection2Device.h; path = src/api/WANConnection2Device.h; sourceTree = "<group>"; };
+		2883E818E2AD41D18A1D224D9EE01AB8 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		2979C679B4FBFEDE1CEC4FDC31A72A2F /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9F6580EF42101B470E37328D74276E /* UPnPEventParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPEventParser.m; path = src/upnp/UPnPEventParser.m; sourceTree = "<group>"; };
+		2B99E19530B910319ED51B839713B711 /* SoapActionsWANCableLinkConfig1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANCableLinkConfig1.m; path = src/upnp/SoapActionsWANCableLinkConfig1.m; sourceTree = "<group>"; };
+		2E551672BE6EE69EE5F837F133CC719C /* UPnPServiceConstantsAVTransport1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPServiceConstantsAVTransport1.h; path = src/api/UPnPServiceConstantsAVTransport1.h; sourceTree = "<group>"; };
+		2EB23F2274C78461116948039F2A4340 /* SoapAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapAction.h; path = src/api/SoapAction.h; sourceTree = "<group>"; };
+		2F7F4802519890B79CDC2049CB32C7BD /* DeviceFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DeviceFactory.m; path = src/upnp/DeviceFactory.m; sourceTree = "<group>"; };
+		2FF67FD2BF8486C3F574E5198E86D752 /* UPnPManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPManager.m; path = src/upnp/UPnPManager.m; sourceTree = "<group>"; };
+		30FBA1D3A6BD5F5553D797796C3BA1F3 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		31574039DDF166C78C92DCA5E9B0C7A7 /* MediaServer1ItemRes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaServer1ItemRes.m; path = src/upnp/MediaServer1ItemRes.m; sourceTree = "<group>"; };
+		31FA4356292D1CE389925E6F6FBAAB7B /* SoapActionsWANCableLinkConfig1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANCableLinkConfig1.h; path = src/api/SoapActionsWANCableLinkConfig1.h; sourceTree = "<group>"; };
+		3462C46EACC0F16E861EF827E6215793 /* StateVariableList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StateVariableList.h; path = src/api/StateVariableList.h; sourceTree = "<group>"; };
+		350C35CE98CADF9A34D2C30568D2C89C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		35896E88685E9FB22016E53163D62A09 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		35BBE8E9C5DB9811BB431BB22EEDA109 /* libPods-dslrbrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-dslrbrowser.a"; path = "libPods-dslrbrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D120C0215C066ABF4994C60B812C5D /* BasicParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicParser.h; path = src/api/BasicParser.h; sourceTree = "<group>"; };
+		35DE78587E74F97C81C786BBA30FE2C5 /* SoapActionsDigitalSecurityCameraMotionImage1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsDigitalSecurityCameraMotionImage1.h; path = src/api/SoapActionsDigitalSecurityCameraMotionImage1.h; sourceTree = "<group>"; };
+		36404A745C8453883875A629768FA2A0 /* BasicHTTPServer_ObjC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicHTTPServer_ObjC.h; path = src/api/BasicHTTPServer_ObjC.h; sourceTree = "<group>"; };
+		3642505AEA6E63C858B74A02A260B9C7 /* Pods-dslrbrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dslrbrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		37101CCAF46844C53590C04E67242CF5 /* socketserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = socketserver.h; path = src/eventserver/socketserver.h; sourceTree = "<group>"; };
+		38DA34DD648949068F976CC0602E6C44 /* tools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tools.h; path = src/common/tools.h; sourceTree = "<group>"; };
+		392BCF40E08037066AA981C4CD02D459 /* LastChangeParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LastChangeParser.m; path = src/upnp/LastChangeParser.m; sourceTree = "<group>"; };
+		39F2A037D5650C7E8E1981F62960B022 /* socketserverconnection.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = socketserverconnection.cpp; path = src/eventserver/socketserverconnection.cpp; sourceTree = "<group>"; };
+		3C21F0A83F68B7592E4CCB2AB4ECD861 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		3DFBA7F5D0C47F20F615B67F6BCEFB15 /* upnpx-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "upnpx-dummy.m"; sourceTree = "<group>"; };
+		3FB59583FFE28CD65EF6D792CE02F128 /* basichttpserver.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = basichttpserver.cpp; path = src/eventserver/basichttpserver.cpp; sourceTree = "<group>"; };
+		41ECBC79AC74CD61863FB28AC6299D60 /* tools.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = tools.cpp; path = src/common/tools.cpp; sourceTree = "<group>"; };
+		41F9B0CFAB65286C3C08201F02B8939B /* UPnPServiceConstantsConnectionManager1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPServiceConstantsConnectionManager1.h; path = src/api/UPnPServiceConstantsConnectionManager1.h; sourceTree = "<group>"; };
+		47358A7D7B29B5834BFB201FD00421E4 /* ssdpsearchresp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpsearchresp.cpp; path = src/ssdp/ssdpsearchresp.cpp; sourceTree = "<group>"; };
+		4775CD682207008934304B7839DE60B5 /* SoapActionsSwitchPower1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsSwitchPower1.h; path = src/api/SoapActionsSwitchPower1.h; sourceTree = "<group>"; };
+		47A3B353B277EF82B680CA814A2B6FD6 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		48287A079CC5705E58866C2C0F231D6D /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		4AC80041EB2C58E455206F5EA73F51C8 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		4AF8C2659AD79E87C4285DBD1F781274 /* ssdpparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpparser.h; path = src/ssdp/ssdpparser.h; sourceTree = "<group>"; };
+		4C40FBF43DEB979758699CC79E0D2454 /* SocketServer_ObjC.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = SocketServer_ObjC.mm; path = src/eventserver/SocketServer_ObjC.mm; sourceTree = "<group>"; };
+		4E96BA10C8244BB9E6A0A0CCF43553B7 /* SSDPDB_ObjC.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = SSDPDB_ObjC.mm; path = src/ssdp/SSDPDB_ObjC.mm; sourceTree = "<group>"; };
+		4F8ECF30DD13EBE7FF21221844FA598F /* basichttpobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = basichttpobserver.h; path = src/eventserver/basichttpobserver.h; sourceTree = "<group>"; };
+		4F9FF80AAF25472749A3B3AB5B478E02 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		5124912607DACF22BAEE0CD6DF75F1C4 /* StateVariableRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StateVariableRange.h; path = src/api/StateVariableRange.h; sourceTree = "<group>"; };
+		51F7169FCCF122AF49CF8606AF8C2F91 /* MediaServer1ItemRes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaServer1ItemRes.h; path = src/api/MediaServer1ItemRes.h; sourceTree = "<group>"; };
+		5357113BC74A1485220688C0F485B43F /* libupnpx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libupnpx.a; path = libupnpx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E696767CD6B4B42579C510F900F0A9 /* UPnPEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPEvents.h; path = src/api/UPnPEvents.h; sourceTree = "<group>"; };
+		54429AB5A6D01C0FAD619A479960B46A /* BasicHTTPServer_ObjC.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BasicHTTPServer_ObjC.mm; path = src/eventserver/BasicHTTPServer_ObjC.mm; sourceTree = "<group>"; };
+		5551958482B1A4006B8F46C85A393D60 /* TelephonyClient1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TelephonyClient1Device.h; path = src/api/TelephonyClient1Device.h; sourceTree = "<group>"; };
+		569F51530A690B80DBF33AB9549B57F5 /* SoapActionsDimming1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsDimming1.m; path = src/upnp/SoapActionsDimming1.m; sourceTree = "<group>"; };
+		57CAA4B0898CF900F8414311134EE8F0 /* upnp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = upnp.h; path = src/ssdp/upnp.h; sourceTree = "<group>"; };
+		58163F7C0EB9D9D24D0030DDA0195DA1 /* ssdpnotifyalive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpnotifyalive.h; path = src/ssdp/ssdpnotifyalive.h; sourceTree = "<group>"; };
+		5884E31F55202DBD386E9E1BBC1DD6BA /* SoapActionsRendering.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsRendering.m; path = src/upnp/SoapActionsRendering.m; sourceTree = "<group>"; };
+		5A2D0077E9074BD2EFB64DB7B6A8D418 /* ssdpsearchreq.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpsearchreq.cpp; path = src/ssdp/ssdpsearchreq.cpp; sourceTree = "<group>"; };
+		5C2F0BF32CE4529A9416568C0DCC7112 /* SoapActionsCallManagement1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsCallManagement1.h; path = src/api/SoapActionsCallManagement1.h; sourceTree = "<group>"; };
+		5C3076143126055C32B4622C7091B768 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		5E2071225884B2A3AFD1C65D0099CD40 /* Pods-dslrbrowser-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dslrbrowser-resources.sh"; sourceTree = "<group>"; };
+		5F84B4B9DFCB11AF72ED21C5E1EA1EDF /* SoapActionsConnectionManager1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsConnectionManager1.h; path = src/api/SoapActionsConnectionManager1.h; sourceTree = "<group>"; };
+		613964D928238A1B914A10B65D684A1A /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		620747E66ED6EEB13499D3460F9CF8F7 /* httpsession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = httpsession.h; path = src/eventserver/httpsession.h; sourceTree = "<group>"; };
+		633841023F272B2212E8121DB7D1E3F2 /* WANConnection1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WANConnection1Device.h; path = src/api/WANConnection1Device.h; sourceTree = "<group>"; };
+		64BC4B104A75B0A9B8FE7EA74F072A93 /* MediaRenderer1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaRenderer1Device.m; path = src/upnp/MediaRenderer1Device.m; sourceTree = "<group>"; };
+		67D1BF7673BBC5E06E75E89228EC86C6 /* BasicParserAsset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicParserAsset.h; path = src/api/BasicParserAsset.h; sourceTree = "<group>"; };
+		67FA8E4A131D23DD8CE0898E810220F0 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		68BA80AA38D9897F17AEEFBED801DD08 /* SoapActionsMessaging1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsMessaging1.h; path = src/api/SoapActionsMessaging1.h; sourceTree = "<group>"; };
+		69149953D8CF566745CFF66747D9496E /* SoapActionsWANDSLLinkConfig1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANDSLLinkConfig1.h; path = src/api/SoapActionsWANDSLLinkConfig1.h; sourceTree = "<group>"; };
+		6BD902200748AF4D047319C5CD4787BE /* SoapActionsLayer3Forwarding1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsLayer3Forwarding1.m; path = src/upnp/SoapActionsLayer3Forwarding1.m; sourceTree = "<group>"; };
+		6CF526A4583A8B85C79A806C5ECA2D3F /* SoapActionsDeviceProtection1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsDeviceProtection1.m; path = src/upnp/SoapActionsDeviceProtection1.m; sourceTree = "<group>"; };
+		6D2EB5D388F2854FF135B820925C0161 /* ssdp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdp.h; path = src/ssdp/ssdp.h; sourceTree = "<group>"; };
+		7018061771A4D313F63098AC306F28CB /* Pods-dslrbrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dslrbrowser.release.xcconfig"; sourceTree = "<group>"; };
+		72C4A7F2A71EFB12CD1BEA566CFA5AF6 /* UPnPEventParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPEventParser.h; path = src/api/UPnPEventParser.h; sourceTree = "<group>"; };
+		75552E03C428BC8F1B0F5B033457D600 /* BasicDeviceParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BasicDeviceParser.m; path = src/upnp/BasicDeviceParser.m; sourceTree = "<group>"; };
+		759CAB19299FA3E37359F0E64D95EE51 /* MediaServer1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaServer1Device.m; path = src/upnp/MediaServer1Device.m; sourceTree = "<group>"; };
+		77AE955813B6599299DE74AE383AA35A /* ssdpmessage.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpmessage.cpp; path = src/ssdp/ssdpmessage.cpp; sourceTree = "<group>"; };
+		793E9F1A427DDE602AD6BD27BFE2B1BC /* SoapActionsMediaManagement1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsMediaManagement1.m; path = src/upnp/SoapActionsMediaManagement1.m; sourceTree = "<group>"; };
+		79E661ABD61C78E61DD77DE7C9EA0452 /* SoapActionsMediaManagement1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsMediaManagement1.h; path = src/api/SoapActionsMediaManagement1.h; sourceTree = "<group>"; };
+		7B238E0E44AA73D8FFF145D2B9556500 /* SoapActionsWANIPConnection1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANIPConnection1.m; path = src/upnp/SoapActionsWANIPConnection1.m; sourceTree = "<group>"; };
+		7B39B434B5AD21C1FE64FBABD2981F6C /* OrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OrderedDictionary.h; path = src/api/OrderedDictionary.h; sourceTree = "<group>"; };
+		7C4F82954AE3A4C563C16928283D4758 /* SoapActionsConfigurationManagement1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsConfigurationManagement1.m; path = src/upnp/SoapActionsConfigurationManagement1.m; sourceTree = "<group>"; };
+		7D71FCBD79FB090F4181E6324991FCBC /* DimmableLight1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DimmableLight1Device.h; path = src/api/DimmableLight1Device.h; sourceTree = "<group>"; };
+		7DDBA0FE9122546D66CB636ABB90D510 /* osal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = osal.h; path = src/common/osal.h; sourceTree = "<group>"; };
+		7DF5BCF5D235BBA6516010CF80E8F6CE /* StateVariable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StateVariable.h; path = src/api/StateVariable.h; sourceTree = "<group>"; };
+		80CC90FA4D739EEC7C08BC0805F09A56 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		820A84E476497A21BB84653B4F70DF25 /* ssdphttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdphttp.h; path = src/ssdp/ssdphttp.h; sourceTree = "<group>"; };
+		82CD88E8E894DC8B571EBCFD665503C9 /* upnpx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = upnpx.xcconfig; sourceTree = "<group>"; };
+		838B6B3A373B8A8E82CCDFB6B7463D73 /* UPnPServiceConstantsContentDirectory1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPServiceConstantsContentDirectory1.h; path = src/api/UPnPServiceConstantsContentDirectory1.h; sourceTree = "<group>"; };
+		840D394297A2B6FC206189872A335E23 /* UPnPServiceConstantsAVTransport1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPServiceConstantsAVTransport1.m; path = src/upnp/UPnPServiceConstantsAVTransport1.m; sourceTree = "<group>"; };
+		847B58FB45FAAB4C30AFA9B2DCF07FC3 /* SoapActionsWANCommonInterfaceConfig1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANCommonInterfaceConfig1.m; path = src/upnp/SoapActionsWANCommonInterfaceConfig1.m; sourceTree = "<group>"; };
+		8640F567C2F78682C9D1D25D6A1F96D1 /* BasicUPnPDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicUPnPDevice.h; path = src/api/BasicUPnPDevice.h; sourceTree = "<group>"; };
+		86C2AE11905ABB39EF225CAFF267A585 /* SoapActionsDigitalSecurityCameraSettings1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsDigitalSecurityCameraSettings1.m; path = src/upnp/SoapActionsDigitalSecurityCameraSettings1.m; sourceTree = "<group>"; };
+		8837DBD16A6101ECA2E04F286B586A45 /* MediaServer1ItemObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaServer1ItemObject.m; path = src/upnp/MediaServer1ItemObject.m; sourceTree = "<group>"; };
+		8914E8BC477BC59CA5E0B24F170F818B /* NSString+UPnPExtentions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+UPnPExtentions.h"; path = "src/api/NSString+UPnPExtentions.h"; sourceTree = "<group>"; };
+		8A9C384BB2E2EA0BEA9657A8B3C22DD2 /* ssdpobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpobserver.h; path = src/ssdp/ssdpobserver.h; sourceTree = "<group>"; };
+		8BED16F1491C2BEFA2E38BC552182A04 /* TelephonyServer1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TelephonyServer1Device.m; path = src/upnp/TelephonyServer1Device.m; sourceTree = "<group>"; };
+		8D741D85DB81412D19EE30367689DAE5 /* MediaPlaylist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaPlaylist.m; path = src/upnp/MediaPlaylist.m; sourceTree = "<group>"; };
+		8EBB30F06A363EFD9A2FF0DC6EAE99FD /* WANConnection1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WANConnection1Device.m; path = src/upnp/WANConnection1Device.m; sourceTree = "<group>"; };
+		8ECDD0A90660AD44F7F6F876F7790096 /* basichttpserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = basichttpserver.h; path = src/eventserver/basichttpserver.h; sourceTree = "<group>"; };
+		8F2C4B58D2EE523C10162AC61DE3769B /* BasicParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BasicParser.m; path = src/upnp/BasicParser.m; sourceTree = "<group>"; };
+		91D1D0C437EC757671164845BCDA41FE /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		92BCFD56BAF9B1F3C8096C5C6BDB58C3 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		9333B0959DD4D2D9CB11EBAA4D88B313 /* MediaServerBasicObjectParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaServerBasicObjectParser.h; path = src/api/MediaServerBasicObjectParser.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94BD2A19F301295AE752DA85B8EBA3A0 /* MediaServer1BasicObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaServer1BasicObject.h; path = src/api/MediaServer1BasicObject.h; sourceTree = "<group>"; };
+		950DCAA42B26E003262B9BAFD12E8F23 /* SoapActionsRenderingControl1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsRenderingControl1.h; path = src/api/SoapActionsRenderingControl1.h; sourceTree = "<group>"; };
+		96AB840F12C0F666C1005B9161D0262E /* ssdpnotify.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpnotify.cpp; path = src/ssdp/ssdpnotify.cpp; sourceTree = "<group>"; };
+		96CF2CEFC5FE0B5598BDA6484A3C38C2 /* SoapActionsWANDSLLinkConfig1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANDSLLinkConfig1.m; path = src/upnp/SoapActionsWANDSLLinkConfig1.m; sourceTree = "<group>"; };
+		9703480F0EA08DCFEA6F19AFA51CF750 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		97EEDC8EDC9977DB973DF8368C22972E /* ssdpnotifybye.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpnotifybye.cpp; path = src/ssdp/ssdpnotifybye.cpp; sourceTree = "<group>"; };
+		99DB8489F7F58D7D9DB1C94E29AE8E2D /* SoapActionsDeviceProtection1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsDeviceProtection1.h; path = src/api/SoapActionsDeviceProtection1.h; sourceTree = "<group>"; };
+		99F1239D54B8EBA98A8B409279605F65 /* ssdp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdp.cpp; path = src/ssdp/ssdp.cpp; sourceTree = "<group>"; };
+		9A1EB984B0E8838693FCB5D170E2B657 /* LAN1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LAN1Device.m; path = src/upnp/LAN1Device.m; sourceTree = "<group>"; };
+		9AB518286B39DD37CD95B70C4EE4B88A /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		9C32FA5078A2C0FF0E4A3C242A59B482 /* SoapActionsDigitalSecurityCameraMotionImage1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsDigitalSecurityCameraMotionImage1.m; path = src/upnp/SoapActionsDigitalSecurityCameraMotionImage1.m; sourceTree = "<group>"; };
+		9CCC02B23AF0973BFCC39DC4E516E089 /* SoapActionsCallManagement1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsCallManagement1.m; path = src/upnp/SoapActionsCallManagement1.m; sourceTree = "<group>"; };
+		9EBC71DC728546BC1DBBFDE4121C0D2C /* WANConnection2Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WANConnection2Device.m; path = src/upnp/WANConnection2Device.m; sourceTree = "<group>"; };
+		A138725ABBFA72A7A4FED953A7C32A59 /* UPnPServiceConstantsConnectionManager1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPServiceConstantsConnectionManager1.m; path = src/upnp/UPnPServiceConstantsConnectionManager1.m; sourceTree = "<group>"; };
+		A195120B8903AA057ACD7FBBCDEC72F9 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
+		A2C8C0DD495A074F5AAA77C54065441F /* Pods-dslrbrowser-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dslrbrowser-frameworks.sh"; sourceTree = "<group>"; };
+		A3129672CA8E7202550FEAF0B80EA0B1 /* SoapActionsWANPPPConnection1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANPPPConnection1.m; path = src/upnp/SoapActionsWANPPPConnection1.m; sourceTree = "<group>"; };
+		A38FA53DE29ADCD4AFA37A68AD909B80 /* SoapActionsRendering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsRendering.h; path = src/api/SoapActionsRendering.h; sourceTree = "<group>"; };
+		A390DBC13810F5EBE2CC6FE3BEE3E613 /* iphoneport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iphoneport.h; path = src/port/ios/iphoneport.h; sourceTree = "<group>"; };
+		A5A5E3BE7A0A384F202B0AEB5878B014 /* ssdphttp.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdphttp.cpp; path = src/ssdp/ssdphttp.cpp; sourceTree = "<group>"; };
+		A62BE2AB394924A9200B13BE24B9CD82 /* SoapActionsWANPPPConnection1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANPPPConnection1.h; path = src/api/SoapActionsWANPPPConnection1.h; sourceTree = "<group>"; };
+		A77C1245C89651AF3653F3ED04DFB813 /* BasicDeviceParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicDeviceParser.h; path = src/api/BasicDeviceParser.h; sourceTree = "<group>"; };
+		A85E26AF91ADEFF8EC38D53B30E2256E /* SoapActionsWANIPv6FirewallControl1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANIPv6FirewallControl1.h; path = src/api/SoapActionsWANIPv6FirewallControl1.h; sourceTree = "<group>"; };
+		AA052A99392B5B92E8E9FE7B929E62A5 /* UPnPServiceConstantsRenderingControl1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPServiceConstantsRenderingControl1.h; path = src/api/UPnPServiceConstantsRenderingControl1.h; sourceTree = "<group>"; };
+		AA2868BAA30F8B59C33900F14A458283 /* SocketServer_ObjC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketServer_ObjC.h; path = src/eventserver/SocketServer_ObjC.h; sourceTree = "<group>"; };
+		AB1DF1F31CF48DE6B9F030F2698D2414 /* SoapActionsRenderingControl1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsRenderingControl1.m; path = src/upnp/SoapActionsRenderingControl1.m; sourceTree = "<group>"; };
+		AC04D180AF26DC9C6EC7FA9E19AE981E /* SoapActionsDigitalSecurityCameraStillImage1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsDigitalSecurityCameraStillImage1.m; path = src/upnp/SoapActionsDigitalSecurityCameraStillImage1.m; sourceTree = "<group>"; };
+		AC56CD4A700D364149651ECA8728A96B /* SoapActionsDigitalSecurityCameraSettings1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsDigitalSecurityCameraSettings1.h; path = src/api/SoapActionsDigitalSecurityCameraSettings1.h; sourceTree = "<group>"; };
+		AFD4F6A5B23E6EEC4CE269EB1369D82B /* SoapActionsAVTransport1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsAVTransport1.h; path = src/api/SoapActionsAVTransport1.h; sourceTree = "<group>"; };
+		B1001376F41F5BB1513B05C58AA45F4F /* MediaServer1ContainerObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaServer1ContainerObject.m; path = src/upnp/MediaServer1ContainerObject.m; sourceTree = "<group>"; };
+		B28EBE8FA0F2D8B1735C6C41A666DD28 /* SoapActionsLANHostConfigManagement1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsLANHostConfigManagement1.m; path = src/upnp/SoapActionsLANHostConfigManagement1.m; sourceTree = "<group>"; };
+		B488202843A065ED9B9B3B55BE5CCF82 /* DimmableLigh1tDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DimmableLigh1tDevice.m; path = src/upnp/DimmableLigh1tDevice.m; sourceTree = "<group>"; };
+		B4F4B69EF86CF277B96634C21F70AAF7 /* BasicServiceParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicServiceParser.h; path = src/api/BasicServiceParser.h; sourceTree = "<group>"; };
+		B4F55B552B383D38B8978B37F83BFBB1 /* StateVariableRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StateVariableRange.m; path = src/upnp/StateVariableRange.m; sourceTree = "<group>"; };
+		B522BA1B5F204C7D90EA7EBA832E62D9 /* BasicUPnPDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BasicUPnPDevice.m; path = src/upnp/BasicUPnPDevice.m; sourceTree = "<group>"; };
+		B547C70B58281E9BF2EEB4278B7651DB /* ssdpnotifyupdate.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpnotifyupdate.cpp; path = src/ssdp/ssdpnotifyupdate.cpp; sourceTree = "<group>"; };
+		B68212984D597B8C5600B931EAAC4563 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		B705E525A0256E7B53DFFA369BC15755 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		B789EE5AD0065B74E238094D8B52CA29 /* ssdpdbobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpdbobserver.h; path = src/ssdp/ssdpdbobserver.h; sourceTree = "<group>"; };
+		B83234AAFF1B05F5CC253FD8D6DDB4B5 /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = main.mm; path = src/ssdp/main.mm; sourceTree = "<group>"; };
+		B9DC82C4A4C08CAF0BE91CE51EE069F9 /* BinaryLight1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BinaryLight1Device.m; path = src/upnp/BinaryLight1Device.m; sourceTree = "<group>"; };
+		BA2C448DD94FEA933148D58F419AF496 /* ssdpmsearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpmsearch.h; path = src/ssdp/ssdpmsearch.h; sourceTree = "<group>"; };
+		BA4DFBE0212DAF9189F72F0E1D8B4274 /* socketserver.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = socketserver.cpp; path = src/eventserver/socketserver.cpp; sourceTree = "<group>"; };
+		BB06E1E42B932F71F6F19CCE974F0AA7 /* SoapActionsWANIPConnection2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsWANIPConnection2.m; path = src/upnp/SoapActionsWANIPConnection2.m; sourceTree = "<group>"; };
+		BFBE0C9739A94759BAD839D458DF8B01 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		C015FE873CD364AF42E82831033D22BB /* SoapActionsWANCommonInterfaceConfig1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANCommonInterfaceConfig1.h; path = src/api/SoapActionsWANCommonInterfaceConfig1.h; sourceTree = "<group>"; };
+		C0762D5B1BFFE800F08817BE329610CD /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
+		C098E660355A8BFF3C18007590163DA4 /* upnpx-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "upnpx-prefix.pch"; sourceTree = "<group>"; };
+		C0BCAFF3C022FEB8CC0D5785C123B628 /* MediaServer1ItemObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaServer1ItemObject.h; path = src/api/MediaServer1ItemObject.h; sourceTree = "<group>"; };
+		C115472B628F5E81182B2CE56E06FE29 /* SoapActionsWANIPConnection1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsWANIPConnection1.h; path = src/api/SoapActionsWANIPConnection1.h; sourceTree = "<group>"; };
+		C438914A2C588BCCF368F0522550B3C4 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		C5336D99E75A5BEC1D8FA0A433E14F05 /* TelephonyClient1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TelephonyClient1Device.m; path = src/upnp/TelephonyClient1Device.m; sourceTree = "<group>"; };
+		C5B12C88C048A1CECF399A0B5A4BC4C0 /* BasicUPnPService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasicUPnPService.h; path = src/api/BasicUPnPService.h; sourceTree = "<group>"; };
+		C6DAB9533C7358F155C645166C70AD5E /* StateVariable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StateVariable.m; path = src/upnp/StateVariable.m; sourceTree = "<group>"; };
+		C6F00F55F98911A20ED60A1E1EE421BA /* DigitalSecurityCamera1Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DigitalSecurityCamera1Device.m; path = src/upnp/DigitalSecurityCamera1Device.m; sourceTree = "<group>"; };
+		C87029280E0D47FB74BAB1FFC9A8C119 /* ssdpdbdevice.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpdbdevice.cpp; path = src/ssdp/ssdpdbdevice.cpp; sourceTree = "<group>"; };
+		C8976096759D3560C1DAE6A3337EA02D /* ssdpmessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpmessage.h; path = src/ssdp/ssdpmessage.h; sourceTree = "<group>"; };
+		C945F93CF6CACEB141FC87061C50345F /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		C9D6BE20E1DBCF50C0BC0504D22FAB6C /* ssdptools.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdptools.cpp; path = src/ssdp/ssdptools.cpp; sourceTree = "<group>"; };
+		CA3130DACCB63B977B7C80BA21A6D2D9 /* InternetGateway2Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InternetGateway2Device.m; path = src/upnp/InternetGateway2Device.m; sourceTree = "<group>"; };
+		CAF2C176AABAD266EAE6420FA1F0F525 /* WAN2Device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WAN2Device.m; path = src/upnp/WAN2Device.m; sourceTree = "<group>"; };
+		CB40A0256787F60A459411CE9210FCCB /* ssdpmsearch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpmsearch.cpp; path = src/ssdp/ssdpmsearch.cpp; sourceTree = "<group>"; };
+		CBE372B4225FDABF6CDE875A17D25440 /* SoapActionsConfigurationManagement1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsConfigurationManagement1.h; path = src/api/SoapActionsConfigurationManagement1.h; sourceTree = "<group>"; };
+		CC9D005B73D8AFC709BAF32A0DE1C5AC /* SoapActionsContentDirectory1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsContentDirectory1.m; path = src/upnp/SoapActionsContentDirectory1.m; sourceTree = "<group>"; };
+		CCE39C7040D1DBD75309FD4C79D2DFEB /* MediaRenderer1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaRenderer1Device.h; path = src/api/MediaRenderer1Device.h; sourceTree = "<group>"; };
+		CF364233439FF3F6E1F319F5CB34C10B /* BasicUPnPService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BasicUPnPService.m; path = src/upnp/BasicUPnPService.m; sourceTree = "<group>"; };
+		D0CDEAF9A7B094320750DE7B89E4EC5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D2A2CD0F6DF335195F315D5AD30D2B29 /* DeviceFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceFactory.h; path = src/api/DeviceFactory.h; sourceTree = "<group>"; };
+		D3FE471E3B2CEE26760F192E25B5C180 /* Pods-dslrbrowser-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dslrbrowser-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D74BCF0380287CD77F0207D1373FC786 /* UPnPServiceConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPServiceConstants.h; path = src/api/UPnPServiceConstants.h; sourceTree = "<group>"; };
+		D8F8A3AC67E0AAE29062DB9319EE3870 /* ssdpdb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpdb.h; path = src/ssdp/ssdpdb.h; sourceTree = "<group>"; };
+		DAA640F5F73501CE9DC8BD3FC6AB6684 /* socketserverconnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = socketserverconnection.h; path = src/eventserver/socketserverconnection.h; sourceTree = "<group>"; };
+		DBF33436D0B9CB220A6AA64792420C75 /* ssdpnotifybye.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpnotifybye.h; path = src/ssdp/ssdpnotifybye.h; sourceTree = "<group>"; };
+		DF89413F0406163E84CB2D2B19ABC22F /* UPnPServiceConstantsContentDirectory1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPServiceConstantsContentDirectory1.m; path = src/upnp/UPnPServiceConstantsContentDirectory1.m; sourceTree = "<group>"; };
+		E24329F2B1BC32496E76FC6FF79B4F22 /* TelephonyServer1Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TelephonyServer1Device.h; path = src/api/TelephonyServer1Device.h; sourceTree = "<group>"; };
+		E43E8C55DC0AF25E39BD2835622EE41E /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		E4BA7B99EEF041573BD13B49D10CDC32 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		E5DAF82A279E85A4C41599A173C63FFC /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		E659E8352DD64B51E531E7A68BB2F5AF /* ssdpsearchresp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdpsearchresp.h; path = src/ssdp/ssdpsearchresp.h; sourceTree = "<group>"; };
+		E7E427848A15F870335DD388159CACE4 /* OrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OrderedDictionary.m; path = src/upnp/OrderedDictionary.m; sourceTree = "<group>"; };
+		E8E6CB09BD0F0B1230FA68B3730964BB /* ssdpdb.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ssdpdb.cpp; path = src/ssdp/ssdpdb.cpp; sourceTree = "<group>"; };
+		E940F65D2A277F0A9FF10E705CE3C4BE /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		EBA9A0129AF91EB6E487F6A7D72C604C /* SoapActionsSwitchPower1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsSwitchPower1.m; path = src/upnp/SoapActionsSwitchPower1.m; sourceTree = "<group>"; };
+		EC8AF12886C20F3D6F870CD82AC3D52D /* SoapActionsLayer3Forwarding1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsLayer3Forwarding1.h; path = src/api/SoapActionsLayer3Forwarding1.h; sourceTree = "<group>"; };
+		ED7F7BCF27B5F90EA1FA18EF5C9EA3D3 /* UPnPDB.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UPnPDB.m; path = src/upnp/UPnPDB.m; sourceTree = "<group>"; };
+		ED9EE245463C5FB5884F694BB8E0CFC8 /* SoapActionsMessaging1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsMessaging1.m; path = src/upnp/SoapActionsMessaging1.m; sourceTree = "<group>"; };
+		EDE48FE3B7AEE57738D4C8064EF9EDCF /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		EE0301F0A4142E4AC01CFE838ECAB2EA /* MediaServerBasicObjectParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaServerBasicObjectParser.m; path = src/upnp/MediaServerBasicObjectParser.m; sourceTree = "<group>"; };
+		F105FB137D80395E333122C9A8B41280 /* CocoaTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CocoaTools.m; path = src/upnp/CocoaTools.m; sourceTree = "<group>"; };
+		F1376B17CE0474FD601A298D8A8B274A /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
+		F166778923B51D291039D7D950970F24 /* SoapActionsAVTransport1.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SoapActionsAVTransport1.m; path = src/upnp/SoapActionsAVTransport1.m; sourceTree = "<group>"; };
+		F1C4B3D846B960A2577B1D48C2D61BAD /* BasicParserAsset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BasicParserAsset.m; path = src/upnp/BasicParserAsset.m; sourceTree = "<group>"; };
+		F1D15341838042E55E174617B0299532 /* SoapActionsLANHostConfigManagement1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsLANHostConfigManagement1.h; path = src/api/SoapActionsLANHostConfigManagement1.h; sourceTree = "<group>"; };
+		F2AA241C405B0EA85E107EA821B94613 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		F44EE0663072D0D40B1FC2067FC50160 /* UPnPManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UPnPManager.h; path = src/api/UPnPManager.h; sourceTree = "<group>"; };
+		F504C0C0AAFEAD8DB7D57766327608CF /* socketServerobserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = socketServerobserver.h; path = src/eventserver/socketServerobserver.h; sourceTree = "<group>"; };
+		F6F6B0E4F1CCDD21FD4EBD5192FE8DAE /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		F811587FA033E8E8B18C14DC9691A28A /* httpsession.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = httpsession.cpp; path = src/eventserver/httpsession.cpp; sourceTree = "<group>"; };
+		F98C5DFB25805B3C574A73E7368D86E3 /* BasicServiceParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BasicServiceParser.m; path = src/upnp/BasicServiceParser.m; sourceTree = "<group>"; };
+		FB0E56708BA79020662D55DA33E0C3BA /* InternetGateway2Device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InternetGateway2Device.h; path = src/api/InternetGateway2Device.h; sourceTree = "<group>"; };
+		FB6CD82CE0399C64445E56166B24A942 /* SoapActionsDigitalSecurityCameraStillImage1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SoapActionsDigitalSecurityCameraStillImage1.h; path = src/api/SoapActionsDigitalSecurityCameraStillImage1.h; sourceTree = "<group>"; };
+		FC1D9121AF6D59D30272DC89B6201716 /* ssdptools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssdptools.h; path = src/ssdp/ssdptools.h; sourceTree = "<group>"; };
+		FC1E2D6EF1F5AA839708962342BC2D98 /* LastChangeParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LastChangeParser.h; path = src/api/LastChangeParser.h; sourceTree = "<group>"; };
+		FFD71430819C4F82634E6213855D58B9 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		FFD71EBF1D071B5BE60A895830CFF251 /* MediaServer1ContainerObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MediaServer1ContainerObject.h; path = src/api/MediaServer1ContainerObject.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBC488480B7BBE447D0C027FEE1E6ECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E3F92199F49298400FD15584E1F356 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B5617006288E7897B11034C85F786A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D24DBF637B497A836F1F84C73D59BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3284DBE3CA8932733932AD2A48445B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2843898C40D365BC1361BF1CD832E9B2 /* CoreGraphics.framework in Frameworks */,
+				AFD0634B4D580C7C585C242BE0008A0E /* Foundation.framework in Frameworks */,
+				8B1E1A45E0B423395CE2A513BB1B1010 /* MobileCoreServices.framework in Frameworks */,
+				D6661D944DA4B5402DA6B57914542DF9 /* Security.framework in Frameworks */,
+				E738C16AF8020F2D6948D867AA7109EF /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05B55DFFACCD9F333E86E2EF446DD015 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				20CB4FD24578B35484925C4D9A27FC62 /* CoreGraphics.framework */,
+				350C35CE98CADF9A34D2C30568D2C89C /* Foundation.framework */,
+				268F47AC608D1CB011B9CAEAEA7B8824 /* MobileCoreServices.framework */,
+				5C3076143126055C32B4622C7091B768 /* Security.framework */,
+				D0CDEAF9A7B094320750DE7B89E4EC5B /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		122BE74A83B24DD22E6EF7E170D3B803 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				92BCFD56BAF9B1F3C8096C5C6BDB58C3 /* AFNetworkReachabilityManager.h */,
+				4AC80041EB2C58E455206F5EA73F51C8 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05B55DFFACCD9F333E86E2EF446DD015 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		243403E61B2649F2F3F53BBA952B6FF1 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4F9FF80AAF25472749A3B3AB5B478E02 /* AFNetworking.h */,
+				6ADD3E21CE2186F8CA5E631416DDA9BA /* NSURLSession */,
+				122BE74A83B24DD22E6EF7E170D3B803 /* Reachability */,
+				B3BE40732455B8FA4EE754D17B5BD09D /* Security */,
+				6A921A74876AC656DBE8F4C57D8C0931 /* Serialization */,
+				B00CFD341960A75C0EA4263590362B32 /* Support Files */,
+				56149E7CFCE53A8070CBD54EB9D58B6E /* UIKit */,
+			);
+			name = AFNetworking;
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		4515373649C375822CFEC4C0F4F2C1A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82CD88E8E894DC8B571EBCFD665503C9 /* upnpx.xcconfig */,
+				3DFBA7F5D0C47F20F615B67F6BCEFB15 /* upnpx-dummy.m */,
+				C098E660355A8BFF3C18007590163DA4 /* upnpx-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/upnpx";
+			sourceTree = "<group>";
+		};
+		4CBC8D57EC4A56F582DE4F719502D494 /* upnpx */ = {
+			isa = PBXGroup;
+			children = (
+				A77C1245C89651AF3653F3ED04DFB813 /* BasicDeviceParser.h */,
+				75552E03C428BC8F1B0F5B033457D600 /* BasicDeviceParser.m */,
+				4F8ECF30DD13EBE7FF21221844FA598F /* basichttpobserver.h */,
+				3FB59583FFE28CD65EF6D792CE02F128 /* basichttpserver.cpp */,
+				8ECDD0A90660AD44F7F6F876F7790096 /* basichttpserver.h */,
+				36404A745C8453883875A629768FA2A0 /* BasicHTTPServer_ObjC.h */,
+				54429AB5A6D01C0FAD619A479960B46A /* BasicHTTPServer_ObjC.mm */,
+				35D120C0215C066ABF4994C60B812C5D /* BasicParser.h */,
+				8F2C4B58D2EE523C10162AC61DE3769B /* BasicParser.m */,
+				67D1BF7673BBC5E06E75E89228EC86C6 /* BasicParserAsset.h */,
+				F1C4B3D846B960A2577B1D48C2D61BAD /* BasicParserAsset.m */,
+				B4F4B69EF86CF277B96634C21F70AAF7 /* BasicServiceParser.h */,
+				F98C5DFB25805B3C574A73E7368D86E3 /* BasicServiceParser.m */,
+				8640F567C2F78682C9D1D25D6A1F96D1 /* BasicUPnPDevice.h */,
+				B522BA1B5F204C7D90EA7EBA832E62D9 /* BasicUPnPDevice.m */,
+				C5B12C88C048A1CECF399A0B5A4BC4C0 /* BasicUPnPService.h */,
+				CF364233439FF3F6E1F319F5CB34C10B /* BasicUPnPService.m */,
+				21D50E326D266A2DF5289EFA08A01A38 /* BinaryLight1Device.h */,
+				B9DC82C4A4C08CAF0BE91CE51EE069F9 /* BinaryLight1Device.m */,
+				F105FB137D80395E333122C9A8B41280 /* CocoaTools.m */,
+				D2A2CD0F6DF335195F315D5AD30D2B29 /* DeviceFactory.h */,
+				2F7F4802519890B79CDC2049CB32C7BD /* DeviceFactory.m */,
+				17B349D0B1CEDFA26E8FD8B3C73C39B0 /* DigitalSecurityCamera1Device.h */,
+				C6F00F55F98911A20ED60A1E1EE421BA /* DigitalSecurityCamera1Device.m */,
+				B488202843A065ED9B9B3B55BE5CCF82 /* DimmableLigh1tDevice.m */,
+				7D71FCBD79FB090F4181E6324991FCBC /* DimmableLight1Device.h */,
+				F811587FA033E8E8B18C14DC9691A28A /* httpsession.cpp */,
+				620747E66ED6EEB13499D3460F9CF8F7 /* httpsession.h */,
+				FB0E56708BA79020662D55DA33E0C3BA /* InternetGateway2Device.h */,
+				CA3130DACCB63B977B7C80BA21A6D2D9 /* InternetGateway2Device.m */,
+				A390DBC13810F5EBE2CC6FE3BEE3E613 /* iphoneport.h */,
+				0474F436A913F5FAB3E43C317913A2BF /* LAN1Device.h */,
+				9A1EB984B0E8838693FCB5D170E2B657 /* LAN1Device.m */,
+				FC1E2D6EF1F5AA839708962342BC2D98 /* LastChangeParser.h */,
+				392BCF40E08037066AA981C4CD02D459 /* LastChangeParser.m */,
+				B83234AAFF1B05F5CC253FD8D6DDB4B5 /* main.mm */,
+				029AB030D501C315B5B9E80948954C02 /* MediaPlaylist.h */,
+				8D741D85DB81412D19EE30367689DAE5 /* MediaPlaylist.m */,
+				CCE39C7040D1DBD75309FD4C79D2DFEB /* MediaRenderer1Device.h */,
+				64BC4B104A75B0A9B8FE7EA74F072A93 /* MediaRenderer1Device.m */,
+				94BD2A19F301295AE752DA85B8EBA3A0 /* MediaServer1BasicObject.h */,
+				1707783D1F7462AAE57BABFBEDEC8188 /* MediaServer1BasicObject.m */,
+				FFD71EBF1D071B5BE60A895830CFF251 /* MediaServer1ContainerObject.h */,
+				B1001376F41F5BB1513B05C58AA45F4F /* MediaServer1ContainerObject.m */,
+				02F1EF47603880496D33443E5891755D /* MediaServer1Device.h */,
+				759CAB19299FA3E37359F0E64D95EE51 /* MediaServer1Device.m */,
+				C0BCAFF3C022FEB8CC0D5785C123B628 /* MediaServer1ItemObject.h */,
+				8837DBD16A6101ECA2E04F286B586A45 /* MediaServer1ItemObject.m */,
+				51F7169FCCF122AF49CF8606AF8C2F91 /* MediaServer1ItemRes.h */,
+				31574039DDF166C78C92DCA5E9B0C7A7 /* MediaServer1ItemRes.m */,
+				9333B0959DD4D2D9CB11EBAA4D88B313 /* MediaServerBasicObjectParser.h */,
+				EE0301F0A4142E4AC01CFE838ECAB2EA /* MediaServerBasicObjectParser.m */,
+				8914E8BC477BC59CA5E0B24F170F818B /* NSString+UPnPExtentions.h */,
+				7B39B434B5AD21C1FE64FBABD2981F6C /* OrderedDictionary.h */,
+				E7E427848A15F870335DD388159CACE4 /* OrderedDictionary.m */,
+				7DDBA0FE9122546D66CB636ABB90D510 /* osal.h */,
+				2EB23F2274C78461116948039F2A4340 /* SoapAction.h */,
+				0DB40A845BCF803E16282980CE98A846 /* SoapAction.m */,
+				AFD4F6A5B23E6EEC4CE269EB1369D82B /* SoapActionsAVTransport1.h */,
+				F166778923B51D291039D7D950970F24 /* SoapActionsAVTransport1.m */,
+				5C2F0BF32CE4529A9416568C0DCC7112 /* SoapActionsCallManagement1.h */,
+				9CCC02B23AF0973BFCC39DC4E516E089 /* SoapActionsCallManagement1.m */,
+				CBE372B4225FDABF6CDE875A17D25440 /* SoapActionsConfigurationManagement1.h */,
+				7C4F82954AE3A4C563C16928283D4758 /* SoapActionsConfigurationManagement1.m */,
+				5F84B4B9DFCB11AF72ED21C5E1EA1EDF /* SoapActionsConnectionManager1.h */,
+				12D714AA7B04B22DDE481C3CE9994013 /* SoapActionsConnectionManager1.m */,
+				26212A2D81939D10D6314100AC9CAF96 /* SoapActionsContentDirectory1.h */,
+				CC9D005B73D8AFC709BAF32A0DE1C5AC /* SoapActionsContentDirectory1.m */,
+				99DB8489F7F58D7D9DB1C94E29AE8E2D /* SoapActionsDeviceProtection1.h */,
+				6CF526A4583A8B85C79A806C5ECA2D3F /* SoapActionsDeviceProtection1.m */,
+				35DE78587E74F97C81C786BBA30FE2C5 /* SoapActionsDigitalSecurityCameraMotionImage1.h */,
+				9C32FA5078A2C0FF0E4A3C242A59B482 /* SoapActionsDigitalSecurityCameraMotionImage1.m */,
+				AC56CD4A700D364149651ECA8728A96B /* SoapActionsDigitalSecurityCameraSettings1.h */,
+				86C2AE11905ABB39EF225CAFF267A585 /* SoapActionsDigitalSecurityCameraSettings1.m */,
+				FB6CD82CE0399C64445E56166B24A942 /* SoapActionsDigitalSecurityCameraStillImage1.h */,
+				AC04D180AF26DC9C6EC7FA9E19AE981E /* SoapActionsDigitalSecurityCameraStillImage1.m */,
+				2104B311A87B1CC366618F04EF6357C2 /* SoapActionsDimming1.h */,
+				569F51530A690B80DBF33AB9549B57F5 /* SoapActionsDimming1.m */,
+				1A603FFB3DBA06F06F13328B890C7DBB /* SoapActionsInputConfig1.h */,
+				02F7B61EC55551631FCE42F6074452EC /* SoapActionsInputConfig1.m */,
+				F1D15341838042E55E174617B0299532 /* SoapActionsLANHostConfigManagement1.h */,
+				B28EBE8FA0F2D8B1735C6C41A666DD28 /* SoapActionsLANHostConfigManagement1.m */,
+				EC8AF12886C20F3D6F870CD82AC3D52D /* SoapActionsLayer3Forwarding1.h */,
+				6BD902200748AF4D047319C5CD4787BE /* SoapActionsLayer3Forwarding1.m */,
+				79E661ABD61C78E61DD77DE7C9EA0452 /* SoapActionsMediaManagement1.h */,
+				793E9F1A427DDE602AD6BD27BFE2B1BC /* SoapActionsMediaManagement1.m */,
+				68BA80AA38D9897F17AEEFBED801DD08 /* SoapActionsMessaging1.h */,
+				ED9EE245463C5FB5884F694BB8E0CFC8 /* SoapActionsMessaging1.m */,
+				A38FA53DE29ADCD4AFA37A68AD909B80 /* SoapActionsRendering.h */,
+				5884E31F55202DBD386E9E1BBC1DD6BA /* SoapActionsRendering.m */,
+				950DCAA42B26E003262B9BAFD12E8F23 /* SoapActionsRenderingControl1.h */,
+				AB1DF1F31CF48DE6B9F030F2698D2414 /* SoapActionsRenderingControl1.m */,
+				4775CD682207008934304B7839DE60B5 /* SoapActionsSwitchPower1.h */,
+				EBA9A0129AF91EB6E487F6A7D72C604C /* SoapActionsSwitchPower1.m */,
+				31FA4356292D1CE389925E6F6FBAAB7B /* SoapActionsWANCableLinkConfig1.h */,
+				2B99E19530B910319ED51B839713B711 /* SoapActionsWANCableLinkConfig1.m */,
+				C015FE873CD364AF42E82831033D22BB /* SoapActionsWANCommonInterfaceConfig1.h */,
+				847B58FB45FAAB4C30AFA9B2DCF07FC3 /* SoapActionsWANCommonInterfaceConfig1.m */,
+				69149953D8CF566745CFF66747D9496E /* SoapActionsWANDSLLinkConfig1.h */,
+				96CF2CEFC5FE0B5598BDA6484A3C38C2 /* SoapActionsWANDSLLinkConfig1.m */,
+				0A6C15A800207B2888254EEBA33D38D0 /* SoapActionsWANEthernetLinkConfig1.h */,
+				14A5112713781057F62EFA4CE5E64EA0 /* SoapActionsWANEthernetLinkConfig1.m */,
+				C115472B628F5E81182B2CE56E06FE29 /* SoapActionsWANIPConnection1.h */,
+				7B238E0E44AA73D8FFF145D2B9556500 /* SoapActionsWANIPConnection1.m */,
+				2448486B006F2571321344134FBDE1E0 /* SoapActionsWANIPConnection2.h */,
+				BB06E1E42B932F71F6F19CCE974F0AA7 /* SoapActionsWANIPConnection2.m */,
+				A85E26AF91ADEFF8EC38D53B30E2256E /* SoapActionsWANIPv6FirewallControl1.h */,
+				03C8FA303CA26EDD373F047247A2863E /* SoapActionsWANIPv6FirewallControl1.m */,
+				07DD5DCF59543552EB4EC793CE6CF170 /* SoapActionsWANPOTSLinkConfig1.h */,
+				0C69247F33DC90B56C82DD770888FA5F /* SoapActionsWANPOTSLinkConfig1.m */,
+				A62BE2AB394924A9200B13BE24B9CD82 /* SoapActionsWANPPPConnection1.h */,
+				A3129672CA8E7202550FEAF0B80EA0B1 /* SoapActionsWANPPPConnection1.m */,
+				BA4DFBE0212DAF9189F72F0E1D8B4274 /* socketserver.cpp */,
+				37101CCAF46844C53590C04E67242CF5 /* socketserver.h */,
+				AA2868BAA30F8B59C33900F14A458283 /* SocketServer_ObjC.h */,
+				4C40FBF43DEB979758699CC79E0D2454 /* SocketServer_ObjC.mm */,
+				39F2A037D5650C7E8E1981F62960B022 /* socketserverconnection.cpp */,
+				DAA640F5F73501CE9DC8BD3FC6AB6684 /* socketserverconnection.h */,
+				F504C0C0AAFEAD8DB7D57766327608CF /* socketServerobserver.h */,
+				99F1239D54B8EBA98A8B409279605F65 /* ssdp.cpp */,
+				6D2EB5D388F2854FF135B820925C0161 /* ssdp.h */,
+				E8E6CB09BD0F0B1230FA68B3730964BB /* ssdpdb.cpp */,
+				D8F8A3AC67E0AAE29062DB9319EE3870 /* ssdpdb.h */,
+				0704A76F3976E5F542A18B189DDF98F7 /* SSDPDB_ObjC.h */,
+				4E96BA10C8244BB9E6A0A0CCF43553B7 /* SSDPDB_ObjC.mm */,
+				C87029280E0D47FB74BAB1FFC9A8C119 /* ssdpdbdevice.cpp */,
+				21886B2364B8566E1E4D6C7A3E4E2BC1 /* ssdpdbdevice.h */,
+				B789EE5AD0065B74E238094D8B52CA29 /* ssdpdbobserver.h */,
+				A5A5E3BE7A0A384F202B0AEB5878B014 /* ssdphttp.cpp */,
+				820A84E476497A21BB84653B4F70DF25 /* ssdphttp.h */,
+				77AE955813B6599299DE74AE383AA35A /* ssdpmessage.cpp */,
+				C8976096759D3560C1DAE6A3337EA02D /* ssdpmessage.h */,
+				CB40A0256787F60A459411CE9210FCCB /* ssdpmsearch.cpp */,
+				BA2C448DD94FEA933148D58F419AF496 /* ssdpmsearch.h */,
+				96AB840F12C0F666C1005B9161D0262E /* ssdpnotify.cpp */,
+				00A0CB62552DD014195F41E1492581D5 /* ssdpnotify.h */,
+				17C72B0F3CEE776318EA2E301E29F23D /* ssdpnotifyalive.cpp */,
+				58163F7C0EB9D9D24D0030DDA0195DA1 /* ssdpnotifyalive.h */,
+				97EEDC8EDC9977DB973DF8368C22972E /* ssdpnotifybye.cpp */,
+				DBF33436D0B9CB220A6AA64792420C75 /* ssdpnotifybye.h */,
+				B547C70B58281E9BF2EEB4278B7651DB /* ssdpnotifyupdate.cpp */,
+				19753884E6681E45CAB2936159C6DF45 /* ssdpnotifyupdate.h */,
+				8A9C384BB2E2EA0BEA9657A8B3C22DD2 /* ssdpobserver.h */,
+				0A91B1E7095F5FB79A5512E2CBD5D0B2 /* ssdpparser.cpp */,
+				4AF8C2659AD79E87C4285DBD1F781274 /* ssdpparser.h */,
+				5A2D0077E9074BD2EFB64DB7B6A8D418 /* ssdpsearchreq.cpp */,
+				207DE4BBAF4BB44B922D8D3E21F62635 /* ssdpsearchreq.h */,
+				47358A7D7B29B5834BFB201FD00421E4 /* ssdpsearchresp.cpp */,
+				E659E8352DD64B51E531E7A68BB2F5AF /* ssdpsearchresp.h */,
+				C9D6BE20E1DBCF50C0BC0504D22FAB6C /* ssdptools.cpp */,
+				FC1D9121AF6D59D30272DC89B6201716 /* ssdptools.h */,
+				7DF5BCF5D235BBA6516010CF80E8F6CE /* StateVariable.h */,
+				C6DAB9533C7358F155C645166C70AD5E /* StateVariable.m */,
+				3462C46EACC0F16E861EF827E6215793 /* StateVariableList.h */,
+				1BA1074265603EFE900E2F665E3E6D19 /* StateVariableList.m */,
+				5124912607DACF22BAEE0CD6DF75F1C4 /* StateVariableRange.h */,
+				B4F55B552B383D38B8978B37F83BFBB1 /* StateVariableRange.m */,
+				5551958482B1A4006B8F46C85A393D60 /* TelephonyClient1Device.h */,
+				C5336D99E75A5BEC1D8FA0A433E14F05 /* TelephonyClient1Device.m */,
+				E24329F2B1BC32496E76FC6FF79B4F22 /* TelephonyServer1Device.h */,
+				8BED16F1491C2BEFA2E38BC552182A04 /* TelephonyServer1Device.m */,
+				41ECBC79AC74CD61863FB28AC6299D60 /* tools.cpp */,
+				38DA34DD648949068F976CC0602E6C44 /* tools.h */,
+				16DE854BE0735D988559C6830D6F7D41 /* upnp.cpp */,
+				57CAA4B0898CF900F8414311134EE8F0 /* upnp.h */,
+				14B5B9AFF33B37EE232450AD44726168 /* UPnPDB.h */,
+				ED7F7BCF27B5F90EA1FA18EF5C9EA3D3 /* UPnPDB.m */,
+				72C4A7F2A71EFB12CD1BEA566CFA5AF6 /* UPnPEventParser.h */,
+				2A9F6580EF42101B470E37328D74276E /* UPnPEventParser.m */,
+				53E696767CD6B4B42579C510F900F0A9 /* UPnPEvents.h */,
+				2103A273F2CDB73688699ED4BC6C104F /* UPnPEvents.m */,
+				F44EE0663072D0D40B1FC2067FC50160 /* UPnPManager.h */,
+				2FF67FD2BF8486C3F574E5198E86D752 /* UPnPManager.m */,
+				D74BCF0380287CD77F0207D1373FC786 /* UPnPServiceConstants.h */,
+				2E551672BE6EE69EE5F837F133CC719C /* UPnPServiceConstantsAVTransport1.h */,
+				840D394297A2B6FC206189872A335E23 /* UPnPServiceConstantsAVTransport1.m */,
+				41F9B0CFAB65286C3C08201F02B8939B /* UPnPServiceConstantsConnectionManager1.h */,
+				A138725ABBFA72A7A4FED953A7C32A59 /* UPnPServiceConstantsConnectionManager1.m */,
+				838B6B3A373B8A8E82CCDFB6B7463D73 /* UPnPServiceConstantsContentDirectory1.h */,
+				DF89413F0406163E84CB2D2B19ABC22F /* UPnPServiceConstantsContentDirectory1.m */,
+				AA052A99392B5B92E8E9FE7B929E62A5 /* UPnPServiceConstantsRenderingControl1.h */,
+				0AF66A21912B2984BE8CA9C619C197F5 /* UPnPServiceConstantsRenderingControl1.m */,
+				1FC7D35E83A0104D37A32DF35C025BCC /* WAN2Device.h */,
+				CAF2C176AABAD266EAE6420FA1F0F525 /* WAN2Device.m */,
+				633841023F272B2212E8121DB7D1E3F2 /* WANConnection1Device.h */,
+				8EBB30F06A363EFD9A2FF0DC6EAE99FD /* WANConnection1Device.m */,
+				26970931EF262AF95673B1F663DD5CB1 /* WANConnection2Device.h */,
+				9EBC71DC728546BC1DBBFDE4121C0D2C /* WANConnection2Device.m */,
+				4515373649C375822CFEC4C0F4F2C1A6 /* Support Files */,
+			);
+			name = upnpx;
+			path = upnpx;
+			sourceTree = "<group>";
+		};
+		56149E7CFCE53A8070CBD54EB9D58B6E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				09CA92B5C01A2E5C6AF39461F050DAB3 /* AFAutoPurgingImageCache.h */,
+				A195120B8903AA057ACD7FBBCDEC72F9 /* AFAutoPurgingImageCache.m */,
+				F1376B17CE0474FD601A298D8A8B274A /* AFImageDownloader.h */,
+				30FBA1D3A6BD5F5553D797796C3BA1F3 /* AFImageDownloader.m */,
+				9703480F0EA08DCFEA6F19AFA51CF750 /* AFNetworkActivityIndicatorManager.h */,
+				9AB518286B39DD37CD95B70C4EE4B88A /* AFNetworkActivityIndicatorManager.m */,
+				B705E525A0256E7B53DFFA369BC15755 /* UIActivityIndicatorView+AFNetworking.h */,
+				20B268D54302F4BE3AF78D88C3EC5E0F /* UIActivityIndicatorView+AFNetworking.m */,
+				08D2343B9C0F63DDC790F94A30F7B364 /* UIButton+AFNetworking.h */,
+				E5DAF82A279E85A4C41599A173C63FFC /* UIButton+AFNetworking.m */,
+				80CC90FA4D739EEC7C08BC0805F09A56 /* UIImage+AFNetworking.h */,
+				B68212984D597B8C5600B931EAAC4563 /* UIImageView+AFNetworking.h */,
+				67FA8E4A131D23DD8CE0898E810220F0 /* UIImageView+AFNetworking.m */,
+				FFD71430819C4F82634E6213855D58B9 /* UIKit+AFNetworking.h */,
+				48287A079CC5705E58866C2C0F231D6D /* UIProgressView+AFNetworking.h */,
+				2883E818E2AD41D18A1D224D9EE01AB8 /* UIProgressView+AFNetworking.m */,
+				91D1D0C437EC757671164845BCDA41FE /* UIRefreshControl+AFNetworking.h */,
+				F2AA241C405B0EA85E107EA821B94613 /* UIRefreshControl+AFNetworking.m */,
+				613964D928238A1B914A10B65D684A1A /* UIWebView+AFNetworking.h */,
+				47A3B353B277EF82B680CA814A2B6FD6 /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		69A29FA90F0A20CEF041BBA4A0B61EBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				243403E61B2649F2F3F53BBA952B6FF1 /* AFNetworking */,
+				4CBC8D57EC4A56F582DE4F719502D494 /* upnpx */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A921A74876AC656DBE8F4C57D8C0931 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				E940F65D2A277F0A9FF10E705CE3C4BE /* AFURLRequestSerialization.h */,
+				E43E8C55DC0AF25E39BD2835622EE41E /* AFURLRequestSerialization.m */,
+				F6F6B0E4F1CCDD21FD4EBD5192FE8DAE /* AFURLResponseSerialization.h */,
+				E4BA7B99EEF041573BD13B49D10CDC32 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		6ADD3E21CE2186F8CA5E631416DDA9BA /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				BFBE0C9739A94759BAD839D458DF8B01 /* AFHTTPSessionManager.h */,
+				EDE48FE3B7AEE57738D4C8064EF9EDCF /* AFHTTPSessionManager.m */,
+				C438914A2C588BCCF368F0522550B3C4 /* AFURLSessionManager.h */,
+				35896E88685E9FB22016E53163D62A09 /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				69A29FA90F0A20CEF041BBA4A0B61EBF /* Pods */,
+				89925334827720B224AC032AED78B504 /* Products */,
+				DC9AC7CBD183B41E4B8F8811609375A8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89925334827720B224AC032AED78B504 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2979C679B4FBFEDE1CEC4FDC31A72A2F /* libAFNetworking.a */,
+				35BBE8E9C5DB9811BB431BB22EEDA109 /* libPods-dslrbrowser.a */,
+				5357113BC74A1485220688C0F485B43F /* libupnpx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A92951AD5291F1044CA75204C9768383 /* Pods-dslrbrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE471E3B2CEE26760F192E25B5C180 /* Pods-dslrbrowser-acknowledgements.markdown */,
+				06DB86A34FA905A7ADE04BE0645C2AFA /* Pods-dslrbrowser-acknowledgements.plist */,
+				08DE05ED29938D5A04ED20C02872ACC9 /* Pods-dslrbrowser-dummy.m */,
+				A2C8C0DD495A074F5AAA77C54065441F /* Pods-dslrbrowser-frameworks.sh */,
+				5E2071225884B2A3AFD1C65D0099CD40 /* Pods-dslrbrowser-resources.sh */,
+				3642505AEA6E63C858B74A02A260B9C7 /* Pods-dslrbrowser.debug.xcconfig */,
+				7018061771A4D313F63098AC306F28CB /* Pods-dslrbrowser.release.xcconfig */,
+			);
+			name = "Pods-dslrbrowser";
+			path = "Target Support Files/Pods-dslrbrowser";
+			sourceTree = "<group>";
+		};
+		B00CFD341960A75C0EA4263590362B32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0762D5B1BFFE800F08817BE329610CD /* AFNetworking.xcconfig */,
+				3C21F0A83F68B7592E4CCB2AB4ECD861 /* AFNetworking-dummy.m */,
+				148991C7C11D71232B23DA1D2B12FAC6 /* AFNetworking-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		B3BE40732455B8FA4EE754D17B5BD09D /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				169D0265D67FD74926B1F4C98C83B732 /* AFSecurityPolicy.h */,
+				C945F93CF6CACEB141FC87061C50345F /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		DC9AC7CBD183B41E4B8F8811609375A8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A92951AD5291F1044CA75204C9768383 /* Pods-dslrbrowser */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A1C2B07813030B0D51EB1D804A4439E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F93EE1AA5E870F2CE81325CE9EB643 /* AFAutoPurgingImageCache.h in Headers */,
+				6B71CE5BA32574F407349C1DA20605B4 /* AFHTTPSessionManager.h in Headers */,
+				707E818332E5033501DF2D7826C639DF /* AFImageDownloader.h in Headers */,
+				E7B0270BEDCBE116DDD853F76E27B0BA /* AFNetworkActivityIndicatorManager.h in Headers */,
+				46401F3C7FF0B0CFE2E9B14914780835 /* AFNetworking.h in Headers */,
+				DE31BBF6A7963C5871A19655EF5532BE /* AFNetworkReachabilityManager.h in Headers */,
+				D59FC98A74E440C4725B6FDC28F5951E /* AFSecurityPolicy.h in Headers */,
+				C1C0D7C93BF3DE14A26757273598D0FA /* AFURLRequestSerialization.h in Headers */,
+				66635EAAE52FF5571DBCDC626FB8CA86 /* AFURLResponseSerialization.h in Headers */,
+				F5CC06F3E0C232483A72DCCFAF393BE0 /* AFURLSessionManager.h in Headers */,
+				682B0E603612B6ADBCCF30580F9A4B09 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				2EBAA518CB8B2DAF89A63637091D4615 /* UIButton+AFNetworking.h in Headers */,
+				1341A7AC2439CB63D459D32EF985A414 /* UIImage+AFNetworking.h in Headers */,
+				D5CB999FB5FC80FC126A38AB4DF12227 /* UIImageView+AFNetworking.h in Headers */,
+				5719F06B809080CDEF7E6BC75DEA1A3C /* UIKit+AFNetworking.h in Headers */,
+				B40756412613B53C80EE77C4C223990F /* UIProgressView+AFNetworking.h in Headers */,
+				F099E5987DD80E8D78E909AF81D3C587 /* UIRefreshControl+AFNetworking.h in Headers */,
+				8958F2453EEBAF71BFEBD78FB48986EC /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8106AF1D51C7DE8392E875BD8635AF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35359833D21AE2E87F56112299E0DDF6 /* BasicDeviceParser.h in Headers */,
+				C4E557413E79BA188FABA92A3613C53F /* basichttpobserver.h in Headers */,
+				19BEBE643A7479F76A2E82C3A71D080D /* basichttpserver.h in Headers */,
+				33306A5C4FFC163EAF1C54DBE9898390 /* BasicHTTPServer_ObjC.h in Headers */,
+				942B5850DD810226A1E28B007C320B5A /* BasicParser.h in Headers */,
+				4577B82E603336C17A8EEEDE1ADD6E88 /* BasicParserAsset.h in Headers */,
+				C87698A0B2B109195E528BABA49FDFCC /* BasicServiceParser.h in Headers */,
+				AA20738FE9D087349B2593DF3687D58A /* BasicUPnPDevice.h in Headers */,
+				49BE751B4EF82EA875B5496BAECC6F09 /* BasicUPnPService.h in Headers */,
+				D070A4E85B4663D84062EFFB296DBF5F /* BinaryLight1Device.h in Headers */,
+				72E97D3A561C9BD8DEDD521F0DE50628 /* DeviceFactory.h in Headers */,
+				9B635113C1646303E773FAF6006E94E9 /* DigitalSecurityCamera1Device.h in Headers */,
+				5235248F8B63826CAB86AC00BF0CCB81 /* DimmableLight1Device.h in Headers */,
+				2ED75B443A8EA15FA7017BC01F8071A3 /* httpsession.h in Headers */,
+				88CBCE99C7385C3C25E9673A54701F37 /* InternetGateway2Device.h in Headers */,
+				74A124EBBD873BB58B3DC3ECF5B1DB4D /* iphoneport.h in Headers */,
+				E98B8FA71716CDA08E7F812C6D9224CF /* LAN1Device.h in Headers */,
+				AFD0B04AEBB89FD8CA72FF9C3E7E8530 /* LastChangeParser.h in Headers */,
+				72B5853982C994717EFAE829E5866AB2 /* MediaPlaylist.h in Headers */,
+				59BCAD384C339639A0A10EC8C2774464 /* MediaRenderer1Device.h in Headers */,
+				7EF6187163D4615D2E08907FAE637702 /* MediaServer1BasicObject.h in Headers */,
+				8E74D2465B44801ACF84CCD26CF9D29C /* MediaServer1ContainerObject.h in Headers */,
+				BA960B947CB4E095C227DC5FA39E417B /* MediaServer1Device.h in Headers */,
+				1058D98C346C8D2AA079BD6B137587DB /* MediaServer1ItemObject.h in Headers */,
+				E2B370741F78EA7DC2E5F22B55036490 /* MediaServer1ItemRes.h in Headers */,
+				9FE696C244453F068202D482BED29037 /* MediaServerBasicObjectParser.h in Headers */,
+				68AAD59A8CD15BEF4098C2AB0337920F /* NSString+UPnPExtentions.h in Headers */,
+				C5A306BD29B3CC350CF6615A3E220063 /* OrderedDictionary.h in Headers */,
+				21409640ED0DB1D39B8AE1EE0FF60524 /* osal.h in Headers */,
+				6EF3CB4A2B98366C1A855CAD902264E5 /* SoapAction.h in Headers */,
+				C5507BA81CD681E9DEDFF3714DDF794A /* SoapActionsAVTransport1.h in Headers */,
+				0D8C0A37A21A1FC8B22EB4B1E243845C /* SoapActionsCallManagement1.h in Headers */,
+				295127CE50151B9540124F5F4BF7B18F /* SoapActionsConfigurationManagement1.h in Headers */,
+				FADDB53B6B112E384D6269A9AEC4DA76 /* SoapActionsConnectionManager1.h in Headers */,
+				3833096ED98ABD895F78B2D7B836B5C4 /* SoapActionsContentDirectory1.h in Headers */,
+				F2BF7A51E70E2EBF972022753D9D363C /* SoapActionsDeviceProtection1.h in Headers */,
+				A1B30BEBEF6E7A437C6A7A0CBB522DAC /* SoapActionsDigitalSecurityCameraMotionImage1.h in Headers */,
+				35BEE5ED50771B2295B908D0837B9205 /* SoapActionsDigitalSecurityCameraSettings1.h in Headers */,
+				5C6BDA5D977AE32751490EFF39BCCD67 /* SoapActionsDigitalSecurityCameraStillImage1.h in Headers */,
+				059E5520E51B22FB35DF6EBD708005E5 /* SoapActionsDimming1.h in Headers */,
+				5AC82A58ADD3722F2E15F76A6EFF65F1 /* SoapActionsInputConfig1.h in Headers */,
+				CF914C356E774DEC6944E0B8090A552D /* SoapActionsLANHostConfigManagement1.h in Headers */,
+				1D92BB1C9FCC526E5023A95C50E0C33A /* SoapActionsLayer3Forwarding1.h in Headers */,
+				2C1D855C971147DD7F3B9871D327A460 /* SoapActionsMediaManagement1.h in Headers */,
+				D50D8E7A6302737A1775DB467BB43ED0 /* SoapActionsMessaging1.h in Headers */,
+				CC55FD5E68F0033F37E5F86EC58947D8 /* SoapActionsRendering.h in Headers */,
+				451064C72FC45C9ECD2448AA23C5D455 /* SoapActionsRenderingControl1.h in Headers */,
+				C47D431E2C75126C59559777EE29C615 /* SoapActionsSwitchPower1.h in Headers */,
+				34F54B47193253FB1E2CE0984FB12479 /* SoapActionsWANCableLinkConfig1.h in Headers */,
+				C48D1278573BD1C30FBA02E6065FB3EA /* SoapActionsWANCommonInterfaceConfig1.h in Headers */,
+				D7E3E3CB0F4DAA6F4BA82E1C7ED8B272 /* SoapActionsWANDSLLinkConfig1.h in Headers */,
+				3031CCE7D55DD18838EF30F479230AA7 /* SoapActionsWANEthernetLinkConfig1.h in Headers */,
+				664178637E5AB8471B58B5A48847A310 /* SoapActionsWANIPConnection1.h in Headers */,
+				A7B6ACD9C0D63A1E5BF01D9198A215E7 /* SoapActionsWANIPConnection2.h in Headers */,
+				D960C721CE7A3D3BF5898A0E05FD31F3 /* SoapActionsWANIPv6FirewallControl1.h in Headers */,
+				5893D90ECDF4434A9A1137A1046C6097 /* SoapActionsWANPOTSLinkConfig1.h in Headers */,
+				E43D7F9DEACFA874DB0AEC84A0170030 /* SoapActionsWANPPPConnection1.h in Headers */,
+				6BC0569C0772ECFA1129642598A992EF /* socketserver.h in Headers */,
+				192F295A50702B7223EEB5E55A70CFF6 /* SocketServer_ObjC.h in Headers */,
+				6B4E8DAD135EB641277E003BF5707F0F /* socketserverconnection.h in Headers */,
+				762C4A0DB5E4A7FA3F640CCF6DBA8359 /* socketServerobserver.h in Headers */,
+				FC1394850F61F2740B7E1F8CC8B7DE7F /* ssdp.h in Headers */,
+				A5AD392B171FC0BBE764478EF8DB2B6D /* ssdpdb.h in Headers */,
+				6DFC9D30A42C1881461F1A1D4B3EBF7B /* SSDPDB_ObjC.h in Headers */,
+				DE37D1619763348D9F0FE48BDE40FC1B /* ssdpdbdevice.h in Headers */,
+				DB4BD7B2D8C738AA5292A735CA164AB7 /* ssdpdbobserver.h in Headers */,
+				5CF68437BBEE6E58D6073D17D3759180 /* ssdphttp.h in Headers */,
+				361982F63CB004082EAB2105C632A347 /* ssdpmessage.h in Headers */,
+				0EC7BFBA1B6BB52CC1B6E80446C57951 /* ssdpmsearch.h in Headers */,
+				5946A00528606C1B0247B1CBFE1F087C /* ssdpnotify.h in Headers */,
+				8042DE6FABC633304568F524B94E9E7A /* ssdpnotifyalive.h in Headers */,
+				C47694F9B21C64EF65F3355566199FB7 /* ssdpnotifybye.h in Headers */,
+				70E9BAA0D5E899767069E7BF832D9EAE /* ssdpnotifyupdate.h in Headers */,
+				7182329B2EFE41A92B9452375646F295 /* ssdpobserver.h in Headers */,
+				565809B286F5CBA236B4E2F239054169 /* ssdpparser.h in Headers */,
+				BA1F730A7196ADD554CC49D01AA6AE96 /* ssdpsearchreq.h in Headers */,
+				53B28A25761B718066E4DDB34A66C8E0 /* ssdpsearchresp.h in Headers */,
+				122A32F73463D17B1E30A779B20475E2 /* ssdptools.h in Headers */,
+				4183B03D420C1D6FD5C5A79FD2A74AA3 /* StateVariable.h in Headers */,
+				A5A58F2FDCCE37FD1FEBAD9CE45C4370 /* StateVariableList.h in Headers */,
+				AD52E236854796461599921463378E3D /* StateVariableRange.h in Headers */,
+				20030B207037052FAB318A3122FD7EAA /* TelephonyClient1Device.h in Headers */,
+				09ED2FC69A699FCAFEB57803E45E051D /* TelephonyServer1Device.h in Headers */,
+				F125A816CE46AF97BB2254D0D92D718B /* tools.h in Headers */,
+				EEDE809DFAAC47F098C5189BD13A0D73 /* upnp.h in Headers */,
+				98DB564D98E784A95C675D60329DCD38 /* UPnPDB.h in Headers */,
+				AB8E6ED2324F5B43A4A23D17012E469A /* UPnPEventParser.h in Headers */,
+				72113E170B344C8F0E74EFFEA13643F3 /* UPnPEvents.h in Headers */,
+				66686AC6BF3FDFD3377E03162AE4B86D /* UPnPManager.h in Headers */,
+				3A033B214DB57073342015ADBC50F62B /* UPnPServiceConstants.h in Headers */,
+				50CB630517A9489C592A9F470A6D674F /* UPnPServiceConstantsAVTransport1.h in Headers */,
+				A07D15A4DC95DDEB7BACBD56A21A4A92 /* UPnPServiceConstantsConnectionManager1.h in Headers */,
+				DEFAC2880881DAA7D754D194450D7BA9 /* UPnPServiceConstantsContentDirectory1.h in Headers */,
+				648E220B06621A1F211BD315AA5137FD /* UPnPServiceConstantsRenderingControl1.h in Headers */,
+				22114F0C11CCB31254676FC0ACD05E11 /* WAN2Device.h in Headers */,
+				B64AD2280BD577CB8B40AF51ACA4848E /* WANConnection1Device.h in Headers */,
+				FDA98AD3C5E485F4782A8826DCA3B811 /* WANConnection2Device.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5E841B9140FFBA078DE96C3D75944BD5 /* upnpx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 471CCFED6AEE1FC2BFAE1EC2BFFF65E0 /* Build configuration list for PBXNativeTarget "upnpx" */;
+			buildPhases = (
+				940C0BB1FB518FAD9A48E880DF08AE37 /* Sources */,
+				D2B5617006288E7897B11034C85F786A /* Frameworks */,
+				A8106AF1D51C7DE8392E875BD8635AF6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = upnpx;
+			productName = upnpx;
+			productReference = 5357113BC74A1485220688C0F485B43F /* libupnpx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		742A8104D2F56B15931CA9BE017E16FE /* Pods-dslrbrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C5755CBE73F4871E781B45D4BA64E44 /* Build configuration list for PBXNativeTarget "Pods-dslrbrowser" */;
+			buildPhases = (
+				454AC197CAC8A5397693E8AAF1A598DC /* Sources */,
+				BBC488480B7BBE447D0C027FEE1E6ECF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				917042C727B8AC0A4F435AD75F063D75 /* PBXTargetDependency */,
+				81D8C1AE6F6EACF9E16259AFE07971E7 /* PBXTargetDependency */,
+			);
+			name = "Pods-dslrbrowser";
+			productName = "Pods-dslrbrowser";
+			productReference = 35BBE8E9C5DB9811BB431BB22EEDA109 /* libPods-dslrbrowser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9E033EDB5EC0819481B0546434FA577B /* AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483FBC4A668BF7F1A8767452E7E188AC /* Build configuration list for PBXNativeTarget "AFNetworking" */;
+			buildPhases = (
+				0068413C89BADAAF4691AA78AFE62C3E /* Sources */,
+				F3284DBE3CA8932733932AD2A48445B2 /* Frameworks */,
+				0A1C2B07813030B0D51EB1D804A4439E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFNetworking;
+			productName = AFNetworking;
+			productReference = 2979C679B4FBFEDE1CEC4FDC31A72A2F /* libAFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 89925334827720B224AC032AED78B504 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E033EDB5EC0819481B0546434FA577B /* AFNetworking */,
+				742A8104D2F56B15931CA9BE017E16FE /* Pods-dslrbrowser */,
+				5E841B9140FFBA078DE96C3D75944BD5 /* upnpx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0068413C89BADAAF4691AA78AFE62C3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775CE7A8107457BDE59F113D40020839 /* AFAutoPurgingImageCache.m in Sources */,
+				73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */,
+				5C0696B2AD1DC23F6473F5A19FAB6296 /* AFImageDownloader.m in Sources */,
+				31ED9BD97AF9E62874AF3CDF2F8090CF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */,
+				E0EF330DB2D3521ED26E67B2E8687A2E /* AFNetworkReachabilityManager.m in Sources */,
+				66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */,
+				5945033488F9995134DBB7014DE2412F /* AFURLRequestSerialization.m in Sources */,
+				85D30678FF4F0AB306399A368EAA46B2 /* AFURLResponseSerialization.m in Sources */,
+				9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */,
+				2579663181BFA8F7DA4B5D7CF8537FC0 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */,
+				A277AD9070E44BED5A7DE0B1D64D6F15 /* UIImageView+AFNetworking.m in Sources */,
+				D4AA4704CA7863CC86E22AAF88635836 /* UIProgressView+AFNetworking.m in Sources */,
+				B84CD33084C9867E67BD56E47B7BFC04 /* UIRefreshControl+AFNetworking.m in Sources */,
+				A7F7FDCD36E2DD8D8E346DB19452CC03 /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		454AC197CAC8A5397693E8AAF1A598DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15CF5A2CEC221BA35682D522528BC257 /* Pods-dslrbrowser-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		940C0BB1FB518FAD9A48E880DF08AE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D163287C392CEDC1F467B997813DBAE0 /* BasicDeviceParser.m in Sources */,
+				D8FC48BF633EDD6D11C6D01B0994E20F /* basichttpserver.cpp in Sources */,
+				BC61993A356F30936D445D9CDF92741D /* BasicHTTPServer_ObjC.mm in Sources */,
+				F43666E57DC5310CAFBEDDE6CE93840A /* BasicParser.m in Sources */,
+				1949930AD670A5F2CA8E417AB05437CC /* BasicParserAsset.m in Sources */,
+				B1BDAF050A5669B673557BA64CC541DB /* BasicServiceParser.m in Sources */,
+				DAAE8AAEBC220C2A96D5305F26D2E9AD /* BasicUPnPDevice.m in Sources */,
+				DD6E214DF098B91F7F2D44CDDE1B662D /* BasicUPnPService.m in Sources */,
+				EA9EA153D7F40B2C3E4F8D2C5E991011 /* BinaryLight1Device.m in Sources */,
+				9C87AF396D3502C19F346CE4F0C4D910 /* CocoaTools.m in Sources */,
+				1B84ADA6F03FBD876CA9BE1548024E60 /* DeviceFactory.m in Sources */,
+				D7A50B9077B0F21A82E4D02E5419BC27 /* DigitalSecurityCamera1Device.m in Sources */,
+				4C932672A266F0F855A925D883DF75F0 /* DimmableLigh1tDevice.m in Sources */,
+				8A11BC129391632CD8AE1B29C7248EE3 /* httpsession.cpp in Sources */,
+				8DC092A5E3D66F54E0078AD4CDF05849 /* InternetGateway2Device.m in Sources */,
+				10DFF9F55C8EA4BE5D135AA923B67777 /* LAN1Device.m in Sources */,
+				F0CAE43A16963863419680202A6BD282 /* LastChangeParser.m in Sources */,
+				97C4EAF6749F1396644523862B529729 /* main.mm in Sources */,
+				BC7C4E86013F93501833CCF2CB30E689 /* MediaPlaylist.m in Sources */,
+				26A93728F91A28531DB6F0BB742AC199 /* MediaRenderer1Device.m in Sources */,
+				B43BCAF3C963DF303C8356E7089860DE /* MediaServer1BasicObject.m in Sources */,
+				595E429C4EACAB065837159137CE6F69 /* MediaServer1ContainerObject.m in Sources */,
+				C1B8DC826B11F0CD7D212492BA0AD2F1 /* MediaServer1Device.m in Sources */,
+				66A12F387D8C8E8E88856879AC58A11E /* MediaServer1ItemObject.m in Sources */,
+				3DD853D8FE9300E69E80E5EF6DF491D8 /* MediaServer1ItemRes.m in Sources */,
+				2C34AA8A3E314C2BCE96C48E56B22A94 /* MediaServerBasicObjectParser.m in Sources */,
+				91A99C54D5F49B8A4F89EB622464FBC3 /* OrderedDictionary.m in Sources */,
+				B611F2E822C8E62D09AF24DEDB0FF1E1 /* SoapAction.m in Sources */,
+				E9D627F91F17DE648CC060E726EE86B3 /* SoapActionsAVTransport1.m in Sources */,
+				7C278913AB3BA7A757B574B10482C570 /* SoapActionsCallManagement1.m in Sources */,
+				56455F85D2D89EEA8C9389F2954F1452 /* SoapActionsConfigurationManagement1.m in Sources */,
+				45B89B7C4C6B8130A2526BFBA47249A6 /* SoapActionsConnectionManager1.m in Sources */,
+				A0D46BFCC3F7B7006F225A9F69DFB011 /* SoapActionsContentDirectory1.m in Sources */,
+				2605FD35D73ECA005AE0A4C8610984C1 /* SoapActionsDeviceProtection1.m in Sources */,
+				C2F3A93054412B7B58D6CF2B9E29AB86 /* SoapActionsDigitalSecurityCameraMotionImage1.m in Sources */,
+				6595BDCA8CF1866C5FE376854B9ED2AD /* SoapActionsDigitalSecurityCameraSettings1.m in Sources */,
+				AAE1E5D9E7A54C858FFBA57F6B3E6F93 /* SoapActionsDigitalSecurityCameraStillImage1.m in Sources */,
+				998C20C179D76B9B9F7930DBAABB88A3 /* SoapActionsDimming1.m in Sources */,
+				F4F68ECE034D83EE091D6BA8787F659F /* SoapActionsInputConfig1.m in Sources */,
+				2E6FDBA46C32B4554BC7DEA8EA545D92 /* SoapActionsLANHostConfigManagement1.m in Sources */,
+				67100204FC5D247BBC98322A354C1958 /* SoapActionsLayer3Forwarding1.m in Sources */,
+				686ABC3315B6226A4DCA8F274BBD0661 /* SoapActionsMediaManagement1.m in Sources */,
+				F7304D113174765272460C46AFD376DA /* SoapActionsMessaging1.m in Sources */,
+				E4A99A3316E5C8CE35DF08624033CC36 /* SoapActionsRendering.m in Sources */,
+				C49E45F702202002CB808B050E288696 /* SoapActionsRenderingControl1.m in Sources */,
+				A9C345C2FF4DDB24461F8CB6875AA473 /* SoapActionsSwitchPower1.m in Sources */,
+				7F773435B0B547FA8D0FA1198E1B0012 /* SoapActionsWANCableLinkConfig1.m in Sources */,
+				E25181035A47EE7E7BF8AC18B4189B5C /* SoapActionsWANCommonInterfaceConfig1.m in Sources */,
+				3EC001AEE40032647DE0886D76D3C8E9 /* SoapActionsWANDSLLinkConfig1.m in Sources */,
+				3608F1E4E5B072337BBE01B4FFE69257 /* SoapActionsWANEthernetLinkConfig1.m in Sources */,
+				2FA1A2FA3F87463A1C1F55BA72D533C5 /* SoapActionsWANIPConnection1.m in Sources */,
+				052354B9798A06EB8E4BE5703EA78F5F /* SoapActionsWANIPConnection2.m in Sources */,
+				D8776D6EBCE28919350C1697A76587C7 /* SoapActionsWANIPv6FirewallControl1.m in Sources */,
+				F13932CD53270D3FA950C60548D37DE9 /* SoapActionsWANPOTSLinkConfig1.m in Sources */,
+				ADDC126210AE79CAA010E4302F2AA9CC /* SoapActionsWANPPPConnection1.m in Sources */,
+				EA97634556CB4FE717FE3383B3827F2E /* socketserver.cpp in Sources */,
+				B871934E70C173A959F78BA387D1AF75 /* SocketServer_ObjC.mm in Sources */,
+				2F4068F6B9D0C879F833957EF1067BE3 /* socketserverconnection.cpp in Sources */,
+				9DD56C67AC5221599B1126A17D9EA800 /* ssdp.cpp in Sources */,
+				E216E302DDD64B5C979E149458076FCF /* ssdpdb.cpp in Sources */,
+				6FB74580604F864FCFC41BB7EAFB43AA /* SSDPDB_ObjC.mm in Sources */,
+				968C415BFD9A2F19E1750FD8446107DC /* ssdpdbdevice.cpp in Sources */,
+				67CD973ACDBE768C44D97A24749189A0 /* ssdphttp.cpp in Sources */,
+				B99BC76110D1FA1AC54A3011C120D906 /* ssdpmessage.cpp in Sources */,
+				0D76A44F20E38B90B13AC4E67CB79266 /* ssdpmsearch.cpp in Sources */,
+				E23884925DD91E3D759ADFFB398B8ECE /* ssdpnotify.cpp in Sources */,
+				93E1DD4E2E346CFE8A8F72E2AEB8AAEB /* ssdpnotifyalive.cpp in Sources */,
+				982732CF6C9D72E0D288F959801D1D93 /* ssdpnotifybye.cpp in Sources */,
+				E7EAD095C1EAB3B6A72C77DB5876E6E4 /* ssdpnotifyupdate.cpp in Sources */,
+				5401D6DF5B31B6E4AB68AED9025E45B0 /* ssdpparser.cpp in Sources */,
+				4E3F78C68B892ED7D8EEDC3CFE6434B2 /* ssdpsearchreq.cpp in Sources */,
+				AD716E770681C5A4639BB23E751EC929 /* ssdpsearchresp.cpp in Sources */,
+				BF97663470BBC6EFB042A6FB25DDEA70 /* ssdptools.cpp in Sources */,
+				CAED67E90B2D9E5890132264A93041FD /* StateVariable.m in Sources */,
+				94740AE8C02CE2893C689BB6CEEF132B /* StateVariableList.m in Sources */,
+				9318427353B53650E63B1F77C695BA1D /* StateVariableRange.m in Sources */,
+				F1071D044B9BBF0D184050472F598F0E /* TelephonyClient1Device.m in Sources */,
+				8E0C0199BE9AEDCE5D49535D6974087E /* TelephonyServer1Device.m in Sources */,
+				0C12CCB32F09AAB397EA700D9BA75621 /* tools.cpp in Sources */,
+				C773AB34E4DCBDA63D12A92EA32CD6DD /* upnp.cpp in Sources */,
+				AB65ECC81A42508CD47395E87CC52782 /* UPnPDB.m in Sources */,
+				1C2FCEE7C508AFD90B152A6177BEF1C8 /* UPnPEventParser.m in Sources */,
+				8012728EFEF41E94CDFF5A6C7D5262E1 /* UPnPEvents.m in Sources */,
+				95D67C892BFA88ABE4E9309BBCB7E5FD /* UPnPManager.m in Sources */,
+				5CB67F46333F5EC4DC3B04CB1A993ECA /* UPnPServiceConstantsAVTransport1.m in Sources */,
+				25B0EA52EE0CFE13B7F47F4D7765D781 /* UPnPServiceConstantsConnectionManager1.m in Sources */,
+				18DD571D951B58DD820CE063B022A0E6 /* UPnPServiceConstantsContentDirectory1.m in Sources */,
+				761C1569DFC8468B62C98DF81E6F6263 /* UPnPServiceConstantsRenderingControl1.m in Sources */,
+				CF731057D09D47E7A5622DACD4EF3264 /* upnpx-dummy.m in Sources */,
+				383427D7BC40DFD37C7819F4A975E5D6 /* WAN2Device.m in Sources */,
+				E50C7AE1E18C267B36F61D9BDECBD930 /* WANConnection1Device.m in Sources */,
+				0753EBA116671FE4557ACBF0F1735CEF /* WANConnection2Device.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81D8C1AE6F6EACF9E16259AFE07971E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = upnpx;
+			target = 5E841B9140FFBA078DE96C3D75944BD5 /* upnpx */;
+			targetProxy = C7715E64458410E86A95374744C90DAE /* PBXContainerItemProxy */;
+		};
+		917042C727B8AC0A4F435AD75F063D75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 9E033EDB5EC0819481B0546434FA577B /* AFNetworking */;
+			targetProxy = 5E1F1C2122ED70178006C6275354EC39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05F597BD530A45888425A69CD7D0F33D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CD88E8E894DC8B571EBCFD665503C9 /* upnpx.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/upnpx/upnpx-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		43324B6AE85A5C101FFD78293C659E99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0762D5B1BFFE800F08817BE329610CD /* AFNetworking.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		91FAC3128FE7DAA099725E77D6311AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CD88E8E894DC8B571EBCFD665503C9 /* upnpx.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/upnpx/upnpx-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B0D050F697C3E58D3E631EFD6722E915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7018061771A4D313F63098AC306F28CB /* Pods-dslrbrowser.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C958CBF2A066FE5930162D172DAA81DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3642505AEA6E63C858B74A02A260B9C7 /* Pods-dslrbrowser.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CAFC36E45734F0DAC2E3AA83F0E269FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0762D5B1BFFE800F08817BE329610CD /* AFNetworking.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ED4FC68AB2A4E06C718CFF338F6F156B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C5755CBE73F4871E781B45D4BA64E44 /* Build configuration list for PBXNativeTarget "Pods-dslrbrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C958CBF2A066FE5930162D172DAA81DD /* Debug */,
+				B0D050F697C3E58D3E631EFD6722E915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */,
+				ED4FC68AB2A4E06C718CFF338F6F156B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		471CCFED6AEE1FC2BFAE1EC2BFFF65E0 /* Build configuration list for PBXNativeTarget "upnpx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FAC3128FE7DAA099725E77D6311AB8 /* Debug */,
+				05F597BD530A45888425A69CD7D0F33D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483FBC4A668BF7F1A8767452E7E188AC /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAFC36E45734F0DAC2E3AA83F0E269FF /* Debug */,
+				43324B6AE85A5C101FFD78293C659E99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
