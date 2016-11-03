@@ -104,18 +104,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" tag="3000" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qyx-zz-KFi">
-                                <rect key="frame" x="28" y="541" width="544" height="2"/>
+                            <progressView opaque="NO" tag="3000" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qyx-zz-KFi">
+                                <rect key="frame" x="24" y="608" width="327" height="2"/>
                             </progressView>
-                            <button opaque="NO" tag="2000" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-fu-BMR">
-                                <rect key="frame" x="28" y="501" width="544" height="30"/>
+                            <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-fu-BMR">
+                                <rect key="frame" x="24" y="568" width="327" height="30"/>
                                 <state key="normal" title="Download Photo"/>
                                 <connections>
                                     <action selector="downloadPhotoAction:" destination="jLw-vB-JJv" eventType="touchUpInside" id="OCF-GZ-QtL"/>
                                 </connections>
                             </button>
-                            <imageView multipleTouchEnabled="YES" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-l3-cE5">
-                                <rect key="frame" x="28" y="72" width="544" height="421"/>
+                            <imageView multipleTouchEnabled="YES" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-l3-cE5">
+                                <rect key="frame" x="24" y="72" width="327" height="488"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,8 +177,8 @@
                                                 <constraint firstAttribute="width" constant="48" id="m9V-S3-Wmx"/>
                                             </constraints>
                                         </imageView>
-                                        <progressView opaque="NO" tag="2000" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-bW-bPy">
-                                            <rect key="frame" x="8" y="65" width="536.5" height="2"/>
+                                        <progressView opaque="NO" tag="2000" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-bW-bPy">
+                                            <rect key="frame" x="8" y="66" width="312" height="2"/>
                                         </progressView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-nW-fLJ">
                                             <rect key="frame" x="64" y="8" width="118" height="21"/>
@@ -192,8 +192,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="5000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12/415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9U-5A-vRw">
-                                            <rect key="frame" x="552" y="60" width="31.5" height="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9U-5A-vRw">
+                                            <rect key="frame" x="327.5" y="61" width="31.5" height="12"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -245,14 +245,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9S-F9-dcx">
-                                <rect key="frame" x="84" y="85" width="488" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9S-F9-dcx">
+                                <rect key="frame" x="80" y="85" width="271" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="6000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-uC-Qad">
-                                <rect key="frame" x="28" y="128" width="544" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="6000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-uC-Qad">
+                                <rect key="frame" x="24" y="128" width="327" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="UXV-y5-gAa"/>
                                 </constraints>
@@ -260,24 +260,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="3000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usU-AD-o4S">
-                                <rect key="frame" x="28" y="200" width="544" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="3000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usU-AD-o4S">
+                                <rect key="frame" x="24" y="200" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" tag="4000" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RAq-Fp-3NG">
-                                <rect key="frame" x="28" y="236" width="544" height="2"/>
+                            <progressView opaque="NO" tag="4000" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RAq-Fp-3NG">
+                                <rect key="frame" x="24" y="236" width="327" height="2"/>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-zn-wEH">
-                                <rect key="frame" x="28" y="72" width="48" height="48"/>
+                            <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-zn-wEH">
+                                <rect key="frame" x="24" y="72" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Uti-pW-giz"/>
                                     <constraint firstAttribute="height" constant="48" id="aSd-oI-PDz"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" tag="5000" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jF-hq-PQp">
-                                <rect key="frame" x="28" y="254" width="544" height="30"/>
+                            <button opaque="NO" tag="5000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jF-hq-PQp">
+                                <rect key="frame" x="24" y="254" width="327" height="30"/>
                                 <state key="normal" title="Download all Photos"/>
                                 <connections>
                                     <action selector="downloadAllPhotosAction:" destination="ffn-lv-NjC" eventType="touchUpInside" id="0kA-Ff-kDI"/>
@@ -353,8 +353,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
-                                                    <rect key="frame" x="535" y="6" width="51" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
+                                                    <rect key="frame" x="310" y="6" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
