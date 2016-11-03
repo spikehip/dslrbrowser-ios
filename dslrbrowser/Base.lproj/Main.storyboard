@@ -33,7 +33,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Nx-Cl-R7n">
+                                        <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="7Nx-Cl-R7n">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -114,7 +114,7 @@
                                     <action selector="downloadPhotoAction:" destination="jLw-vB-JJv" eventType="touchUpInside" id="OCF-GZ-QtL"/>
                                 </connections>
                             </button>
-                            <imageView multipleTouchEnabled="YES" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-l3-cE5">
+                            <imageView multipleTouchEnabled="YES" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-l3-cE5">
                                 <rect key="frame" x="24" y="72" width="327" height="488"/>
                             </imageView>
                         </subviews>
@@ -353,7 +353,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
                                                     <rect key="frame" x="310" y="6" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
@@ -403,6 +403,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="F0W-pL-S1P" kind="show" id="6dM-pY-Kzh"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zKq-bH-kma">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
@@ -433,6 +436,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usC-Al-pO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1466" y="865"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DJq-qh-Vgp">
+            <objects>
+                <viewController id="F0W-pL-S1P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FnK-yt-Auv"/>
+                        <viewControllerLayoutGuide type="bottom" id="T7x-L1-8j8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PTB-nr-wqw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geT-J1-xXN">
+                                <rect key="frame" x="16" y="226" width="343" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">DSLR Browser
+
+UPNPX Library by Felix Paul Kühne http://github.com/fkuehne/upnpx 
+Gear Icon made by Gregor Cresnar from www.flaticon.com 
+Photos Icon made by Kirill Kazachek from www.flaticon.com
+Camera Icon made by Madebyoliver from www.flaticon.com 
+
+© 2016 Andras Bekesi http://bekesiandras.hu/dslrbrowser
+Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="SyC-ak-eKh">
+                                <rect key="frame" x="16" y="72" width="146" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Di-TH-MRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220" y="865.81709145427294"/>
         </scene>
         <!--Settings-->
         <scene sceneID="BG1-Yd-4rf">
@@ -472,9 +516,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="256" height="256"/>
+        <image name="lens" width="470" height="470"/>
         <image name="photo-camera" width="25" height="25"/>
         <image name="picture" width="25" height="25"/>
-        <image name="placeholder" width="96" height="96"/>
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
