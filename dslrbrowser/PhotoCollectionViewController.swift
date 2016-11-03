@@ -69,7 +69,7 @@ class PhotoCollectionViewController: UICollectionViewController {
             let title: String = imageCollection.getImageTitleAt(withPosition: (indexPath as NSIndexPath).item)
         {
             self.titleToPositionMap[title] = indexPath
-            imageView.image = UIImage.init(named: "placeholder")
+            imageView.image = UIImage.init(named: "lens")
             print("Background loading image for ", (indexPath as NSIndexPath).item, " from ", url)
             progressView.progress = 0.0
             activityIndicatorView.startAnimating()
