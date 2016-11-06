@@ -167,7 +167,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vT2-SB-dvH" id="ehB-CX-bPQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-dF-Hlg">
@@ -343,7 +343,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSm-4N-IlV" id="8wy-yP-rh5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert GPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF2-KN-Ekp">
@@ -367,18 +367,18 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44h-iR-2bh" id="apR-iI-cWq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Download to Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7V9-YH-aYL">
-                                                    <rect key="frame" x="15" y="5" width="142" height="20"/>
+                                                    <rect key="frame" x="15" y="6" width="141.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Select an Album where to download to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sug-gI-PGz">
-                                                    <rect key="frame" x="15" y="25" width="202" height="14"/>
+                                                    <rect key="frame" x="15" y="25.5" width="202" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -391,11 +391,11 @@
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ekf-5s-Su0" id="ihW-kR-vRh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Credits and Copyright" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9p-hr-6ij">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -411,7 +411,7 @@
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKq-bH-kma" id="dce-2O-Dm5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -419,7 +419,7 @@
                                         <rect key="frame" x="0.0" y="176" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sgM-WD-yQv" id="14i-XW-Qi8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -449,29 +449,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geT-J1-xXN">
-                                <rect key="frame" x="16" y="226" width="343" height="384"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">DSLR Browser
-
-UPNPX Library by Felix Paul Kühne http://github.com/fkuehne/upnpx 
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="SyC-ak-eKh">
+                                <rect key="frame" x="16" y="72" width="146" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="G9r-1j-OEL"/>
+                                    <constraint firstAttribute="width" constant="146" id="UAK-0J-oUv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DSLR Browser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLP-8a-c1w">
+                                <rect key="frame" x="16" y="226" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Canon Cameras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="css-wG-RJP">
+                                <rect key="frame" x="16" y="264" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-kt-U9n">
+                                <rect key="frame" x="16" y="293" width="343" height="317"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geT-J1-xXN">
+                                        <rect key="frame" x="0.0" y="46" width="343" height="743"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="743" id="zm8-a5-9YJ"/>
+                                        </constraints>
+                                        <string key="text">UPNPX Library by Felix Paul Kühne http://github.com/fkuehne/upnpx 
 Gear Icon made by Gregor Cresnar from www.flaticon.com 
 Photos Icon made by Kirill Kazachek from www.flaticon.com
 Camera Icon made by Madebyoliver from www.flaticon.com 
 
 © 2016 Andras Bekesi http://bekesiandras.hu/dslrbrowser
 Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="SyC-ak-eKh">
-                                <rect key="frame" x="16" y="72" width="146" height="146"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="geT-J1-xXN" firstAttribute="top" secondItem="eTh-kt-U9n" secondAttribute="top" constant="46" id="CQP-UJ-41Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="geT-J1-xXN" secondAttribute="bottom" constant="-472" id="Wm1-fz-fx6"/>
+                                    <constraint firstAttribute="trailing" secondItem="geT-J1-xXN" secondAttribute="trailing" id="e31-b4-cSo"/>
+                                    <constraint firstItem="geT-J1-xXN" firstAttribute="centerX" secondItem="eTh-kt-U9n" secondAttribute="centerX" id="lMz-GY-jiB"/>
+                                    <constraint firstItem="geT-J1-xXN" firstAttribute="leading" secondItem="eTh-kt-U9n" secondAttribute="leading" id="mzF-5T-w4W"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SyC-ak-eKh" firstAttribute="top" secondItem="FnK-yt-Auv" secondAttribute="bottom" constant="8" symbolic="YES" id="0Lj-LQ-fTf"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="top" secondItem="PTB-nr-wqw" secondAttribute="top" constant="293" id="0S5-F2-P7g"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="trailing" secondItem="PTB-nr-wqw" secondAttribute="trailingMargin" id="6TB-2P-O4x"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="KLP-8a-c1w" secondAttribute="leading" id="H9Z-JY-HCq"/>
+                            <constraint firstItem="T7x-L1-8j8" firstAttribute="top" secondItem="eTh-kt-U9n" secondAttribute="bottom" constant="8" symbolic="YES" id="RR9-5F-uXY"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="top" secondItem="css-wG-RJP" secondAttribute="bottom" constant="8" symbolic="YES" id="YIX-v3-S7i"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="PTB-nr-wqw" secondAttribute="leadingMargin" id="d3m-Jp-M5r"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="css-wG-RJP" secondAttribute="leading" id="fgC-a7-xHL"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="trailing" secondItem="css-wG-RJP" secondAttribute="trailing" id="hhj-lu-4Eq"/>
+                            <constraint firstItem="KLP-8a-c1w" firstAttribute="top" secondItem="SyC-ak-eKh" secondAttribute="bottom" constant="8" symbolic="YES" id="q5n-VD-8jX"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="trailing" secondItem="KLP-8a-c1w" secondAttribute="trailing" id="tlN-No-IAn"/>
+                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="SyC-ak-eKh" secondAttribute="leading" id="zIg-pg-Qf7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Di-TH-MRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
