@@ -457,61 +457,45 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DSLR Browser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLP-8a-c1w">
-                                <rect key="frame" x="16" y="226" width="343" height="20.5"/>
+                                <rect key="frame" x="170" y="123" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Canon Cameras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="css-wG-RJP">
-                                <rect key="frame" x="16" y="264" width="343" height="21"/>
+                                <rect key="frame" x="170" y="151" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-kt-U9n">
-                                <rect key="frame" x="16" y="293" width="343" height="317"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geT-J1-xXN">
-                                        <rect key="frame" x="0.0" y="46" width="343" height="743"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="743" id="zm8-a5-9YJ"/>
-                                        </constraints>
-                                        <string key="text">UPNPX Library by Felix Paul Kühne http://github.com/fkuehne/upnpx 
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geT-J1-xXN">
+                                <rect key="frame" x="16" y="208" width="350" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">UPNPX Library by Felix Paul Kühne http://github.com/fkuehne/upnpx 
 Gear Icon made by Gregor Cresnar from www.flaticon.com 
 Photos Icon made by Kirill Kazachek from www.flaticon.com
 Camera Icon made by Madebyoliver from www.flaticon.com 
 
 © 2016 Andras Bekesi http://bekesiandras.hu/dslrbrowser
 Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="geT-J1-xXN" firstAttribute="top" secondItem="eTh-kt-U9n" secondAttribute="top" constant="46" id="CQP-UJ-41Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="geT-J1-xXN" secondAttribute="bottom" constant="-472" id="Wm1-fz-fx6"/>
-                                    <constraint firstAttribute="trailing" secondItem="geT-J1-xXN" secondAttribute="trailing" id="e31-b4-cSo"/>
-                                    <constraint firstItem="geT-J1-xXN" firstAttribute="centerX" secondItem="eTh-kt-U9n" secondAttribute="centerX" id="lMz-GY-jiB"/>
-                                    <constraint firstItem="geT-J1-xXN" firstAttribute="leading" secondItem="eTh-kt-U9n" secondAttribute="leading" id="mzF-5T-w4W"/>
-                                </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SyC-ak-eKh" firstAttribute="top" secondItem="FnK-yt-Auv" secondAttribute="bottom" constant="8" symbolic="YES" id="0Lj-LQ-fTf"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="top" secondItem="PTB-nr-wqw" secondAttribute="top" constant="293" id="0S5-F2-P7g"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="trailing" secondItem="PTB-nr-wqw" secondAttribute="trailingMargin" id="6TB-2P-O4x"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="KLP-8a-c1w" secondAttribute="leading" id="H9Z-JY-HCq"/>
-                            <constraint firstItem="T7x-L1-8j8" firstAttribute="top" secondItem="eTh-kt-U9n" secondAttribute="bottom" constant="8" symbolic="YES" id="RR9-5F-uXY"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="top" secondItem="css-wG-RJP" secondAttribute="bottom" constant="8" symbolic="YES" id="YIX-v3-S7i"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="PTB-nr-wqw" secondAttribute="leadingMargin" id="d3m-Jp-M5r"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="css-wG-RJP" secondAttribute="leading" id="fgC-a7-xHL"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="trailing" secondItem="css-wG-RJP" secondAttribute="trailing" id="hhj-lu-4Eq"/>
-                            <constraint firstItem="KLP-8a-c1w" firstAttribute="top" secondItem="SyC-ak-eKh" secondAttribute="bottom" constant="8" symbolic="YES" id="q5n-VD-8jX"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="trailing" secondItem="KLP-8a-c1w" secondAttribute="trailing" id="tlN-No-IAn"/>
-                            <constraint firstItem="eTh-kt-U9n" firstAttribute="leading" secondItem="SyC-ak-eKh" secondAttribute="leading" id="zIg-pg-Qf7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="geT-J1-xXN" secondAttribute="leading" id="BBD-Ap-1WB"/>
+                            <constraint firstItem="css-wG-RJP" firstAttribute="top" secondItem="KLP-8a-c1w" secondAttribute="bottom" constant="7" id="DhM-JS-oqr"/>
+                            <constraint firstItem="KLP-8a-c1w" firstAttribute="leading" secondItem="SyC-ak-eKh" secondAttribute="trailing" constant="8" id="NRw-da-XwY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SyC-ak-eKh" secondAttribute="leading" id="YPK-9r-S6Y"/>
+                            <constraint firstItem="T7x-L1-8j8" firstAttribute="top" secondItem="geT-J1-xXN" secondAttribute="bottom" constant="10" id="Ytc-hX-r4e"/>
+                            <constraint firstItem="geT-J1-xXN" firstAttribute="top" secondItem="FnK-yt-Auv" secondAttribute="bottom" constant="144" id="Ywf-UG-82c"/>
+                            <constraint firstItem="css-wG-RJP" firstAttribute="leading" secondItem="SyC-ak-eKh" secondAttribute="trailing" constant="8" id="cny-mv-DUb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="geT-J1-xXN" secondAttribute="trailing" constant="-7" id="d96-Cq-4Fn"/>
+                            <constraint firstItem="geT-J1-xXN" firstAttribute="leading" secondItem="SyC-ak-eKh" secondAttribute="leading" id="fQd-ac-Abf"/>
+                            <constraint firstItem="KLP-8a-c1w" firstAttribute="top" secondItem="SyC-ak-eKh" secondAttribute="bottom" constant="-95" id="q5n-VD-8jX"/>
                         </constraints>
                     </view>
                 </viewController>
