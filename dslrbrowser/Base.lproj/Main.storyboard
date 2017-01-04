@@ -170,7 +170,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-dF-Hlg">
+                                        <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_green" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-dF-Hlg">
                                             <rect key="frame" x="8" y="8" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="ibZ-dj-rU6"/>
@@ -566,6 +566,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
     </scenes>
     <resources>
         <image name="camera" width="256" height="256"/>
+        <image name="icon_green" width="32" height="30"/>
         <image name="lens" width="470" height="470"/>
         <image name="photo-camera" width="25" height="25"/>
         <image name="picture" width="25" height="25"/>
