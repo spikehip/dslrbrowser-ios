@@ -16,20 +16,6 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     var handlerQueue: [String : CompleteHandlerBlock] = [String:CompleteHandlerBlock]()
     var item:MediaServer1ItemObject
     
-//    class var sharedInstance: DownloadSessionDelegate {
-//        struct Static {
-//            static var instance : DownloadSessionDelegate?
-//            static var token : dispatch_once_t = 0
-//        }
-//        
-//        dispatch_once(&Static.token) {
-//            Static.instance = DownloadSessionDelegate()
-//            Static.instance!.handlerQueue = [String : CompleteHandlerBlock]()
-//        }
-//        
-//        return Static.instance!
-//    }
-    
     init(withItem item:MediaServer1ItemObject) {
         self.item = item
     }

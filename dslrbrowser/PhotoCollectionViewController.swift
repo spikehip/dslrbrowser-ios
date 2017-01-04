@@ -73,7 +73,8 @@ class PhotoCollectionViewController: UICollectionViewController {
             print("Background loading image for ", (indexPath as NSIndexPath).item, " from ", url)
             progressView.progress = 0.0
             activityIndicatorView.startAnimating()
-            DispatchQueue.global().async {
+            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.thumbnail", qos: .background)
+            backgroundQueue.async {
                 let data = try? Data(contentsOf: url)
                 if ( data == nil ) {
                     DispatchQueue.global().async {
@@ -146,7 +147,9 @@ class PhotoCollectionViewController: UICollectionViewController {
         if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
             let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
         {
-            DispatchQueue.main.async {
+            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.low", qos: .background)
+            
+            backgroundQueue.async {
                 let data = try? Data(contentsOf: url)
                 if ( data != nil ) {
                     let image : UIImage = UIImage(data: data!)!

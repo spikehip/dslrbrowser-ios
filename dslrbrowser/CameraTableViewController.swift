@@ -113,12 +113,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 let port : NSNumber = NSNumber(value: device.baseURL.port!)
                 var baseUrl : String = device.baseURL.scheme!+"://"+device.baseURL.host!
                 baseUrl += ":" + (port == 0 ? "80" : port.stringValue)
-                let url : URL = URL(string: baseUrl+device.smallIconURL)!
-                let data = try? Data(contentsOf: url)
-                if ( data != nil ) {
-                    let deviceIcon : UIImage = UIImage(data: data!)!
-                    DispatchQueue.main.async {
-                        iconView.image = deviceIcon
+                if ( device.smallIconURL != nil ) {
+                    let url : URL = URL(string: baseUrl+device.smallIconURL)!
+                    let data = try? Data(contentsOf: url)
+                    if ( data != nil ) {
+                        let deviceIcon : UIImage = UIImage(data: data!)!
+                        DispatchQueue.main.async {
+                            iconView.image = deviceIcon
+                        }
                     }
                 }
             }
@@ -177,6 +179,24 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                         browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
                     }
                     
+                }
+                else {
+                    print("This is NOT a canon camera, proceed scanning directory contents")
+                    print("------------------------------------------------------------------------")
+                    print("device.identifier: ",device)
+                    print("device.friendlyName: ",(device as AnyObject).friendlyName)
+                    print("device.manufacturer, device.manufacturerUrl: ", (device as AnyObject).manufacturer, (device as AnyObject).manufacturerURL)
+                    print("device.smallIconURL: ", (device as AnyObject).smallIconURL)
+                    print("device.modelName, device.modelDescription: ", (device as AnyObject).modelName, (device as AnyObject).modelDescription)
+                    print("------------------------------------------------------------------------")
+                    
+                    let deviceBaseUrl : String = getBaseUrlString(device as! BasicUPnPDevice)
+                    deviceUrls.append(deviceBaseUrl)
+                    
+                    CameraCollectionManager.initializeItemCollectionFor(cameraKey: deviceBaseUrl)
+                    CameraCollectionManager.devices[deviceBaseUrl] = (device as! MediaServer1Device)
+                    
+                    browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
                 }
             }
         }
