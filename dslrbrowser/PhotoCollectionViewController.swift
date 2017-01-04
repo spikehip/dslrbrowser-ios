@@ -153,7 +153,7 @@ class PhotoCollectionViewController: UICollectionViewController {
                 let data = try? Data(contentsOf: url)
                 if ( data != nil ) {
                     let image : UIImage = UIImage(data: data!)!
-                    DispatchQueue.main.async {
+                    DispatchQueue.global().async {
                         imageView.image = image
                         let size = data!.count / 1024 / 1024
                         print("Loaded image to peek view", (indexPath as NSIndexPath).item, " from ", url, " size(Mb) ", size)
