@@ -14,6 +14,7 @@ class PhotoCollectionViewController: UICollectionViewController {
     
     var titleToPositionMap : [String: IndexPath] = [String: IndexPath]()
     var indexToProgressMap : [IndexPath : Float] = [IndexPath: Float]()
+    var isLowOnMemory : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,8 @@ class PhotoCollectionViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        isLowOnMemory = true
+        self.collectionView?.reloadData()
         print("Maybe consider to implement this")
     }
     
@@ -62,43 +65,45 @@ class PhotoCollectionViewController: UICollectionViewController {
         let imageCollection:MediaServer1BasicObjectCollection = CameraCollectionManager.getItemCollectionFor(cameraKey: cameraKeyForSection)
         
         // Configure the cell
+        let title: String = imageCollection.getImageTitleAt(withPosition: (indexPath as NSIndexPath).item)
         if let imageView : UIImageView = cell.viewWithTag(1000) as? UIImageView,
             let activityIndicatorView = cell.viewWithTag(3000) as? UIActivityIndicatorView,
             let progressView = cell.viewWithTag(2000) as? UIProgressView,
-            let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_THUMBNAIL)),
-            let title: String = imageCollection.getImageTitleAt(withPosition: (indexPath as NSIndexPath).item)
+            let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_THUMBNAIL))
         {
             self.titleToPositionMap[title] = indexPath
-            imageView.image = UIImage.init(named: "lens")
             print("Background loading image for ", (indexPath as NSIndexPath).item, " from ", url)
             progressView.progress = 0.0
+            
             activityIndicatorView.startAnimating()
             let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.thumbnail", qos: .background)
-            backgroundQueue.async {
-                let data = try? Data(contentsOf: url)
-                if ( data == nil ) {
-                    DispatchQueue.global().async {
-                        activityIndicatorView.stopAnimating()
-                        progressView.setProgress(0, animated: false)
-                    }
-                }
-                else {
-                    let image : UIImage = UIImage(data: data!)!
-                    DispatchQueue.global().async {
-                        imageView.image = image
-                        activityIndicatorView.stopAnimating()
-                        if let progress:Float = self.indexToProgressMap[indexPath] {
-                            progressView.setProgress(progress, animated: true)
+            if (!isLowOnMemory) {
+                backgroundQueue.async {
+                    let data = try? Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        if ( data == nil || data!.count > 100000) {
+                            activityIndicatorView.stopAnimating()
+                            progressView.setProgress(0, animated: false)
+                            imageView.image = #imageLiteral(resourceName: "lens")
                         }
                         else {
-                            progressView.setProgress(0, animated: false)
+                            
+                            let image : UIImage = UIImage(data: data!)!
+                            imageView.image = image
+                            activityIndicatorView.stopAnimating()
+                            if let progress:Float = self.indexToProgressMap[indexPath] {
+                                progressView.setProgress(progress, animated: true)
+                            }
+                            else {
+                                progressView.setProgress(0, animated: false)
+                            }
+                            
+                            print("Loaded image ", (indexPath as NSIndexPath).item, " from ", url, " size(b) ", data!.count)
                         }
-                        
-                        print("Loaded image ", (indexPath as NSIndexPath).item, " from ", url, " size(b) ", data!.count)
                     }
-                    
                 }
             }
+            
         }
         
         return cell
@@ -147,18 +152,17 @@ class PhotoCollectionViewController: UICollectionViewController {
         if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
             let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
         {
-            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.low", qos: .background)
+            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.peek", qos: .userInteractive)
             
             backgroundQueue.async {
                 let data = try? Data(contentsOf: url)
                 if ( data != nil ) {
-                    let image : UIImage = UIImage(data: data!)!
-                    DispatchQueue.global().async {
+                    DispatchQueue.main.async {
+                        let image : UIImage = UIImage(data: data!)!
                         imageView.image = image
                         let size = data!.count / 1024 / 1024
                         print("Loaded image to peek view", (indexPath as NSIndexPath).item, " from ", url, " size(Mb) ", size)
                     }
-                    
                 }
             }
         }

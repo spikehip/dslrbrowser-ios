@@ -123,6 +123,9 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                         }
                     }
                 }
+                else {
+                    iconView.image = #imageLiteral(resourceName: "icon_green")
+                }
             }
             
         }
@@ -279,10 +282,11 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
-        if let indexPath : IndexPath = self.tableView.indexPath(for: cell),
-         let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: (indexPath as NSIndexPath).section),
-         let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection]
+        let indexPath : IndexPath = self.tableView.indexPath(for: cell)!
+        let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: indexPath.row)
+        if let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection]
         {
+            
             let detailViewController = segue.destination as! CameraDetailViewController
             detailViewController.cameraKey = cameraKeyForSection
             segue.destination.navigationItem.title = camera.friendlyName

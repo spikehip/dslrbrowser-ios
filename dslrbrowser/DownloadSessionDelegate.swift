@@ -87,7 +87,11 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
         let downloadsURLS : [URL] = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask)
         
         if ( downloadsURLS.count > 0 ) {
-            let destination : URL = URL.init(fileURLWithPath: downloadsURLS[0].path + "/"+item.title)
+            var filename:String = item.title
+            if (!item.title.uppercased().hasSuffix(".JPG")) {
+                filename = item.title + ".JPG"
+            }
+            let destination : URL = URL.init(fileURLWithPath: downloadsURLS[0].path + "/"+filename)
             
             do {
                 try FileManager.default.createDirectory(at: downloadsURLS[0], withIntermediateDirectories: true, attributes: nil)

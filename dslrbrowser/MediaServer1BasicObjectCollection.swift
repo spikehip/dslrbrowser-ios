@@ -73,7 +73,9 @@ open class MediaServer1BasicObjectCollection {
                 }
             }
             //no protocol info was found, take the first value as at least one shall be available
-            url = uriDictionary.values.first!
+            if (url == "") {
+                url = uriDictionary.values.first!
+            }
         }
         else if ( object.uriCollection.count >= 1 ) {
             url = uriDictionary.values.first!            
