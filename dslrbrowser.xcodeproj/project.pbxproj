@@ -29,6 +29,7 @@
 		A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF69761C125260001F9417 /* CameraTableViewController.swift */; };
 		A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */; };
 		A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */; };
+		A7FB8EB11E1E49D700835130 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FB8EB01E1E49D700835130 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A7AF69761C125260001F9417 /* CameraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTableViewController.swift; sourceTree = "<group>"; };
 		A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaServer1BasicObjectCollection.swift; sourceTree = "<group>"; };
 		A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveContentDirectoryBrowser.swift; sourceTree = "<group>"; };
+		A7FB8EB01E1E49D700835130 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EFBDA158EF9EBCCA3F818FC2 /* Pods-dslrbrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dslrbrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-dslrbrowser/Pods-dslrbrowser.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 				A75EAA021C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift */,
 				A72A882D1C31780F00CB0D97 /* DownloadProgressNotification.swift */,
 				A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */,
+				A7FB8EB01E1E49D700835130 /* SettingsViewController.swift */,
 			);
 			path = dslrbrowser;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */,
 				A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */,
 				A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */,
+				A7FB8EB11E1E49D700835130 /* SettingsViewController.swift in Sources */,
 				A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */,
 				A72A882E1C31780F00CB0D97 /* DownloadProgressNotification.swift in Sources */,
 				A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */,
