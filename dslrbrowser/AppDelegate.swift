@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Set user preference defaults
+        let prefs = UserDefaults.standard
+        let prefsDictionary:Dictionary = prefs.dictionaryRepresentation()
+        if ( !prefsDictionary.keys.contains("insertGPS") ) {
+            prefs.set(false, forKey: "insertGPS")
+        }
+        if ( !prefsDictionary.keys.contains("useOnlyCanon") ) {
+            prefs.set(true, forKey: "useOnlyCanon")
+        }
+        
         return true
     }
 

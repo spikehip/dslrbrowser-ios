@@ -331,7 +331,7 @@
         <!--Settings-->
         <scene sceneID="U6E-ZX-WRP">
             <objects>
-                <tableViewController id="cPD-Uz-PoG" sceneMemberID="viewController">
+                <tableViewController id="cPD-Uz-PoG" customClass="SettingsViewController" customModule="dslrbrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aEr-yQ-FLW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,8 +353,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-bh-KEP">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-bh-KEP">
                                                     <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchOnlyCanonChangedWithSender:" destination="cPD-Uz-PoG" eventType="touchUpInside" id="4rR-cs-AXK"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -456,6 +459,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="pbK-up-mQ2"/>
+                    <connections>
+                        <outlet property="switchInsertGPS" destination="Sv6-tG-JLH" id="Ttj-fg-ak6"/>
+                        <outlet property="switchOnlyCanon" destination="nOR-bh-KEP" id="q4Q-kO-TT5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usC-Al-pO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -573,7 +580,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xuL-My-8Wu"/>
         <segue reference="cho-2s-sCc"/>
+        <segue reference="xuL-My-8Wu"/>
     </inferredMetricsTieBreakers>
 </document>

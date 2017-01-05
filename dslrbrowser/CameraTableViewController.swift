@@ -31,6 +31,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class CameraTableViewController: UITableViewController, UPnPDBObserver {
 
+    let prefs = UserDefaults.standard
     let reuseIdentifier = "CameraCell"
     let manager = UPnPManager.getInstance()
     //var cameras : [String : MediaServer1Device] = [String : MediaServer1Device]()
@@ -78,6 +79,23 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         for key in CameraCollectionManager.devices.keys {
             print("Refreshing Device Contents", key)
             let device:MediaServer1Device = CameraCollectionManager.devices[key]!
+            let showOnlyCanon = prefs.bool(forKey: "useOnlyCanon")
+            var isCanon:Bool = false
+            if ( device.manufacturer.lowercased().range(of: "canon") != nil ) {
+                isCanon = true
+            }
+            
+            if ( showOnlyCanon && !isCanon ) {
+                print("Forcefully signing off Device ",key," signed off.")
+                if ( camerasAlreadyBrowsing.contains(key)) {
+                    camerasAlreadyBrowsing.remove(at: camerasAlreadyBrowsing.index(of: key)!)
+                }
+                CameraCollectionManager.removeItemCollectionFor(cameraKey: key)
+                CameraCollectionManager.devices.removeValue(forKey: key)
+
+                continue
+            }
+            
             browseCamera(device: device, deviceBaseUrl: key)
         }
         
@@ -183,7 +201,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                     }
                     
                 }
-                else {
+                else if (!prefs.bool(forKey: "useOnlyCanon")) {
                     print("This is NOT a canon camera, proceed scanning directory contents")
                     print("------------------------------------------------------------------------")
                     print("device.identifier: ",device)
