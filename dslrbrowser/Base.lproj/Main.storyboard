@@ -48,9 +48,9 @@
                                     </subviews>
                                 </view>
                                 <connections>
-                                    <segue destination="jLw-vB-JJv" kind="show" id="xuL-My-8Wu">
+                                    <segue destination="jLw-vB-JJv" kind="show" identifier="photoDetail" id="xuL-My-8Wu">
                                         <segue key="commit" inheritsFrom="parent" id="kY7-MY-Kds"/>
-                                        <segue key="preview" inheritsFrom="commit" id="JoT-bx-ods"/>
+                                        <segue key="preview" destination="jLw-vB-JJv" identifier="photoDetailPreview" id="JoT-bx-ods"/>
                                     </segue>
                                 </connections>
                             </collectionViewCell>
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsu-UR-Rmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2161" y="-1030"/>
+            <point key="canvasLocation" x="2250" y="-1030"/>
         </scene>
         <!--Cameras Navigation-->
         <scene sceneID="bI5-jE-GM2">

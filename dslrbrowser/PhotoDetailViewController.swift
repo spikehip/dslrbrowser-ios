@@ -30,7 +30,7 @@ class PhotoDetailViewController: UIViewController {
         }
         
         let downloadAction = previewActionForTitle("Download")
-        let quickShareAction = previewActionForTitle("Quick Share")
+        //let quickShareAction = previewActionForTitle("Quick Share")
         /*
         let action2 = previewActionForTitle("Destructive Action", style: .Destructive)
         
@@ -38,7 +38,7 @@ class PhotoDetailViewController: UIViewController {
         let subAction2 = previewActionForTitle("Sub Action 2")
         let groupedActions = UIPreviewActionGroup(title: "Sub Actions…", style: .Default, actions: [subAction1, subAction2] )
         */
-        return [downloadAction, quickShareAction]
+        return [downloadAction]
     }()
     
     // MARK: Preview actions
@@ -69,6 +69,8 @@ class PhotoDetailViewController: UIViewController {
         if let downloadButton:UIButton = self.view.viewWithTag(2000) as? UIButton,
             let progressView = self.view.viewWithTag(3000) as? UIProgressView
         {
+            downloadButton.isHidden = false
+            progressView.isHidden = false
             if (CameraCollectionManager.isDownloadFinishedFor(title: (imageData?.title)!, cameraKey: self.cameraKey!)) {
                 downloadButton.isEnabled = false
                 progressView.setProgress(1.0, animated: true)

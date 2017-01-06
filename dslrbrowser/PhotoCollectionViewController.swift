@@ -74,7 +74,7 @@ class PhotoCollectionViewController: UICollectionViewController {
             self.titleToPositionMap[title] = indexPath
             print("Background loading image for ", (indexPath as NSIndexPath).item, " from ", url)
             progressView.progress = 0.0
-            
+            imageView.image = #imageLiteral(resourceName: "lens")
             activityIndicatorView.startAnimating()
             let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.thumbnail", qos: .background)
             if (!isLowOnMemory) {
@@ -84,10 +84,17 @@ class PhotoCollectionViewController: UICollectionViewController {
                         if ( data == nil || data!.count > 100000) {
                             activityIndicatorView.stopAnimating()
                             progressView.setProgress(0, animated: false)
-                            imageView.image = #imageLiteral(resourceName: "lens")
+                            //TODO: icon for broken connection
+                            if ( data == nil ) {
+                                imageView.image = #imageLiteral(resourceName: "camera_wifi")
+                            }
+                            else {
+                                //TODO: icon for excessive thumbnail image
+                                print("Thumbnail image size(b) ", data!.count, " exceeds limit.")
+                                imageView.image = #imageLiteral(resourceName: "camera")
+                            }
                         }
                         else {
-                            
                             let image : UIImage = UIImage(data: data!)!
                             imageView.image = image
                             activityIndicatorView.stopAnimating()
@@ -97,7 +104,6 @@ class PhotoCollectionViewController: UICollectionViewController {
                             else {
                                 progressView.setProgress(0, animated: false)
                             }
-                            
                             print("Loaded image ", (indexPath as NSIndexPath).item, " from ", url, " size(b) ", data!.count)
                         }
                     }
@@ -148,6 +154,17 @@ class PhotoCollectionViewController: UICollectionViewController {
         let detailViewController : PhotoDetailViewController = (segue.destination as! PhotoDetailViewController)
         detailViewController.imageData = imageData
         detailViewController.cameraKey = cameraKeyForSection
+        
+        print("Segue identifier ", segue.identifier ?? "empty")
+        
+        if (segue.identifier == "photoDetailPreview") {
+            if let downloadButton : UIButton = segue.destination.view.viewWithTag(2000) as? UIButton,
+                let progressView:UIProgressView = segue.destination.view.viewWithTag(3000) as? UIProgressView{
+                downloadButton.isHidden = true
+                progressView.isHidden = true
+            }
+        }
+        
         
         if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
             let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
