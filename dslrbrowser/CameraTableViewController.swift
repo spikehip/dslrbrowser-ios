@@ -78,7 +78,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         
         for key in CameraCollectionManager.devices.keys {
             print("Refreshing Device Contents", key)
-            let device:MediaServer1Device = CameraCollectionManager.devices[key]!
+            let device:MediaServer1Device = CameraCollectionManager.devices[key]! 
             let showOnlyCanon = prefs.bool(forKey: "useOnlyCanon")
             var isCanon:Bool = false
             if ( device.manufacturer.lowercased().range(of: "canon") != nil ) {
@@ -105,46 +105,68 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+        return 2
+    }        
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        let cameraKey = CameraCollectionManager.getCameraKeyFor(section: (indexPath as NSIndexPath).row)
-        let device:MediaServer1Device = CameraCollectionManager.devices[cameraKey]!
-        //let device : MediaServer1Device = cameras[getKeyAt(cameras, indexPath: indexPath)]!
-        
-        if let iconView : UIImageView = cell.viewWithTag(1000) as? UIImageView,
-            let progress : UIProgressView = cell.viewWithTag(2000) as? UIProgressView,
-            let cameraModel : UILabel = cell.viewWithTag(3000) as? UILabel,
-        let description: UILabel = cell.viewWithTag(4000) as? UILabel,
-        let progressLabel: UILabel = cell.viewWithTag(5000) as? UILabel
-        {
-            cameraModel.text = device.friendlyName
-            description.text = device.modelDescription
-            progress.setProgress(CameraCollectionManager.getDownloadProgressFor(cameraKey: cameraKey), animated: false)
-            let total = CameraCollectionManager.getImageCountFor(cameraKey: cameraKey)
-            let dl = CameraCollectionManager.getDownloadCountFor(cameraKey: cameraKey)
-            progressLabel.text = String(dl)+"/"+String(total)
+        if ( indexPath.section == 0 ) {
+            let cameraKey = CameraCollectionManager.getCameraKeyFor(section: (indexPath as NSIndexPath).row)
+            let device:MediaServer1Device = CameraCollectionManager.devices[cameraKey]!
+            cell.isUserInteractionEnabled = true
             
-            DispatchQueue.global().async {
-                let port : NSNumber = NSNumber(value: device.baseURL.port!)
-                var baseUrl : String = device.baseURL.scheme!+"://"+device.baseURL.host!
-                baseUrl += ":" + (port == 0 ? "80" : port.stringValue)
-                if ( device.smallIconURL != nil ) {
-                    let url : URL = URL(string: baseUrl+device.smallIconURL)!
-                    let data = try? Data(contentsOf: url)
-                    if ( data != nil ) {
-                        let deviceIcon : UIImage = UIImage(data: data!)!
-                        DispatchQueue.main.async {
-                            iconView.image = deviceIcon
+            if let iconView : UIImageView = cell.viewWithTag(1000) as? UIImageView,
+                let progress : UIProgressView = cell.viewWithTag(2000) as? UIProgressView,
+                let cameraModel : UILabel = cell.viewWithTag(3000) as? UILabel,
+            let description: UILabel = cell.viewWithTag(4000) as? UILabel,
+            let progressLabel: UILabel = cell.viewWithTag(5000) as? UILabel
+            {
+                progress.isHidden = false
+                progressLabel.isHidden = false
+                cameraModel.text = device.friendlyName
+                description.text = device.modelDescription
+                progress.setProgress(CameraCollectionManager.getDownloadProgressFor(cameraKey: cameraKey), animated: false)
+                let total = CameraCollectionManager.getImageCountFor(cameraKey: cameraKey)
+                let dl = CameraCollectionManager.getDownloadCountFor(cameraKey: cameraKey)
+                progressLabel.text = String(dl)+"/"+String(total)
+                
+                DispatchQueue.global().async {
+                    let port : NSNumber = NSNumber(value: device.baseURL.port!)
+                    var baseUrl : String = device.baseURL.scheme!+"://"+device.baseURL.host!
+                    baseUrl += ":" + (port == 0 ? "80" : port.stringValue)
+                    if ( device.smallIconURL != nil ) {
+                        let url : URL = URL(string: baseUrl+device.smallIconURL)!
+                        let data = try? Data(contentsOf: url)
+                        if ( data != nil ) {
+                            let deviceIcon : UIImage = UIImage(data: data!)!
+                            DispatchQueue.main.async {
+                                iconView.image = deviceIcon
+                            }
                         }
                     }
+                    else {
+                        iconView.image = #imageLiteral(resourceName: "icon_green")
+                    }
                 }
-                else {
-                    iconView.image = #imageLiteral(resourceName: "icon_green")
-                }
+                
             }
+        }
+        if ( indexPath.section == 1 ) {
+            let cameraKey = PTPCameraCollectionManager.getCameraKeyFor(section: (indexPath as NSIndexPath).row)
+            let device:BasicUPnPDevice = PTPCameraCollectionManager.devices[cameraKey]!
+            if let iconView : UIImageView = cell.viewWithTag(1000) as? UIImageView,
+                let progress : UIProgressView = cell.viewWithTag(2000) as? UIProgressView,
+                let cameraModel : UILabel = cell.viewWithTag(3000) as? UILabel,
+                let description: UILabel = cell.viewWithTag(4000) as? UILabel,
+                let progressLabel: UILabel = cell.viewWithTag(5000) as? UILabel
+            {
+                cameraModel.text = device.friendlyName
+                description.text = device.modelDescription
+                progress.isHidden = true
+                progressLabel.isHidden = true
+                iconView.image = #imageLiteral(resourceName: "camera_wifi")
+            }
+            cell.isUserInteractionEnabled = false
             
         }
         
@@ -152,7 +174,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CameraCollectionManager.getCamerasCount()
+        if (section == 0) {
+            return CameraCollectionManager.getCamerasCount()
+        }
+        if (section == 1) {
+            return PTPCameraCollectionManager.devices.count
+        }
+        
+        return 0
     }
     
     override func didReceiveMemoryWarning() {
@@ -172,9 +201,57 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         
         //add new devices
         for device in sender.rootDevices {
+            let manufacturer : String = (device as! BasicUPnPDevice).manufacturer
+            let isCanon : Bool = ( manufacturer.lowercased().range(of: "canon") != nil )
+            
+            //PTP Devices
+            //device.services {
+//            "urn:schemas-canon-com:service:ICPO-SmartPhoneEOSSystemService:1" = "<BasicUPnPService: 0x14edb590>";
+//        }
+//        ------------------------------------------------------------------------
+//            device.identifier:  <BasicUPnPDevice: 0x14ec9440>
+//        device.friendlyName:  Canon EOS 6D
+//        device.manufacturer, device.manufacturerUrl:  Canon http://www.canon.com/
+//        device.smallIconURL:  nil
+//        device.modelName, device.modelDescription:  Canon EOS 6D Canon Digital Camera
+//        IP:  http://192.168.2.103
+//        ------------------------------------------------------------------------
+        
+            
+            if ((device as AnyObject).isKind(of: BasicUPnPDevice.self)) {
+                if ( isCanon || !prefs.bool(forKey: "useOnlyCanon")) {
+                    print("device.services", (device as! BasicUPnPDevice).services)
+                    print("------------------------------------------------------------------------")
+                    print("device.identifier: ",device)
+                    print("device.friendlyName: ",(device as AnyObject).friendlyName)
+                    print("device.manufacturer, device.manufacturerUrl: ", (device as AnyObject).manufacturer, (device as AnyObject).manufacturerURL)
+                    print("device.smallIconURL: ", (device as AnyObject).smallIconURL)
+                    print("device.modelName, device.modelDescription: ", (device as AnyObject).modelName, (device as AnyObject).modelDescription)
+                    let deviceBaseUrl : String = getBaseUrlString(device as! BasicUPnPDevice)
+                    print("IP: ",deviceBaseUrl)
+                    print("------------------------------------------------------------------------")
+
+                    var isCameraService = false
+                    //urn:microsoft-com:service:MtpNullService:1
+                    //urn:schemas-canon-com:service:ICPO-SmartPhoneEOSSystemService:1
+                    if ((device as! BasicUPnPDevice).services["urn:microsoft-com:service:MtpNullService:1"] != nil) {
+                        isCameraService = true
+                    }
+                    if ((device as! BasicUPnPDevice).services["urn:schemas-canon-com:service:ICPO-SmartPhoneEOSSystemService:1"] != nil) {
+                        isCameraService = true
+                    }
+                    
+                    if (isCameraService) {
+                        deviceUrls.append(deviceBaseUrl)
+                        PTPCameraCollectionManager.devices[deviceBaseUrl] = (device as! BasicUPnPDevice)
+                    }
+                    
+                }
+            }
+            
+            //DLNA Devices
             if ((device as AnyObject).isKind(of: MediaServer1Device.self)) {
-                let manufacturer : String = (device as AnyObject).manufacturer
-                if ( manufacturer.lowercased().range(of: "canon") != nil ) {
+                if ( isCanon ) {
                     print("This is a canon camera, proceed scanning directory contents")
                     print("------------------------------------------------------------------------")
                     print("device.identifier: ",device)
@@ -233,7 +310,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 CameraCollectionManager.devices.removeValue(forKey: key)
             }
         }
-        
+        //removed signed off PTP/IP devices
+        for key in PTPCameraCollectionManager.devices.keys {
+            if (!deviceUrls.contains(key)) {
+                print("PTP Device ",key," signed off.")
+                PTPCameraCollectionManager.devices.removeValue(forKey: key)
+            }
+        }
+
         //UPnPManager.GetInstance().DB.removeObserver(self)
         reloadAllCollectionViews()
     }
@@ -245,7 +329,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
             recursiveCDBrowser.browseTree()
             
             DispatchQueue.main.async {
-                let badgeValue = CameraCollectionManager.getImageCountFor(cameraKey: deviceBaseUrl)
+                let badgeValue = CameraCollectionManager.getTotalImageCount()
                 if (self.tabBarController?.selectedIndex != 1) {
                     let tabArray = self.tabBarController?.tabBar.items as NSArray!
                     let tabItem = tabArray?.object(at: 1) as! UITabBarItem
@@ -302,7 +386,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         let cell = sender as! UITableViewCell
         let indexPath : IndexPath = self.tableView.indexPath(for: cell)!
         let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: indexPath.row)
-        if let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection]
+        if let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection] 
         {
             
             let detailViewController = segue.destination as! CameraDetailViewController
