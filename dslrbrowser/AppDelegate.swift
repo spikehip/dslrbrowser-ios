@@ -27,6 +27,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             prefs.set(true, forKey: "useOnlyCanon")
         }
         
+        /*
+         let assets:PHFetchResult<PHAsset> = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: nil)
+         assets.enumerateObjects({ asset,_,_ in
+         print(asset)
+         print(asset.localIdentifier)
+         let options:PHImageRequestOptions = PHImageRequestOptions.init()
+         options.isSynchronous = true
+         PHImageManager.default().requestImageData(for: asset, options: options, resultHandler: {
+         data,_,_,info in
+         print(info)
+         })
+         })
+         */
+         /*
+ <PHAsset: 0x17fbd790> 3F4CEF0A-8C11-483D-BBD2-A27EC3310579/L0/001 mediaType=1/0, sourceType=1, (3648x5472), creationDate=2016-08-20 13:29:47 +0000, location=1, hidden=0, favorite=0
+ 3F4CEF0A-8C11-483D-BBD2-A27EC3310579/L0/001
+ Optional([AnyHashable("PHImageResultWantedImageFormatKey"): 9999, AnyHashable("PHImageResultOptimizedForSharing"): 0, AnyHashable("PHImageResultIsPlaceholderKey"): 0, AnyHashable("PHImageFileSandboxExtensionTokenKey"): f9994d8f875db567ed6c04afa6a30ed6bda8869c;00000000;00000000;0000001a;com.apple.app-sandbox.read;00000001;01000002;0000000000aac0a3;/private/var/mobile/Media/DCIM/100APPLE/IMG_0608.JPG, AnyHashable("PHImageResultIsDegradedKey"): 0, AnyHashable("PHImageResultDeliveredImageFormatKey"): 9999, AnyHashable("PHImageResultIsInCloudKey"): 0, AnyHashable("PHImageFileUTIKey"): public.jpeg, AnyHashable("PHImageFileURLKey"): file:///var/mobile/Media/DCIM/100APPLE/IMG_0608.JPG, AnyHashable("PHImageFileDataKey"): <PLXPCShMemData: 0x17fb8180> bufferLength=5230592 dataLength=5228792, AnyHashable("PHImageFileOrientationKey"): 2])
+        */
+        
         return true
     }
 
