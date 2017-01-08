@@ -69,6 +69,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        print("Maybe clear up the caches at this point")
+        let cacheDirectory:URL = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
+        do {
+            let files:[String] = try FileManager.default.contentsOfDirectory(atPath: cacheDirectory.path)
+            for file in files {
+                if (file.hasPrefix("dslrbrowser")) {
+                    let cacheFile:URL = URL.init(fileURLWithPath: cacheDirectory.path + "/" + file )
+                    try FileManager.default.removeItem(atPath: cacheFile.path)
+                    print("Cache item ", cacheFile.path, " cleared")
+                }
+            }
+        }
+        catch {
+            print("Error cleaning cache")
+        }
     }
     
     func application(_ application: UIApplication,

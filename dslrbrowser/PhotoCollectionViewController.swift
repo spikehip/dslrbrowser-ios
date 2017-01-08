@@ -78,24 +78,40 @@ class PhotoCollectionViewController: UICollectionViewController {
             activityIndicatorView.startAnimating()
             let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.thumbnail", qos: .background)
             if (!isLowOnMemory) {
+                let filename:String = "dslrbrowser_thumbnail_" + (url.absoluteString.data(using: .utf8)?.base64EncodedString())! + ".jpg"
+                let cacheDirectory:URL = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
+                let cacheFileName:URL = URL.init(fileURLWithPath: cacheDirectory.path + "/" + filename )
+                
                 backgroundQueue.async {
-                    let data = try? Data(contentsOf: url)
+                    var data:Data
+                    if (FileManager.default.fileExists(atPath: cacheFileName.path)) {
+                        //load file
+                        data = FileManager.default.contents(atPath: cacheFileName.path)!
+                    }
+                    else {
+                        //get file and save to cache
+                        data = try! Data(contentsOf: url)
+                        if ( data.count > 0 ) {
+                            FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                        }
+                    }
+                    
                     DispatchQueue.main.async {
-                        if ( data == nil || data!.count > 100000) {
+                        if ( data.count == 0 || data.count > 100000) {
                             activityIndicatorView.stopAnimating()
                             progressView.setProgress(0, animated: false)
                             //TODO: icon for broken connection
-                            if ( data == nil ) {
+                            if ( data.count == 0 ) {
                                 imageView.image = #imageLiteral(resourceName: "camera_wifi")
                             }
                             else {
                                 //TODO: icon for excessive thumbnail image
-                                print("Thumbnail image size(b) ", data!.count, " exceeds limit.")
+                                print("Thumbnail image size(b) ", data.count, " exceeds limit.")
                                 imageView.image = #imageLiteral(resourceName: "camera")
                             }
                         }
                         else {
-                            let image : UIImage = UIImage(data: data!)!
+                            let image : UIImage = UIImage(data: data)!
                             imageView.image = image
                             activityIndicatorView.stopAnimating()
                             if let progress:Float = self.indexToProgressMap[indexPath] {
@@ -104,7 +120,7 @@ class PhotoCollectionViewController: UICollectionViewController {
                             else {
                                 progressView.setProgress(0, animated: false)
                             }
-                            print("Loaded image ", (indexPath as NSIndexPath).item, " from ", url, " size(b) ", data!.count)
+                            print("Loaded image ", (indexPath as NSIndexPath).item, " from ", url, " size(b) ", data.count)
                         }
                     }
                 }
@@ -170,14 +186,29 @@ class PhotoCollectionViewController: UICollectionViewController {
             let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
         {
             let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.peek", qos: .userInteractive)
+            let filename:String = "dslrbrowser_preview_" + (url.absoluteString.data(using: .utf8)?.base64EncodedString())! + ".jpg"
+            let cacheDirectory:URL = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
+            let cacheFileName:URL = URL.init(fileURLWithPath: cacheDirectory.path + "/" + filename )
             
             backgroundQueue.async {
-                let data = try? Data(contentsOf: url)
-                if ( data != nil ) {
+                var data:Data
+                if (FileManager.default.fileExists(atPath: cacheFileName.path)) {
+                    //load file
+                    data = FileManager.default.contents(atPath: cacheFileName.path)!
+                }
+                else {
+                    //get file and save to cache
+                    data = try! Data(contentsOf: url)
+                    if ( data.count > 0 ) {
+                        FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                    }
+                }
+                
+                if ( data.count > 0 ) {
                     DispatchQueue.main.async {
-                        let image : UIImage = UIImage(data: data!)!
+                        let image : UIImage = UIImage(data: data)!
                         imageView.image = image
-                        let size = data!.count / 1024 / 1024
+                        let size = data.count / 1024 / 1024
                         print("Loaded image to peek view", (indexPath as NSIndexPath).item, " from ", url, " size(Mb) ", size)
                     }
                 }
