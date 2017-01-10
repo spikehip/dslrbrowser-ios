@@ -34,7 +34,26 @@ open class ThumbnailCacheManager {
     }
     
     open func cleanUpDatabase() {
-        print("TODO")
+        print("Cleaning up downloaded item database")
+        let photoEntityFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoEntity")
+        do {
+            let entities = try self.dc.managedObjectContext.fetch(photoEntityFetchRequest) as! [PhotoEntity]
+            print("Query download database map found ",entities.count, " entities")
+            for entity in entities {
+                let assets:PHFetchResult<PHAsset> = PHAsset.fetchAssets(withLocalIdentifiers: [entity.localIdentifier!], options: nil)
+                if (assets.count == 0) {
+                    self.dc.managedObjectContext.delete(entity)
+                    print("Removed ", entity.localIdentifier ?? "???")
+                }
+            }
+            
+            try self.dc.managedObjectContext.save()
+            
+        }
+        catch {
+            print("Error cleaning database", error)
+        }
+        print("Finished cleaning up downloaded item database")
     }
     
     open func refresh() {
