@@ -15,6 +15,7 @@ open class ThumbnailCacheManager {
     private var dc:DataController
     private var thumbnails = [String : String]()
     private var previews = [String : String]()
+    private var isRefreshRunning:Bool
     
     open static let defaultManager:ThumbnailCacheManager = {
         let instance = ThumbnailCacheManager()
@@ -24,6 +25,7 @@ open class ThumbnailCacheManager {
     init() {
         dc = DataController()
         dc.waitUntilInitialized()
+        isRefreshRunning = false
         refresh()
      }
     
@@ -36,53 +38,55 @@ open class ThumbnailCacheManager {
     }
     
     open func refresh() {
-        let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.thumbnailcache", qos: .background)
-        backgroundQueue.async {
-            
-            //query downloaded image list from app's sqlite database
-            let photoEntityFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoEntity")
-            do {
-                let entities = try self.dc.managedObjectContext.fetch(photoEntityFetchRequest) as! [PhotoEntity]
-                print("Query download database map found ",entities.count, " entities")
-                var isDatabaseChanged:Bool = false
-                for entity in entities {
-                    print("Refreshing thumbnail cache for entity ", entity)
-                    //query Photos framework to check if image is still in photo roll
-                    let assets:PHFetchResult<PHAsset> = PHAsset.fetchAssets(withLocalIdentifiers: [entity.localIdentifier!], options: nil)
-                    if (assets.count > 0) {
-                        print("Entity found in photo roll, generating thumbnail cache")
-                        //check if a thumbnail is already cached in the filesystem
-                        //and request a thumbnail image otherwise
-                        self.checkThumbnailImage(entity: entity, asset: assets[0])
-                        
-                        //check if a preview is already cached in the filesystem
-                        //and request a preview image otherwise
-                        self.checkPreviewImage(entity: entity, asset: assets[0])
-                    }
-                    else {
-                        //remove deleted image from database
-                        print("Entity not found in photo roll, cleaning up database entries")
-                        let thumbnailKey = self.getThumbnailKeyFor(cameraKey: entity.cameraKey!, title: entity.title!)
-                        if (self.thumbnails.keys.contains(thumbnailKey)) {
-                            self.thumbnails.removeValue(forKey: thumbnailKey)
+        if (!isRefreshRunning) {
+            isRefreshRunning = true
+            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.thumbnailcache", qos: .background)
+            backgroundQueue.async {
+                //query downloaded image list from app's sqlite database
+                let photoEntityFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoEntity")
+                do {
+                    let entities = try self.dc.managedObjectContext.fetch(photoEntityFetchRequest) as! [PhotoEntity]
+                    print("Query download database map found ",entities.count, " entities")
+                    var isDatabaseChanged:Bool = false
+                    for entity in entities {
+                        print("Refreshing thumbnail cache for entity ", entity)
+                        //query Photos framework to check if image is still in photo roll
+                        let assets:PHFetchResult<PHAsset> = PHAsset.fetchAssets(withLocalIdentifiers: [entity.localIdentifier!], options: nil)
+                        if (assets.count > 0) {
+                            print("Entity found in photo roll, generating thumbnail cache")
+                            //check if a thumbnail is already cached in the filesystem
+                            //and request a thumbnail image otherwise
+                            self.checkThumbnailImage(entity: entity, asset: assets[0])
+                            
+                            //check if a preview is already cached in the filesystem
+                            //and request a preview image otherwise
+                            self.checkPreviewImage(entity: entity, asset: assets[0])
                         }
-                        if (self.previews.keys.contains(thumbnailKey)) {
-                            self.previews.removeValue(forKey: thumbnailKey)
+                        else {
+                            //remove deleted image from database
+                            print("Entity not found in photo roll, cleaning up database entries")
+                            let thumbnailKey = self.getThumbnailKeyFor(cameraKey: entity.cameraKey!, title: entity.title!)
+                            if (self.thumbnails.keys.contains(thumbnailKey)) {
+                                self.thumbnails.removeValue(forKey: thumbnailKey)
+                            }
+                            if (self.previews.keys.contains(thumbnailKey)) {
+                                self.previews.removeValue(forKey: thumbnailKey)
+                            }
+                            self.dc.managedObjectContext.delete(entity)
+                            CameraCollectionManager.removeFinishedDownloadFor(cameraKey: entity.cameraKey!, title: entity.title!)
+                            isDatabaseChanged = true
                         }
-                        self.dc.managedObjectContext.delete(entity)
-                        CameraCollectionManager.removeFinishedDownloadFor(cameraKey: entity.cameraKey!, title: entity.title!)
-                        isDatabaseChanged = true
                     }
+                    if (isDatabaseChanged) {
+                        try self.dc.managedObjectContext.save()
+                    }
+                } catch {
+                    print("Failed to fetch photos: \(error)")
                 }
-                if (isDatabaseChanged) {
-                    try self.dc.managedObjectContext.save()
-                }
-            } catch {
-                print("Failed to fetch photos: \(error)")
+                
+                print("ThumbnailCacheManager refresh() finished")
+                self.isRefreshRunning = false
             }
-            
-            print("ThumbnailCacheManager refresh() finished")
-        
         }
     }
     
