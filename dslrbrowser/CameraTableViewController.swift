@@ -306,6 +306,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 }
                 CameraCollectionManager.removeItemCollectionFor(cameraKey: key)
                 CameraCollectionManager.devices.removeValue(forKey: key)
+                CameraCollectionManager.downloads.removeValue(forKey: key)
             }
         }
         //removed signed off PTP/IP devices
