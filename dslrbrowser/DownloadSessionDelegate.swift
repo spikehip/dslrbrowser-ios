@@ -8,6 +8,7 @@
 
 import Foundation
 import Photos
+import CoreData
 
 typealias CompleteHandlerBlock = () -> ()
 
@@ -46,6 +47,8 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     
     func addAssetToPhotoLibrary(_ location: URL) {
         let photoLibrary = PHPhotoLibrary.shared()
+        let dc:DataController = DataController()
+        
         photoLibrary.performChanges(
             {() -> Void in
                 print("Photos creating request for image at url \(location.absoluteString)")
@@ -59,13 +62,28 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                     if ( asset.canPerform(PHAssetEditOperation.properties)) {
                         let changeRequest = PHAssetChangeRequest(for: asset)
                         changeRequest.isFavorite = true
+                        //TODO: fill location here
                     }
-                    
                 }
+                let cameraKey = CameraCollectionManager.getCameraKeyFor(mediaItem: self.item)
+                let photoEntity:PhotoEntity = NSEntityDescription.insertNewObject(forEntityName: "PhotoEntity", into: dc.managedObjectContext) as! PhotoEntity
+                photoEntity.cameraKey = cameraKey
+                photoEntity.localIdentifier = assetIdentifier
+                photoEntity.title = self.item.title
+                print("Database entity prepared: ", photoEntity)
+
             }, completionHandler: {
                 (success: Bool, error: Error?) -> Void in
                 if (success) {
                     print("Photos change success \(success)");
+                    do {
+                        dc.waitUntilInitialized()
+                        try dc.managedObjectContext.save()
+                        print("PhotoEntity persisted ")                        
+                    }
+                    catch {
+                        print("Error persisting PhotoEntity ", error)
+                    }
                 }
                 else {
                     print("Photos change error \(error?.localizedDescription)")

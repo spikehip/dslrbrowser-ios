@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import CoreData
 
 class RecursiveContentDirectoryBrowser {
     
@@ -16,6 +17,7 @@ class RecursiveContentDirectoryBrowser {
     var sortCriteria: String
     var cameraKey : String
     var itemCollection : MediaServer1BasicObjectCollection
+    let dc:DataController = DataController()
     
     init(withContentDirectory directory:SoapActionsContentDirectory1, deviceBaseUrl: String) {
         contentDirectory = directory
@@ -31,6 +33,7 @@ class RecursiveContentDirectoryBrowser {
         if (outSortCaps.range(of: "dc:date").location != NSNotFound ) {
             sortCriteria = "-dc:date"
         }
+        dc.waitUntilInitialized()
     }
     
     func browseTree() {
@@ -75,6 +78,20 @@ class RecursiveContentDirectoryBrowser {
             if (!(item as AnyObject).isContainer) {
                 let image:MediaServer1ItemObject = item as! MediaServer1ItemObject
                 itemCollection.addItem(withObject: image)
+                let photoEntityFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoEntity")
+                photoEntityFetchRequest.predicate = NSPredicate.init(format: "cameraKey == %@ and title == %@", self.cameraKey, image.title)
+                do {
+                    let fetchedPhotoEntities = try dc.managedObjectContext.fetch(photoEntityFetchRequest) as! [PhotoEntity]
+                    for entity in fetchedPhotoEntities {
+                        print("Found item registered as downloaded ",entity.localIdentifier ?? "???")
+                    }
+                    if (fetchedPhotoEntities.count > 0) {
+                        CameraCollectionManager.addFinishedDownloadFor(cameraKey: self.cameraKey, title: image.title)
+                    }
+                } catch {
+                    fatalError("Failed to fetch photos: \(error)")
+                }
+                
             }
             else {
                 let obj:MediaServer1BasicObject = item as! MediaServer1BasicObject

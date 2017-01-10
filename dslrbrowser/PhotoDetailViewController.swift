@@ -73,7 +73,7 @@ class PhotoDetailViewController: UIViewController {
             progressView.isHidden = false
             if (CameraCollectionManager.isDownloadFinishedFor(title: (imageData?.title)!, cameraKey: self.cameraKey!)) {
                 downloadButton.isEnabled = false
-                progressView.setProgress(1.0, animated: true)
+                progressView.setProgress(1.0, animated: false)
             }
         }
         

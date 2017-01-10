@@ -10,7 +10,6 @@
 		13FE9E4E7F9501C51A206711 /* libPods-dslrbrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 098EA38C004B2D3F023003B0 /* libPods-dslrbrowser.a */; };
 		A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */; };
 		A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */; };
-		A723198F1BCAD5DD00C82A38 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723198E1BCAD5DD00C82A38 /* SecondViewController.swift */; };
 		A72319921BCAD5DD00C82A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72319901BCAD5DD00C82A38 /* Main.storyboard */; };
 		A72319941BCAD5DD00C82A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72319931BCAD5DD00C82A38 /* Assets.xcassets */; };
 		A72319971BCAD5DD00C82A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72319951BCAD5DD00C82A38 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,9 @@
 		A75EAA031C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAA021C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift */; };
 		A7736D001C35276A00B2C2CA /* CameraDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */; };
 		A78A2ABB1C27462F0016204E /* DownloadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A2ABA1C27462F0016204E /* DownloadItem.swift */; };
+		A79359181E20FA8000543B6E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A79359161E20FA8000543B6E /* Model.xcdatamodeld */; };
+		A793591A1E23906E00543B6E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79359191E23906E00543B6E /* DataController.swift */; };
+		A793591E1E24B61200543B6E /* ThumbnailCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793591D1E24B61200543B6E /* ThumbnailCacheManager.swift */; };
 		A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79739461C178CCB005B236C /* CameraCollectionManager.swift */; };
 		A79739491C1794AB005B236C /* ImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79739481C1794AB005B236C /* ImageQuality.swift */; };
 		A7AB123C1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */; };
@@ -56,7 +58,6 @@
 		A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		A72319871BCAD5DC00C82A38 /* dslrbrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dslrbrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A723198E1BCAD5DD00C82A38 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A72319911BCAD5DD00C82A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A72319931BCAD5DD00C82A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72319961BCAD5DD00C82A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +73,9 @@
 		A75EAA021C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadSessionDelegateFactory.swift; sourceTree = "<group>"; };
 		A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraDetailViewController.swift; sourceTree = "<group>"; };
 		A78A2ABA1C27462F0016204E /* DownloadItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadItem.swift; sourceTree = "<group>"; };
+		A79359171E20FA8000543B6E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A79359191E23906E00543B6E /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A793591D1E24B61200543B6E /* ThumbnailCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCacheManager.swift; sourceTree = "<group>"; };
 		A79739461C178CCB005B236C /* CameraCollectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCollectionManager.swift; sourceTree = "<group>"; };
 		A79739481C1794AB005B236C /* ImageQuality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageQuality.swift; sourceTree = "<group>"; };
 		A7A048A71C0B354900F79D6D /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Build/Products/Debug-iphonesimulator/libPods.a"; sourceTree = "<group>"; };
@@ -146,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */,
-				A723198E1BCAD5DD00C82A38 /* SecondViewController.swift */,
 				A72319901BCAD5DD00C82A38 /* Main.storyboard */,
 				A72319931BCAD5DD00C82A38 /* Assets.xcassets */,
 				A72319951BCAD5DD00C82A38 /* LaunchScreen.storyboard */,
@@ -166,6 +169,9 @@
 				A7736CFF1C35276A00B2C2CA /* CameraDetailViewController.swift */,
 				A7FB8EB01E1E49D700835130 /* SettingsViewController.swift */,
 				A7FB8EB21E1EE02D00835130 /* PTPCameraCollectionManager.swift */,
+				A79359161E20FA8000543B6E /* Model.xcdatamodeld */,
+				A79359191E23906E00543B6E /* DataController.swift */,
+				A793591D1E24B61200543B6E /* ThumbnailCacheManager.swift */,
 			);
 			path = dslrbrowser;
 			sourceTree = "<group>";
@@ -391,14 +397,16 @@
 				A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */,
 				A79739491C1794AB005B236C /* ImageQuality.swift in Sources */,
 				A7415F601C2DE67B009F54E9 /* DownloadSessionDelegate.swift in Sources */,
-				A723198F1BCAD5DD00C82A38 /* SecondViewController.swift in Sources */,
 				A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */,
 				A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */,
 				A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */,
+				A79359181E20FA8000543B6E /* Model.xcdatamodeld in Sources */,
 				A7FB8EB11E1E49D700835130 /* SettingsViewController.swift in Sources */,
 				A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */,
 				A72A882E1C31780F00CB0D97 /* DownloadProgressNotification.swift in Sources */,
 				A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */,
+				A793591E1E24B61200543B6E /* ThumbnailCacheManager.swift in Sources */,
+				A793591A1E23906E00543B6E /* DataController.swift in Sources */,
 				A75EAA031C2F45B700CAC091 /* DownloadSessionDelegateFactory.swift in Sources */,
 				A7AB123C1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */,
 				A7FB8EB31E1EE02D00835130 /* PTPCameraCollectionManager.swift in Sources */,
@@ -683,6 +691,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A79359161E20FA8000543B6E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A79359171E20FA8000543B6E /* Model.xcdatamodel */,
+			);
+			currentVersion = A79359171E20FA8000543B6E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A723197F1BCAD5DC00C82A38 /* Project object */;
 }

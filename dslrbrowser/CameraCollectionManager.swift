@@ -74,8 +74,22 @@ open class CameraCollectionManager {
         if ( !downloads.keys.contains(cameraKey) ) {
             downloads[cameraKey] = [String]()
         }
-        
-        downloads[cameraKey]!.append(title)
+        if (!downloads[cameraKey]!.contains(title)) {
+            downloads[cameraKey]!.append(title)
+        }        
+    }
+    
+    static func removeFinishedDownloadFor(cameraKey:String, title: String) {
+        if (downloads.keys.contains(cameraKey)) {
+            var i=0
+            for item in downloads[cameraKey]! {
+                if (item == title) {
+                    downloads[cameraKey]?.remove(at: i)
+                    break
+                }
+                i=i+1
+            }
+        }
     }
     
     static func isDownloadFinishedFor(title:String, cameraKey:String) -> Bool {
@@ -112,4 +126,5 @@ open class CameraCollectionManager {
         
         return key
     }
+    
 }

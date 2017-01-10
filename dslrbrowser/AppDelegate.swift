@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if ( !prefsDictionary.keys.contains("useOnlyCanon") ) {
             prefs.set(true, forKey: "useOnlyCanon")
         }
+
+        ThumbnailCacheManager.defaultManager.refresh()
         
         /*
          let assets:PHFetchResult<PHAsset> = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: nil)
@@ -84,6 +87,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         catch {
             print("Error cleaning cache")
         }
+        
+        ThumbnailCacheManager.defaultManager.cleanUpDatabase()
     }
     
     func application(_ application: UIApplication,

@@ -46,7 +46,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
             let cameraKey:String = CameraCollectionManager.getCameraKeyFor(mediaItem: progress.item)
             let indexPath: IndexPath = CameraCollectionManager.getIndexPathFor(cameraKey: cameraKey) as IndexPath
             CameraCollectionManager.addFinishedDownloadFor(cameraKey: cameraKey, title: progress.item.title)
-
+            
             if let cell = self.tableView.cellForRow(at: indexPath) {
                 if let progress : UIProgressView = cell.viewWithTag(2000) as? UIProgressView,
                 let progressLabel: UILabel = cell.viewWithTag(5000) as? UILabel {
@@ -58,9 +58,6 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 }
             }
         })
-        
-        super.viewDidLoad()
-        
         refreshControl = UIRefreshControl()
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(CameraTableViewController.refreshView), for: UIControlEvents.valueChanged)
@@ -99,6 +96,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
             browseCamera(device: device, deviceBaseUrl: key)
         }
         
+        ThumbnailCacheManager.defaultManager.refresh()
         reloadAllCollectionViews()
         
         refreshControl?.endRefreshing()
