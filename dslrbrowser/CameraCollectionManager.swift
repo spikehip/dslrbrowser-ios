@@ -48,7 +48,7 @@ open class CameraCollectionManager {
             }
             i += 1
         }
-        return IndexPath.init(row: 0, section: 0)
+        return IndexPath.init(row: i, section: 0)
     }
     
     static func getCamerasCount() -> Int {
