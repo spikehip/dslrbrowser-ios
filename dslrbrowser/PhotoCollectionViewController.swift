@@ -218,10 +218,20 @@ class PhotoCollectionViewController: UICollectionViewController {
                         data = FileManager.default.contents(atPath: cacheFileName.path)!
                     }
                     else {
-                        //get file and save to cache
-                        data = try! Data(contentsOf: url)
-                        if ( data.count > 0 ) {
-                            FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                        do {
+                            //get file and save to cache
+                            do {
+                                data = try Data(contentsOf: url)
+                                if ( data.count > 0 ) {
+                                    FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                                }
+                            }
+                            catch {
+                                DispatchQueue.main.async {
+                                    imageView.image = #imageLiteral(resourceName: "camera_wifi")
+                                }
+                                data = Data(count: 0)
+                            }
                         }
                     }
                     
