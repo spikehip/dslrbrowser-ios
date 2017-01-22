@@ -9,16 +9,43 @@
 import Foundation
 import Photos
 import CoreData
+import CoreLocation
 
 typealias CompleteHandlerBlock = () -> ()
 
-class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownloadDelegate {
+class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownloadDelegate, CLLocationManagerDelegate {
     
     var handlerQueue: [String : CompleteHandlerBlock] = [String:CompleteHandlerBlock]()
     var item:MediaServer1ItemObject
+    var geoLocation:CLLocation?
+    var hasLocationFromPhone:Bool = false
+    let locationManager:CLLocationManager = CLLocationManager()
     
     init(withItem item:MediaServer1ItemObject) {
         self.item = item
+        super.init()
+        let status = CLLocationManager.authorizationStatus()
+        if (status == CLAuthorizationStatus.authorizedAlways ||
+            status == CLAuthorizationStatus.authorizedWhenInUse ) {
+            //request current location
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
+        if (locations.count > 0) {
+            geoLocation = locations[locations.count - 1]
+            hasLocationFromPhone = true
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error) {
+        hasLocationFromPhone = false
+        print("Location update failed:", error.localizedDescription)
     }
     
     func cleanUp(withURLs urlList:[URL]) {
@@ -52,8 +79,16 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
         photoLibrary.performChanges(
             {() -> Void in
                 print("Photos creating request for image at url \(location.absoluteString)")
+                let prefs = UserDefaults.standard
+                let insertGPS = prefs.bool(forKey: "insertGPS")
                 let creationRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: location)
                 let assetIdentifier = creationRequest?.placeholderForCreatedAsset?.localIdentifier
+                
+                if (insertGPS && self.hasLocationFromPhone && creationRequest?.location == nil) {
+                    creationRequest?.location = self.geoLocation
+                }
+                
+                /*
                 let assets = PHAsset.fetchAssets(withLocalIdentifiers: [assetIdentifier!], options: nil)
                 if ( assets.count > 0 ) {
                     let asset = assets[0] 
@@ -62,9 +97,10 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                     if ( asset.canPerform(PHAssetEditOperation.properties)) {
                         let changeRequest = PHAssetChangeRequest(for: asset)
                         changeRequest.isFavorite = true
-                        //TODO: fill location here
+                        //TODO: fill location here    
                     }
                 }
+                */
                 let cameraKey = CameraCollectionManager.getCameraKeyFor(mediaItem: self.item)
                 let photoEntity:PhotoEntity = NSEntityDescription.insertNewObject(forEntityName: "PhotoEntity", into: dc.managedObjectContext) as! PhotoEntity
                 photoEntity.cameraKey = cameraKey
