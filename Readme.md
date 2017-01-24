@@ -34,6 +34,10 @@ Tested with the Canon EOS 6d and the Canon EOS 7d equipped with the WFT-E5 trans
 - Open photo roll and check that your photos are getting downloaded
 - Open it again after a while and check the download progress on the camera list tab to adapt.
 
+# Testing GPS injection
+
+
+
 ## Launch a DLNA service
 brew install ushare
 ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
@@ -41,5 +45,7 @@ ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
 ## Connection Guide
 
 Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu.
+![screen 1] (dslrbrowser/Assets.xcassets/_wifi_settings.imageset/_wifi_settings.png)
 Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to.
+![screen 2] (dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings.png)
 
