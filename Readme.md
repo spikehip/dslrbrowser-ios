@@ -36,7 +36,13 @@ Tested with the Canon EOS 6d and the Canon EOS 7d equipped with the WFT-E5 trans
 
 # Testing GPS injection
 
-
+- navigate to the settings tab 
+- allow location access to the app
+- toggle the Insert GPS switch on
+- download an item you shot without having your on-camera gps turned on
+- check in the photos app detail view that a location is appended
+- do some other tests with and without granting location access
+and with or without camera gps data
 
 ## Launch a DLNA service
 brew install ushare
