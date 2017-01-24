@@ -440,7 +440,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKq-bH-kma" id="dce-2O-Dm5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connection Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-2E-WcO">
+                                                    <rect key="frame" x="18" y="11" width="221" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="XhW-Hw-hcO" kind="show" id="POU-2h-On6"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sgM-WD-yQv">
                                         <rect key="frame" x="0.0" y="220" width="375" height="44"/>
@@ -468,10 +480,10 @@
             </objects>
             <point key="canvasLocation" x="1464.8" y="864.91754122938539"/>
         </scene>
-        <!--View Controller-->
+        <!--Credits-->
         <scene sceneID="DJq-qh-Vgp">
             <objects>
-                <viewController id="F0W-pL-S1P" sceneMemberID="viewController">
+                <viewController title="Credits" id="F0W-pL-S1P" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FnK-yt-Auv"/>
                         <viewControllerLayoutGuide type="bottom" id="T7x-L1-8j8"/>
@@ -532,7 +544,78 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Di-TH-MRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="865.81709145427294"/>
+            <point key="canvasLocation" x="2695" y="613"/>
+        </scene>
+        <!--Connection Guide-->
+        <scene sceneID="JQS-JW-1xe">
+            <objects>
+                <viewController title="Connection Guide" id="XhW-Hw-hcO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hr1-5p-8u4"/>
+                        <viewControllerLayoutGuide type="bottom" id="klH-5Y-2hv"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ptm-JS-sEI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-6X-9ym">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-qr-rRK">
+                                        <rect key="frame" x="16" y="8" width="343" height="70"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="XIK-QV-Ptu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_wifi_settings" translatesAutoresizingMaskIntoConstraints="NO" id="YV8-Sn-WRp">
+                                        <rect key="frame" x="16" y="86" width="341" height="227"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-fz-kcW">
+                                        <rect key="frame" x="16" y="321" width="341" height="70"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="E6O-pq-NgQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_dlna_settings" translatesAutoresizingMaskIntoConstraints="NO" id="2E2-oS-aSS">
+                                        <rect key="frame" x="16" y="399" width="343" height="227"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="j4x-qr-rRK" secondAttribute="trailing" constant="16" id="B2P-wN-sm6"/>
+                                    <constraint firstItem="j4x-qr-rRK" firstAttribute="top" secondItem="C6g-6X-9ym" secondAttribute="top" constant="8" id="BLG-kO-g86"/>
+                                    <constraint firstItem="YV8-Sn-WRp" firstAttribute="leading" secondItem="C6g-6X-9ym" secondAttribute="leading" constant="16" id="BzW-h9-CWs"/>
+                                    <constraint firstItem="3vx-fz-kcW" firstAttribute="top" secondItem="YV8-Sn-WRp" secondAttribute="bottom" constant="8" id="EYf-nN-tWM"/>
+                                    <constraint firstItem="2E2-oS-aSS" firstAttribute="top" secondItem="3vx-fz-kcW" secondAttribute="bottom" constant="8" id="OpI-19-mJB"/>
+                                    <constraint firstItem="3vx-fz-kcW" firstAttribute="leading" secondItem="C6g-6X-9ym" secondAttribute="leading" constant="16" id="To7-vl-fJc"/>
+                                    <constraint firstAttribute="height" constant="900" id="V6I-yR-uzq"/>
+                                    <constraint firstItem="j4x-qr-rRK" firstAttribute="leading" secondItem="C6g-6X-9ym" secondAttribute="leading" constant="16" id="Ztz-GW-Lwq"/>
+                                    <constraint firstItem="YV8-Sn-WRp" firstAttribute="top" secondItem="j4x-qr-rRK" secondAttribute="bottom" constant="8" id="bxt-EU-B5O"/>
+                                    <constraint firstAttribute="trailing" secondItem="2E2-oS-aSS" secondAttribute="trailing" constant="16" id="cpp-TA-9dz"/>
+                                    <constraint firstAttribute="trailing" secondItem="YV8-Sn-WRp" secondAttribute="trailing" constant="18" id="dcy-Lh-cvy"/>
+                                    <constraint firstItem="2E2-oS-aSS" firstAttribute="leading" secondItem="C6g-6X-9ym" secondAttribute="leading" constant="16" id="uYD-d8-eQX"/>
+                                    <constraint firstAttribute="trailing" secondItem="3vx-fz-kcW" secondAttribute="trailing" constant="18" id="vnn-oP-2bl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C6g-6X-9ym" secondAttribute="trailing" id="ASA-vM-aFo"/>
+                            <constraint firstAttribute="width" secondItem="C6g-6X-9ym" secondAttribute="width" id="Dud-l4-W00"/>
+                            <constraint firstItem="C6g-6X-9ym" firstAttribute="top" secondItem="Ptm-JS-sEI" secondAttribute="top" id="ZyU-m4-S77"/>
+                            <constraint firstItem="C6g-6X-9ym" firstAttribute="leading" secondItem="Ptm-JS-sEI" secondAttribute="leading" id="sHs-mC-vzk"/>
+                            <constraint firstAttribute="bottom" secondItem="C6g-6X-9ym" secondAttribute="bottom" constant="-289" id="tWs-3Z-AA8"/>
+                        </constraints>
+                    </scrollView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWA-XX-XNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2693.5999999999999" y="1268.8155922038982"/>
         </scene>
         <!--Settings-->
         <scene sceneID="BG1-Yd-4rf">
@@ -572,6 +655,8 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
         </scene>
     </scenes>
     <resources>
+        <image name="_dlna_settings" width="341" height="227"/>
+        <image name="_wifi_settings" width="341" height="227"/>
         <image name="camera" width="256" height="256"/>
         <image name="icon_green" width="32" height="30"/>
         <image name="lens" width="470" height="470"/>

@@ -37,3 +37,9 @@ Tested with the Canon EOS 6d and the Canon EOS 7d equipped with the WFT-E5 trans
 ## Launch a DLNA service
 brew install ushare
 ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
+
+## Connection Guide
+
+Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu.
+Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to.
+
