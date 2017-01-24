@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>
@@ -38,10 +38,10 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Enable the app to store downloaded camera photo items in your Photo Library.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Enable Location access to be able to inject GPS coordinates into downloaded items from your camera which do not have them already.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Enable the app to store downloaded camera photo items in your Photo Library.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>external-accessory</string>

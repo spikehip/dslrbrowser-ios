@@ -88,19 +88,6 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                     creationRequest?.location = self.geoLocation
                 }
                 
-                /*
-                let assets = PHAsset.fetchAssets(withLocalIdentifiers: [assetIdentifier!], options: nil)
-                if ( assets.count > 0 ) {
-                    let asset = assets[0] 
-                    print("created: \(asset.creationDate)")
-                    print("modified: \(asset.modificationDate)")
-                    if ( asset.canPerform(PHAssetEditOperation.properties)) {
-                        let changeRequest = PHAssetChangeRequest(for: asset)
-                        changeRequest.isFavorite = true
-                        //TODO: fill location here    
-                    }
-                }
-                */
                 let cameraKey = CameraCollectionManager.getCameraKeyFor(mediaItem: self.item)
                 let photoEntity:PhotoEntity = NSEntityDescription.insertNewObject(forEntityName: "PhotoEntity", into: dc.managedObjectContext) as! PhotoEntity
                 photoEntity.cameraKey = cameraKey
