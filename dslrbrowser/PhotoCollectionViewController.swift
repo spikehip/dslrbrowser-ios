@@ -114,9 +114,15 @@ class PhotoCollectionViewController: UICollectionViewController {
                         }
                         else {
                             //get file and save to cache
-                            data = try! Data(contentsOf: url)
-                            if ( data.count > 0 ) {
-                                FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                            do {
+                                data = try Data(contentsOf: url)
+                                if ( data.count > 0 ) {
+                                    FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                                }
+                            }
+                            catch {
+                                print("Failed to load thumbnail ", url)
+                                data = Data()
                             }
                         }
                         

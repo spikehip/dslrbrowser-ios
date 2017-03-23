@@ -343,23 +343,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Canon only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmR-2V-ayM">
-                                                    <rect key="frame" x="17" y="11" width="151" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-bh-KEP">
                                                     <rect key="frame" x="310" y="6" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchOnlyCanonChangedWithSender:" destination="cPD-Uz-PoG" eventType="touchUpInside" id="4rR-cs-AXK"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Canon only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmR-2V-ayM">
+                                                    <rect key="frame" x="15" y="11" width="151" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nOR-bh-KEP" firstAttribute="top" secondItem="IvT-16-7Ce" secondAttribute="topMargin" constant="-2" id="gmB-bx-Llb"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="nOR-bh-KEP" secondAttribute="trailing" constant="8" id="sDt-mA-Oe2"/>
+                                                <constraint firstItem="nOR-bh-KEP" firstAttribute="top" secondItem="IvT-16-7Ce" secondAttribute="topMargin" constant="-2" id="gC2-HN-DGP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nOR-bh-KEP" secondAttribute="trailing" constant="8" id="pzn-UI-kBN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -370,6 +370,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
+                                                    <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchInsertGPSChangedWithSender:" destination="cPD-Uz-PoG" eventType="touchUpInside" id="BbM-pV-8TB"/>
+                                                    </connections>
+                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert GPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF2-KN-Ekp">
                                                     <rect key="frame" x="15" y="11" width="191" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -377,55 +383,42 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
-                                                    <rect key="frame" x="310" y="6" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="switchInsertGPSChangedWithSender:" destination="cPD-Uz-PoG" eventType="touchUpInside" id="BbM-pV-8TB"/>
-                                                    </connections>
-                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Sv6-tG-JLH" firstAttribute="top" secondItem="8wy-yP-rh5" secondAttribute="topMargin" constant="-2" id="Yfd-Hd-sE3"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Sv6-tG-JLH" secondAttribute="trailing" constant="8" id="qhW-ZB-BrN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Sv6-tG-JLH" secondAttribute="trailing" constant="8" id="OjD-x3-ez5"/>
+                                                <constraint firstItem="Sv6-tG-JLH" firstAttribute="top" secondItem="8wy-yP-rh5" secondAttribute="topMargin" constant="-2" id="W0s-Xa-s6N"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="7V9-YH-aYL" detailTextLabel="Sug-gI-PGz" style="IBUITableViewCellStyleSubtitle" id="44h-iR-2bh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="18" id="44h-iR-2bh">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44h-iR-2bh" id="apR-iI-cWq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Download to Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7V9-YH-aYL">
-                                                    <rect key="frame" x="15" y="6" width="141.5" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download to Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UND-RY-L3P">
+                                                    <rect key="frame" x="15" y="11" width="221" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Select an Album where to download to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sug-gI-PGz">
-                                                    <rect key="frame" x="15" y="25.5" width="202" height="13.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="m9p-hr-6ij" style="IBUITableViewCellStyleDefault" id="Ekf-5s-Su0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ekf-5s-Su0">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ekf-5s-Su0" id="ihW-kR-vRh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Credits and Copyright" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9p-hr-6ij">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits and Copyright" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-iM-b77">
+                                                    <rect key="frame" x="15" y="11" width="221" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -442,7 +435,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connection Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-2E-WcO">
-                                                    <rect key="frame" x="18" y="11" width="221" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="221" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -555,13 +548,13 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                         <viewControllerLayoutGuide type="bottom" id="klH-5Y-2hv"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ptm-JS-sEI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-6X-9ym">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-qr-rRK">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-qr-rRK">
                                         <rect key="frame" x="16" y="8" width="343" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -573,7 +566,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_wifi_settings" translatesAutoresizingMaskIntoConstraints="NO" id="YV8-Sn-WRp">
                                         <rect key="frame" x="16" y="86" width="341" height="227"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-fz-kcW">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-fz-kcW">
                                         <rect key="frame" x="16" y="321" width="341" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -609,9 +602,10 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                             <constraint firstAttribute="width" secondItem="C6g-6X-9ym" secondAttribute="width" id="Dud-l4-W00"/>
                             <constraint firstItem="C6g-6X-9ym" firstAttribute="top" secondItem="Ptm-JS-sEI" secondAttribute="top" id="ZyU-m4-S77"/>
                             <constraint firstItem="C6g-6X-9ym" firstAttribute="leading" secondItem="Ptm-JS-sEI" secondAttribute="leading" id="sHs-mC-vzk"/>
-                            <constraint firstAttribute="bottom" secondItem="C6g-6X-9ym" secondAttribute="bottom" constant="-289" id="tWs-3Z-AA8"/>
+                            <constraint firstAttribute="bottom" secondItem="C6g-6X-9ym" secondAttribute="bottom" constant="-100" id="tWs-3Z-AA8"/>
                         </constraints>
                     </scrollView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWA-XX-XNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

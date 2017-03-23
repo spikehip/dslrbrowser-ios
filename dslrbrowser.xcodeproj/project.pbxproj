@@ -29,6 +29,7 @@
 		A7AB123D1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */; };
 		A7AB123E1BCDB753001D03B6 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */; };
 		A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF69761C125260001F9417 /* CameraTableViewController.swift */; };
+		A7D3D6501E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3D64F1E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift */; };
 		A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */; };
 		A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */; };
 		A7FB8EB11E1E49D700835130 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FB8EB01E1E49D700835130 /* SettingsViewController.swift */; };
@@ -82,6 +83,7 @@
 		A7AB123B1BCDB753001D03B6 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		A7AB123F1BCDB96A001D03B6 /* dslrbrowser-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dslrbrowser-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7AF69761C125260001F9417 /* CameraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTableViewController.swift; sourceTree = "<group>"; };
+		A7D3D64F1E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveContentDirectoryBrowserError.swift; sourceTree = "<group>"; };
 		A7E8DDB01C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaServer1BasicObjectCollection.swift; sourceTree = "<group>"; };
 		A7F806AF1BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveContentDirectoryBrowser.swift; sourceTree = "<group>"; };
 		A7FB8EB01E1E49D700835130 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				A79359161E20FA8000543B6E /* Model.xcdatamodeld */,
 				A79359191E23906E00543B6E /* DataController.swift */,
 				A793591D1E24B61200543B6E /* ThumbnailCacheManager.swift */,
+				A7D3D64F1E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift */,
 			);
 			path = dslrbrowser;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */,
 				A79739491C1794AB005B236C /* ImageQuality.swift in Sources */,
 				A7415F601C2DE67B009F54E9 /* DownloadSessionDelegate.swift in Sources */,
+				A7D3D6501E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift in Sources */,
 				A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */,
 				A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */,
 				A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */,
@@ -563,6 +567,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UAD5KHP9UP;
 				INFOPLIST_FILE = dslrbrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,6 +592,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UAD5KHP9UP;
 				INFOPLIST_FILE = dslrbrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

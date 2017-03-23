@@ -93,7 +93,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 continue
             }
             
-            browseCamera(device: device, deviceBaseUrl: key)
+            DispatchQueue.global().async {
+                do {
+                    try self.browseCamera(device: device, deviceBaseUrl: key)
+                }
+                catch {
+                    print("Error browsing device ", device)
+                }
+            }
         }
         
         ThumbnailCacheManager.defaultManager.refresh()
@@ -272,7 +279,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                         CameraCollectionManager.devices[deviceBaseUrl] = (device as! MediaServer1Device)
                         camerasAlreadyBrowsing.append(deviceBaseUrl)
                         
-                        browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
+                        DispatchQueue.global().async {
+                            do {
+                                try self.browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
+                            }
+                            catch {
+                                print("Error browsing device ", device)
+                            }
+                        }
                     }
                     
                 }
@@ -292,7 +306,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                     CameraCollectionManager.initializeItemCollectionFor(cameraKey: deviceBaseUrl)
                     CameraCollectionManager.devices[deviceBaseUrl] = (device as! MediaServer1Device)
                     
-                    browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
+                    DispatchQueue.global().async {
+                        do {
+                            try self.browseCamera(device: device as! MediaServer1Device, deviceBaseUrl: deviceBaseUrl)
+                        }
+                        catch {
+                            print("Error browsing device ", device)
+                        }
+                    }
                 }
             }
         }
@@ -321,24 +342,26 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         reloadAllCollectionViews()
     }
     
-    func browseCamera(device: MediaServer1Device, deviceBaseUrl: String) {
-        DispatchQueue.global().async {
-            let recursiveCDBrowser : RecursiveContentDirectoryBrowser = RecursiveContentDirectoryBrowser.init(withContentDirectory: (device as AnyObject).contentDirectory, deviceBaseUrl: deviceBaseUrl)
-            
-            recursiveCDBrowser.browseTree()
-            
-            DispatchQueue.main.async {
-                let badgeValue = CameraCollectionManager.getTotalImageCount()
-                if (self.tabBarController?.selectedIndex != 1 && badgeValue > 0) {
-                    let tabArray = self.tabBarController?.tabBar.items as NSArray!
-                    let tabItem = tabArray?.object(at: 1) as! UITabBarItem
-                    tabItem.badgeValue = String(badgeValue)
-                }
-                if ( self.camerasAlreadyBrowsing.contains(deviceBaseUrl)) {
-                    self.camerasAlreadyBrowsing.remove(at: self.camerasAlreadyBrowsing.index(of: deviceBaseUrl)!)
-                }
-                self.tableView.reloadData()
+    func browseCamera(device: MediaServer1Device, deviceBaseUrl: String) throws {
+        if (device.contentDirectory == nil) {
+            throw RecursiveContentDirectoryBrowserError.invalidContentDirectory
+        }
+        
+        let recursiveCDBrowser : RecursiveContentDirectoryBrowser = RecursiveContentDirectoryBrowser.init(withContentDirectory: (device as AnyObject).contentDirectory, deviceBaseUrl: deviceBaseUrl)
+        
+        recursiveCDBrowser.browseTree()
+        
+        DispatchQueue.main.async {
+            let badgeValue = CameraCollectionManager.getTotalImageCount()
+            if (self.tabBarController?.selectedIndex != 1 && badgeValue > 0) {
+                let tabArray = self.tabBarController?.tabBar.items as NSArray!
+                let tabItem = tabArray?.object(at: 1) as! UITabBarItem
+                tabItem.badgeValue = String(badgeValue)
             }
+            if ( self.camerasAlreadyBrowsing.contains(deviceBaseUrl)) {
+                self.camerasAlreadyBrowsing.remove(at: self.camerasAlreadyBrowsing.index(of: deviceBaseUrl)!)
+            }
+            self.tableView.reloadData()
         }
     }
     
@@ -407,7 +430,14 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 label2.text = "Downloaded "+String(dl)+"/"+String(total)
                 progress.setProgress(dlprgrs, animated: true)
                 var desc : String = camera.manufacturer + ", "+camera.manufacturerURL.absoluteString + "\n"
-                desc = desc + camera.modelName+" "+camera.modelDescription + "\n"
+                
+                let modelName:String = camera.modelName ?? ""
+                let modelDescription:String = camera.modelDescription ?? ""
+                desc = desc + modelName
+                desc = desc + " "
+                desc = desc + modelDescription
+                desc = desc + "\n"
+                
                 desc = desc + "Local address: " + getBaseUrlString(camera)
                 label3.numberOfLines = 0
                 label3.text = desc
