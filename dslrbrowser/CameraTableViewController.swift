@@ -129,7 +129,8 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 progress.isHidden = false
                 progressLabel.isHidden = false
                 cameraModel.text = device.friendlyName
-                description.text = device.modelDescription
+                let modelDescription:String = device.modelDescription ?? "N/A"
+                description.text = modelDescription
                 progress.setProgress(CameraCollectionManager.getDownloadProgressFor(cameraKey: cameraKey), animated: false)
                 let total = CameraCollectionManager.getImageCountFor(cameraKey: cameraKey)
                 let dl = CameraCollectionManager.getDownloadCountFor(cameraKey: cameraKey)
@@ -171,7 +172,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 progressLabel.isHidden = true
                 iconView.image = #imageLiteral(resourceName: "camera_wifi")
             }
-            cell.isUserInteractionEnabled = false
+            //cell.isUserInteractionEnabled = false
             
         }
         
@@ -431,8 +432,8 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
                 progress.setProgress(dlprgrs, animated: true)
                 var desc : String = camera.manufacturer + ", "+camera.manufacturerURL.absoluteString + "\n"
                 
-                let modelName:String = camera.modelName ?? ""
-                let modelDescription:String = camera.modelDescription ?? ""
+                let modelName:String = camera.modelName ?? "Model N/A"
+                let modelDescription:String = camera.modelDescription ?? "N/A"
                 desc = desc + modelName
                 desc = desc + " "
                 desc = desc + modelDescription
