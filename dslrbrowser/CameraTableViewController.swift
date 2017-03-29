@@ -405,6 +405,19 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         return baseUrl
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        
+        if ( indexPath.section == 0 ) {
+            self.performSegue(withIdentifier: "ToCameraDetailSegue", sender: cell)
+        }
+        if ( indexPath.section == 1 ) {
+            self.performSegue(withIdentifier: "ToConnectionGuideSegue", sender: cell)
+        }
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         let indexPath : IndexPath = self.tableView.indexPath(for: cell)!
@@ -445,19 +458,6 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
             }
         }
     }
-    
-    
-    /*
-    func getKeyAt(fromHash: [String : MediaServer1Device], indexPath: NSIndexPath) -> String {
-        var i=0
-        for key in fromHash.keys {
-            if ( i == indexPath.item ) {
-                return key
-            }
-            i++
-        }
-        return ""
-    }
-    */
+        
 }
 
