@@ -125,16 +125,17 @@ open class ThumbnailCacheManager {
             option.resizeMode = PHImageRequestOptionsResizeMode.fast
             option.isNetworkAccessAllowed = false
             option.version = PHImageRequestOptionsVersion.current
-            manager.requestImage(for: asset, targetSize: CGSize(width: 80, height: 60), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
-                print(info ?? "???")
-                UIGraphicsBeginImageContext((result?.size)!)
-                result?.draw(in: CGRect(x: 0, y: 0, width: (result?.size.width)!, height: (result?.size.height)!))
-                let newImage = UIGraphicsGetImageFromCurrentImageContext()
-                let png = UIImagePNGRepresentation(newImage!)
-                if (png != nil) {
-                    FileManager.default.createFile(atPath: cacheFileName.path, contents: png, attributes: nil)
+            manager.requestImage(for: asset, targetSize: CGSize(width: 80, height: 60), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in                
+                if (result != nil) {
+                    UIGraphicsBeginImageContext((result?.size)!)
+                    result?.draw(in: CGRect(x: 0, y: 0, width: (result?.size.width)!, height: (result?.size.height)!))
+                    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+                    let png = UIImagePNGRepresentation(newImage!)
+                    if (png != nil) {
+                        FileManager.default.createFile(atPath: cacheFileName.path, contents: png, attributes: nil)
+                    }
+                    UIGraphicsEndImageContext()
                 }
-                UIGraphicsEndImageContext()
             })
         }
     }
@@ -156,15 +157,16 @@ open class ThumbnailCacheManager {
             option.isNetworkAccessAllowed = false
             option.version = PHImageRequestOptionsVersion.current
             manager.requestImage(for: asset, targetSize: CGSize(width: 640, height: 480), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
-                print(info ?? "???")
-                UIGraphicsBeginImageContext((result?.size)!)
-                result?.draw(in: CGRect(x: 0, y: 0, width: (result?.size.width)!, height: (result?.size.height)!))
-                let newImage = UIGraphicsGetImageFromCurrentImageContext()
-                let png = UIImagePNGRepresentation(newImage!)
-                if (png != nil) {
-                    FileManager.default.createFile(atPath: cacheFileName.path, contents: png, attributes: nil)
+                if (result != nil) {
+                    UIGraphicsBeginImageContext((result?.size)!)
+                    result?.draw(in: CGRect(x: 0, y: 0, width: (result?.size.width)!, height: (result?.size.height)!))
+                    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+                    let png = UIImagePNGRepresentation(newImage!)
+                    if (png != nil) {
+                        FileManager.default.createFile(atPath: cacheFileName.path, contents: png, attributes: nil)
+                    }
+                    UIGraphicsEndImageContext()
                 }
-                UIGraphicsEndImageContext()
             })
         }
     }
