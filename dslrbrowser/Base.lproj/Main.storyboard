@@ -223,8 +223,8 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Cameras" id="OtT-9w-8GJ"/>
                     <connections>
-                        <segue destination="XhW-Hw-hcO" kind="show" identifier="ToConnectionGuideSegue" id="k13-Ye-wJ3"/>
                         <segue destination="ffn-lv-NjC" kind="show" identifier="ToCameraDetailSegue" id="cRu-a7-9P1"/>
+                        <segue destination="Nia-Fm-RXC" kind="show" identifier="ToPTPCameraDetailSegue" id="LTr-sE-0QT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTA-It-f3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,15 +246,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9S-F9-dcx">
                                 <rect key="frame" x="80" y="85" width="271" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="6000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-uC-Qad">
-                                <rect key="frame" x="24" y="128" width="327" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="UXV-y5-gAa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -281,6 +272,15 @@
                                     <action selector="downloadAllPhotosAction:" destination="ffn-lv-NjC" eventType="touchUpInside" id="0kA-Ff-kDI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="6000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-uC-Qad">
+                                <rect key="frame" x="16" y="0.0" width="327" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="UXV-y5-gAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HI-Ak-PGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2694" y="-43"/>
+            <point key="canvasLocation" x="2249" y="-298"/>
         </scene>
         <!--Photos Navigation-->
         <scene sceneID="MMh-gj-ARd">
@@ -472,7 +472,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usC-Al-pO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464.8" y="864.91754122938539"/>
+            <point key="canvasLocation" x="750" y="1144"/>
         </scene>
         <!--Credits-->
         <scene sceneID="DJq-qh-Vgp">
@@ -538,7 +538,66 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Di-TH-MRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2695" y="613"/>
+            <point key="canvasLocation" x="1503" y="830"/>
+        </scene>
+        <!--PTP Camera Detail-->
+        <scene sceneID="ITL-Vx-yW8">
+            <objects>
+                <viewController title="PTP Camera Detail" id="Nia-Fm-RXC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UpE-Ip-aWG"/>
+                        <viewControllerLayoutGuide type="bottom" id="dZO-F4-DmU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="guc-Uh-7FW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-Ep-Dp9">
+                                <rect key="frame" x="19" y="250" width="340" height="30"/>
+                                <state key="normal" title="Download Images"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-np-w5e">
+                                <rect key="frame" x="79" y="86" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="camera_wifi" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-7x-VtH">
+                                <rect key="frame" x="16" y="72" width="48" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PTP Camera Connection is not yet supported. Please see the connection guide on supported camera connection modes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-pY-n2P">
+                                <rect key="frame" x="19" y="128" width="340" height="114"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-33-KBK">
+                                <rect key="frame" x="19" y="288" width="340" height="30"/>
+                                <state key="normal" title="Control Camera"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taF-7l-J8X">
+                                <rect key="frame" x="19" y="326" width="340" height="30"/>
+                                <state key="normal" title="Connection Guide"/>
+                                <connections>
+                                    <segue destination="XhW-Hw-hcO" kind="show" id="I1K-Sc-F1v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3gB-pY-n2P" firstAttribute="leading" secondItem="kJC-7x-VtH" secondAttribute="leading" id="LdA-yo-yCy"/>
+                            <constraint firstItem="taF-7l-J8X" firstAttribute="leading" secondItem="LsK-33-KBK" secondAttribute="leading" id="TL5-b6-vkc"/>
+                            <constraint firstItem="uOE-Ep-Dp9" firstAttribute="leading" secondItem="3gB-pY-n2P" secondAttribute="leading" id="evF-qV-HYJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uOE-Ep-Dp9" secondAttribute="trailing" id="jfZ-kc-5oA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3gB-pY-n2P" secondAttribute="trailing" id="slJ-Xw-v4e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="taF-7l-J8X" secondAttribute="trailing" id="w83-0s-fn8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDs-8n-q2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248.8000000000002" y="415.14242878560725"/>
         </scene>
         <!--Connection Guide-->
         <scene sceneID="JQS-JW-1xe">
@@ -610,7 +669,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWA-XX-XNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693.5999999999999" y="1268.8155922038982"/>
+            <point key="canvasLocation" x="1502" y="1534"/>
         </scene>
         <!--Settings-->
         <scene sceneID="BG1-Yd-4rf">
@@ -627,7 +686,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fS-Rg-nHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="865"/>
+            <point key="canvasLocation" x="-71" y="1144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -653,6 +712,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
         <image name="_dlna_settings" width="341" height="227"/>
         <image name="_wifi_settings" width="341" height="227"/>
         <image name="camera" width="256" height="256"/>
+        <image name="camera_wifi" width="256" height="256"/>
         <image name="icon_green" width="32" height="30"/>
         <image name="lens" width="470" height="470"/>
         <image name="photo-camera" width="25" height="25"/>
@@ -660,7 +720,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k13-Ye-wJ3"/>
         <segue reference="xuL-My-8Wu"/>
+        <segue reference="I1K-Sc-F1v"/>
     </inferredMetricsTieBreakers>
 </document>

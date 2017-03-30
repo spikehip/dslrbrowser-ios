@@ -413,50 +413,63 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
             self.performSegue(withIdentifier: "ToCameraDetailSegue", sender: cell)
         }
         if ( indexPath.section == 1 ) {
-            self.performSegue(withIdentifier: "ToConnectionGuideSegue", sender: cell)
+            self.performSegue(withIdentifier: "ToPTPCameraDetailSegue", sender: cell)
         }
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let cell = sender as! UITableViewCell
         let indexPath : IndexPath = self.tableView.indexPath(for: cell)!
-        let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: indexPath.row)
-        if let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection] 
-        {
-            
-            let detailViewController = segue.destination as! CameraDetailViewController
-            detailViewController.cameraKey = cameraKeyForSection
-            segue.destination.navigationItem.title = camera.friendlyName
-            
-            if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
-                let label1 : UILabel = segue.destination.view.viewWithTag(2000) as? UILabel,
-                let label2 : UILabel = segue.destination.view.viewWithTag(3000) as? UILabel,
-                let label3 : UILabel = segue.destination.view.viewWithTag(6000) as? UILabel,
-                let progress : UIProgressView = segue.destination.view.viewWithTag(4000) as? UIProgressView
+        
+        if ( segue.identifier == "ToCameraDetailSegue") {
+            let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: indexPath.row)
+            if let camera :MediaServer1Device = CameraCollectionManager.devices[cameraKeyForSection]
             {
-                let iconView : UIImageView = (cell.viewWithTag(1000) as? UIImageView)!
-                imageView.image = iconView.image
-                label1.text = camera.friendlyName
-                let total = CameraCollectionManager.getImageCountFor(cameraKey: cameraKeyForSection)
-                let dl = CameraCollectionManager.getDownloadCountFor(cameraKey: cameraKeyForSection)
-                let dlprgrs = CameraCollectionManager.getDownloadProgressFor(cameraKey: cameraKeyForSection)
-                label2.text = "Downloaded "+String(dl)+"/"+String(total)
-                progress.setProgress(dlprgrs, animated: true)
-                var desc : String = camera.manufacturer + ", "+camera.manufacturerURL.absoluteString + "\n"
+                let detailViewController = segue.destination as! CameraDetailViewController
+                detailViewController.cameraKey = cameraKeyForSection
+                segue.destination.navigationItem.title = camera.friendlyName
                 
-                let modelName:String = camera.modelName ?? "Model N/A"
-                let modelDescription:String = camera.modelDescription ?? "N/A"
-                desc = desc + modelName
-                desc = desc + " "
-                desc = desc + modelDescription
-                desc = desc + "\n"
-                
-                desc = desc + "Local address: " + getBaseUrlString(camera)
-                label3.numberOfLines = 0
-                label3.text = desc
+                if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
+                    let label1 : UILabel = segue.destination.view.viewWithTag(2000) as? UILabel,
+                    let label2 : UILabel = segue.destination.view.viewWithTag(3000) as? UILabel,
+                    let label3 : UILabel = segue.destination.view.viewWithTag(6000) as? UILabel,
+                    let progress : UIProgressView = segue.destination.view.viewWithTag(4000) as? UIProgressView
+                {
+                    let iconView : UIImageView = (cell.viewWithTag(1000) as? UIImageView)!
+                    imageView.image = iconView.image
+                    label1.text = camera.friendlyName
+                    let total = CameraCollectionManager.getImageCountFor(cameraKey: cameraKeyForSection)
+                    let dl = CameraCollectionManager.getDownloadCountFor(cameraKey: cameraKeyForSection)
+                    let dlprgrs = CameraCollectionManager.getDownloadProgressFor(cameraKey: cameraKeyForSection)
+                    label2.text = "Downloaded "+String(dl)+"/"+String(total)
+                    progress.setProgress(dlprgrs, animated: true)
+                    var desc : String = camera.manufacturer + ", "+camera.manufacturerURL.absoluteString + "\n"
+                    
+                    let modelName:String = camera.modelName ?? "Model N/A"
+                    let modelDescription:String = camera.modelDescription ?? "N/A"
+                    desc = desc + modelName
+                    desc = desc + " "
+                    desc = desc + modelDescription
+                    desc = desc + "\n"
+                    
+                    desc = desc + "Local address: " + getBaseUrlString(camera)
+                    label3.numberOfLines = 0
+                    label3.text = desc
+                }
             }
         }
+        
+        if ( segue.identifier == "ToPTPCameraDetailSegue" ) {
+            let cameraKeyForSection:String = PTPCameraCollectionManager.getCameraKeyFor(section: indexPath.row)
+            if let camera : BasicUPnPDevice = PTPCameraCollectionManager.devices[cameraKeyForSection] {
+                if let label1:UILabel = segue.destination.view.viewWithTag(2000) as? UILabel {
+                    label1.text = camera.friendlyName
+                }
+            }
+        }
+        
     }
         
 }
