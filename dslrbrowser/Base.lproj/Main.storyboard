@@ -167,7 +167,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vT2-SB-dvH" id="ehB-CX-bPQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_green" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-dF-Hlg">
@@ -341,7 +341,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sgu-AI-pv4" id="IvT-16-7Ce">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-bh-KEP">
@@ -368,7 +368,7 @@
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSm-4N-IlV" id="8wy-yP-rh5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
@@ -395,7 +395,7 @@
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44h-iR-2bh" id="apR-iI-cWq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download to Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UND-RY-L3P">
@@ -412,7 +412,7 @@
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ekf-5s-Su0" id="ihW-kR-vRh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits and Copyright" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-iM-b77">
@@ -432,7 +432,7 @@
                                         <rect key="frame" x="0.0" y="176" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKq-bH-kma" id="dce-2O-Dm5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connection Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-2E-WcO">
@@ -452,7 +452,7 @@
                                         <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sgM-WD-yQv" id="14i-XW-Qi8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -552,32 +552,35 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-Ep-Dp9">
-                                <rect key="frame" x="19" y="250" width="340" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-Ep-Dp9">
+                                <rect key="frame" x="16" y="186.5" width="343" height="30"/>
                                 <state key="normal" title="Download Images"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-np-w5e">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-np-w5e">
                                 <rect key="frame" x="79" y="86" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="camera_wifi" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-7x-VtH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_wifi" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-7x-VtH">
                                 <rect key="frame" x="16" y="72" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="ky2-xL-vJc"/>
+                                    <constraint firstAttribute="height" constant="48" id="reH-ON-VtP"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PTP Camera Connection is not yet supported. Please see the connection guide on supported camera connection modes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-pY-n2P">
-                                <rect key="frame" x="19" y="128" width="340" height="114"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTP Camera Connection is not yet supported. Please see the connection guide on supported camera connection modes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-pY-n2P">
+                                <rect key="frame" x="16" y="128" width="343" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-33-KBK">
-                                <rect key="frame" x="19" y="288" width="340" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-33-KBK">
+                                <rect key="frame" x="19" y="224.5" width="340" height="30"/>
                                 <state key="normal" title="Control Camera"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taF-7l-J8X">
-                                <rect key="frame" x="19" y="326" width="340" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taF-7l-J8X">
+                                <rect key="frame" x="19" y="262.5" width="340" height="30"/>
                                 <state key="normal" title="Connection Guide"/>
                                 <connections>
                                     <segue destination="XhW-Hw-hcO" kind="show" id="I1K-Sc-F1v"/>
@@ -586,12 +589,23 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LsK-33-KBK" firstAttribute="top" secondItem="uOE-Ep-Dp9" secondAttribute="bottom" constant="8" symbolic="YES" id="0Bt-82-grR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kJC-7x-VtH" secondAttribute="leading" id="4If-P5-MBj"/>
+                            <constraint firstItem="uOE-Ep-Dp9" firstAttribute="top" secondItem="3gB-pY-n2P" secondAttribute="bottom" constant="8" symbolic="YES" id="9GX-vv-5Xd"/>
+                            <constraint firstItem="3gB-pY-n2P" firstAttribute="top" secondItem="Dw2-np-w5e" secondAttribute="bottom" constant="21" id="Bf6-8j-zVs"/>
+                            <constraint firstItem="Dw2-np-w5e" firstAttribute="leading" secondItem="kJC-7x-VtH" secondAttribute="trailing" constant="15" id="ELE-xu-4Vf"/>
                             <constraint firstItem="3gB-pY-n2P" firstAttribute="leading" secondItem="kJC-7x-VtH" secondAttribute="leading" id="LdA-yo-yCy"/>
+                            <constraint firstItem="Dw2-np-w5e" firstAttribute="centerY" secondItem="kJC-7x-VtH" secondAttribute="centerY" id="LhJ-GG-S4X"/>
                             <constraint firstItem="taF-7l-J8X" firstAttribute="leading" secondItem="LsK-33-KBK" secondAttribute="leading" id="TL5-b6-vkc"/>
+                            <constraint firstItem="taF-7l-J8X" firstAttribute="top" secondItem="LsK-33-KBK" secondAttribute="bottom" constant="8" symbolic="YES" id="dPP-7h-RRT"/>
+                            <constraint firstItem="taF-7l-J8X" firstAttribute="trailing" secondItem="Dw2-np-w5e" secondAttribute="trailing" id="eLg-ay-PMw"/>
                             <constraint firstItem="uOE-Ep-Dp9" firstAttribute="leading" secondItem="3gB-pY-n2P" secondAttribute="leading" id="evF-qV-HYJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uOE-Ep-Dp9" secondAttribute="trailing" id="jfZ-kc-5oA"/>
+                            <constraint firstItem="kJC-7x-VtH" firstAttribute="top" secondItem="UpE-Ip-aWG" secondAttribute="bottom" constant="8" id="oqr-K9-iE0"/>
+                            <constraint firstItem="taF-7l-J8X" firstAttribute="trailing" secondItem="LsK-33-KBK" secondAttribute="trailing" id="qLX-VX-O6o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3gB-pY-n2P" secondAttribute="trailing" id="slJ-Xw-v4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="taF-7l-J8X" secondAttribute="trailing" id="w83-0s-fn8"/>
+                            <constraint firstItem="taF-7l-J8X" firstAttribute="leading" secondItem="guc-Uh-7FW" secondAttribute="leadingMargin" constant="3" id="zcf-75-mIh"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -720,7 +734,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xuL-My-8Wu"/>
         <segue reference="I1K-Sc-F1v"/>
+        <segue reference="xuL-My-8Wu"/>
     </inferredMetricsTieBreakers>
 </document>
