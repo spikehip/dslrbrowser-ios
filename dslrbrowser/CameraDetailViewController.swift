@@ -16,9 +16,11 @@ class CameraDetailViewController: UIViewController {
     override func viewDidLoad() {
         
         //Disable download all photos button if all photos are already downloaded
+        //or there are no photos to download 
         if ( self.cameraKey.characters.count > 0 ) {
+            let total = CameraCollectionManager.getImageCountFor(cameraKey: self.cameraKey)
             let dlprgrs = CameraCollectionManager.getDownloadProgressFor(cameraKey: self.cameraKey)
-            if (dlprgrs == 1.0) {
+            if (dlprgrs == 1.0 || total == 0) {
                 if let downloadButton:UIButton = self.view.viewWithTag(5000) as? UIButton {
                     downloadButton.isEnabled = false
                 }
