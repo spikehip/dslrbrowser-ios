@@ -553,7 +553,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-Ep-Dp9">
-                                <rect key="frame" x="16" y="186.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="203" width="343" height="30"/>
                                 <state key="normal" title="Download Images"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-np-w5e">
@@ -569,18 +569,19 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
                                     <constraint firstAttribute="height" constant="48" id="reH-ON-VtP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTP Camera Connection is not yet supported. Please see the connection guide on supported camera connection modes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-pY-n2P">
-                                <rect key="frame" x="16" y="128" width="343" height="50.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-pY-n2P">
+                                <rect key="frame" x="16" y="128" width="343" height="67"/>
+                                <string key="text">Your camera is detected but "Connect to smartphone" mode is not yet supported. Please see the connection guide on supported camera connection modes.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-33-KBK">
-                                <rect key="frame" x="19" y="224.5" width="340" height="30"/>
+                                <rect key="frame" x="19" y="241" width="340" height="30"/>
                                 <state key="normal" title="Control Camera"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taF-7l-J8X">
-                                <rect key="frame" x="19" y="262.5" width="340" height="30"/>
+                                <rect key="frame" x="19" y="279" width="340" height="30"/>
                                 <state key="normal" title="Connection Guide"/>
                                 <connections>
                                     <segue destination="XhW-Hw-hcO" kind="show" id="I1K-Sc-F1v"/>
