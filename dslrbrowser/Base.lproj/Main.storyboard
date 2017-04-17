@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -405,8 +405,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bcj-Qc-clm">
+                                                    <rect key="frame" x="311" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchDownloadToAlbumChangedWithSender:" destination="cPD-Uz-PoG" eventType="valueChanged" id="bC8-lj-vW5"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bcj-Qc-clm" secondAttribute="trailing" constant="7" id="pSl-XB-IUt"/>
+                                                <constraint firstItem="Bcj-Qc-clm" firstAttribute="top" secondItem="apR-iI-cWq" secondAttribute="topMargin" constant="-2" id="qiX-LM-trg"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="X6d-8Q-m8o" kind="show" id="PIC-MO-pO4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ekf-5s-Su0">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
@@ -466,6 +479,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="pbK-up-mQ2"/>
                     <connections>
+                        <outlet property="switchDownloadToAlbum" destination="Bcj-Qc-clm" id="gTM-VI-ZqJ"/>
                         <outlet property="switchInsertGPS" destination="Sv6-tG-JLH" id="Ttj-fg-ak6"/>
                         <outlet property="switchOnlyCanon" destination="nOR-bh-KEP" id="q4Q-kO-TT5"/>
                     </connections>
@@ -686,6 +700,60 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
             </objects>
             <point key="canvasLocation" x="1502" y="1534"/>
         </scene>
+        <!--Download to Album-->
+        <scene sceneID="5UV-cj-Imq">
+            <objects>
+                <viewController title="Download to Album" id="X6d-8Q-m8o" customClass="DownloadToAlbumController" customModule="dslrbrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kmo-ev-xEL"/>
+                        <viewControllerLayoutGuide type="bottom" id="TJb-vW-WEw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VfF-n4-Z0l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto fill album name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHg-Pl-lDr">
+                                <rect key="frame" x="16" y="72" width="155.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVe-UV-eqZ">
+                                <rect key="frame" x="310" y="72" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchAutoFillChangedWithSender:" destination="X6d-8Q-m8o" eventType="valueChanged" id="Zzk-R3-28B"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Album Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wwY-OX-kZt">
+                                <rect key="frame" x="16" y="114" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textChangedWithSender:" destination="X6d-8Q-m8o" eventType="primaryActionTriggered" id="eZQ-Ek-OPd"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wwY-OX-kZt" firstAttribute="top" secondItem="MHg-Pl-lDr" secondAttribute="bottom" constant="21" id="0Wh-bk-xfY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wwY-OX-kZt" secondAttribute="trailing" id="Ab5-6a-fhR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oVe-UV-eqZ" secondAttribute="trailing" id="BZJ-tp-RZ3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MHg-Pl-lDr" secondAttribute="leading" id="J4r-1z-HzX"/>
+                            <constraint firstItem="oVe-UV-eqZ" firstAttribute="top" secondItem="Kmo-ev-xEL" secondAttribute="bottom" constant="8" id="YKO-Ee-Ez7"/>
+                            <constraint firstItem="MHg-Pl-lDr" firstAttribute="top" secondItem="Kmo-ev-xEL" secondAttribute="bottom" constant="8" id="ccF-9W-Jme"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wwY-OX-kZt" secondAttribute="leading" id="v8p-zX-T68"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumName" destination="wwY-OX-kZt" id="lMM-bV-db3"/>
+                        <outlet property="switchAutoFill" destination="oVe-UV-eqZ" id="m6N-Ed-BFn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSt-1m-uqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208.8000000000002" y="1532.3838080959522"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="BG1-Yd-4rf">
             <objects>
@@ -735,7 +803,7 @@ Source Code available at http://github.com/spikehip/dslrbrowser-ios</string>
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I1K-Sc-F1v"/>
         <segue reference="xuL-My-8Wu"/>
+        <segue reference="POU-2h-On6"/>
     </inferredMetricsTieBreakers>
 </document>

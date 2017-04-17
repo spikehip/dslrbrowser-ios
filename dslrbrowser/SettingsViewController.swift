@@ -13,6 +13,7 @@ class SettingsViewController:UITableViewController, CLLocationManagerDelegate {
 
     @IBOutlet var switchOnlyCanon:UISwitch?
     @IBOutlet var switchInsertGPS:UISwitch?
+    @IBOutlet var switchDownloadToAlbum:UISwitch?
     let locationManager:CLLocationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class SettingsViewController:UITableViewController, CLLocationManagerDelegate {
         let prefs = UserDefaults.standard
         switchOnlyCanon?.setOn(prefs.bool(forKey: "useOnlyCanon"), animated: false)
         switchInsertGPS?.setOn(prefs.bool(forKey: "insertGPS"), animated: false)
+        switchDownloadToAlbum?.setOn(prefs.bool(forKey: "downloadToAlbum"), animated: false)
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
@@ -39,6 +41,11 @@ class SettingsViewController:UITableViewController, CLLocationManagerDelegate {
     @IBAction func switchInsertGPSChanged(sender: UISwitch) {
         let prefs = UserDefaults.standard
         prefs.set(sender.isOn, forKey: "insertGPS")
+    }
+    
+    @IBAction func switchDownloadToAlbumChanged(sender: UISwitch) {
+        let prefs = UserDefaults.standard
+        prefs.set(sender.isOn, forKey: "downloadToAlbum")
     }
     
     func locationManager(_ manager: CLLocationManager,

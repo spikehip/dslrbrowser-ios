@@ -27,6 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if ( !prefsDictionary.keys.contains("useOnlyCanon") ) {
             prefs.set(true, forKey: "useOnlyCanon")
         }
+        if ( !prefsDictionary.keys.contains("downloadToAlbum") ) {
+            prefs.set(false, forKey: "downloadToAlbum")
+        }
+        if ( !prefsDictionary.keys.contains("generateAlbumName") ) {
+            prefs.set(true, forKey: "generateAlbumName")
+        }
+        if ( prefs.bool(forKey: "generateAlbumName") ) {
+            prefs.set(DownloadToAlbumController.generateAlbumName(), forKey: "albumName")
+        }
+        
+        
 
         ThumbnailCacheManager.defaultManager.refresh()
         
