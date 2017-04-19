@@ -27,12 +27,19 @@ class RecursiveContentDirectoryBrowser {
         sortCriteria = ""
         let outSortCaps : NSMutableString = NSMutableString.init()
         contentDirectory.getSortCapabilities(withOutSortCaps: outSortCaps)
-        if (outSortCaps.range(of: "dc:title").location != NSNotFound ) {
-            sortCriteria = "+dc:title"
+        print("["+cameraKey+"]" ,"Found sorting capabilities", outSortCaps)
+        
+        let deviceCapabilities: DeviceCapabilities = DeviceCapabilities.init(withDevice: CameraCollectionManager.devices[cameraKey]!)
+        
+        if (deviceCapabilities.hasBuiltInTransmitter()) {
+            if (outSortCaps.range(of: "dc:date").location != NSNotFound ) {
+                sortCriteria = "+dc:date"
+            }            
+            if (outSortCaps.range(of: "dc:title").location != NSNotFound ) {
+                sortCriteria = "+dc:title"
+            }
         }
-        if (outSortCaps.range(of: "dc:date").location != NSNotFound ) {
-            sortCriteria = "-dc:date"
-        }
+        print("["+cameraKey+"]" ,"Using sorting flags", sortCriteria)
         dc.waitUntilInitialized()
     }
     
@@ -41,18 +48,18 @@ class RecursiveContentDirectoryBrowser {
     }
     
     func browseLevel(fromObjectId objectId:String) {
-        print("Browsing level with objectId: ", objectId)
+        print("["+cameraKey+"]" , "Browsing level with objectId: ", objectId)
         let nodes = getNodesInLevel(fromObjectId: objectId)
-        print("Found \(nodes.count) nodes and counting a total of \(itemCollection.items.count) items")
+        print("["+cameraKey+"]" ,"Found \(nodes.count) nodes and counting a total of \(itemCollection.items.count) items")
         //itemCollection.setFolderFetched(withFolderId: objectId)
         
         for node in nodes {
             if (node.isContainer && !itemCollection.isFolderFetched(withFolderId: node.objectID)) {
-                print("Recursive browsing node ",node.objectID)
+                print("["+cameraKey+"]" ,"Recursive browsing node ",node.objectID)
                     browseLevel(fromObjectId: node.objectID)
             }
             else if (node.isContainer && itemCollection.isFolderFetched(withFolderId: node.objectID)){
-                print("Folder already fetched ",node.objectID)
+                print("["+cameraKey+"]" ,"Folder already fetched ",node.objectID)
             }
         }
     }
@@ -67,7 +74,14 @@ class RecursiveContentDirectoryBrowser {
         
         contentDirectory.browse(withObjectID: objectId, browseFlag: "BrowseDirectChildren", filter: "*", startingIndex: "0", requestedCount: "100", sortCriteria: sortCriteria, outResult: outResult, outNumberReturned: outNumberReturned, outTotalMatches: outTotalMatches, outUpdateID: outUpdateId)
         
-        print("browseWithObjectID returned total number of \(outNumberReturned) items of \(outTotalMatches) matches")
+        // some transmitter does not like the sort criteria defined and may freeze.
+        // if this is the case the outNumberReturned and outTotalMatches strings are empty. 
+        // TODO: make this code a bit nicer
+        if ( outTotalMatches.length == 0 && outNumberReturned.length == 0 ) {
+            print("["+cameraKey+"]" ,"TODO: do something with invalid responses where outNumberReturned and outTotalMatches are empty strings", outUpdateId)
+        }
+        
+        print("["+cameraKey+"]" ,"browseWithObjectID returned total number of \(outNumberReturned) items of \(outTotalMatches) matches")
         
         let didl : Data = outResult.data(using: String.Encoding.utf8.rawValue)!
         let parser : MediaServerBasicObjectParser = MediaServerBasicObjectParser.init(mediaObjectArray: m_playList, itemsOnly: false)
@@ -83,12 +97,13 @@ class RecursiveContentDirectoryBrowser {
                 do {
                     let fetchedPhotoEntities = try dc.managedObjectContext.fetch(photoEntityFetchRequest) as! [PhotoEntity]
                     for entity in fetchedPhotoEntities {
-                        print("Found item registered as downloaded ",entity.localIdentifier ?? "???")
+                        print("["+cameraKey+"]" ,"Found item registered as downloaded ",entity.localIdentifier ?? "???")
                     }
                     if (fetchedPhotoEntities.count > 0) {
                         CameraCollectionManager.addFinishedDownloadFor(cameraKey: self.cameraKey, title: image.title)
                     }
                 } catch {
+                    print("["+cameraKey+"]" , "Failed to fetch photos:", error)
                     fatalError("Failed to fetch photos: \(error)")
                 }
                 
