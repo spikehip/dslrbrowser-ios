@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dslrbrowser/CameraTableViewController.swift"
-            timestampString = "505390515.563748"
+            timestampString = "511967111.136993"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "uPnPDBUpdated(_:)"
             landmarkType = "7">
          </BreakpointContent>

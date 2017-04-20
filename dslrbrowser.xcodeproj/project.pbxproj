@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		13FE9E4E7F9501C51A206711 /* libPods-dslrbrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 098EA38C004B2D3F023003B0 /* libPods-dslrbrowser.a */; };
+		A7104B1C1EA4CDCE008DA122 /* DownloadToAlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7104B1B1EA4CDCE008DA122 /* DownloadToAlbumController.swift */; };
+		A7104B1E1EA76B10008DA122 /* DeviceCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7104B1D1EA76B10008DA122 /* DeviceCapabilities.swift */; };
+		A7104B201EA90834008DA122 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7104B1F1EA90834008DA122 /* FeedbackViewController.swift */; };
 		A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */; };
 		A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */; };
 		A72319921BCAD5DD00C82A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72319901BCAD5DD00C82A38 /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		098EA38C004B2D3F023003B0 /* libPods-dslrbrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dslrbrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		132C8E88C13E99F2D45CCD8D /* Pods-dslrbrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dslrbrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dslrbrowser/Pods-dslrbrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		A7104B1B1EA4CDCE008DA122 /* DownloadToAlbumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadToAlbumController.swift; sourceTree = "<group>"; };
+		A7104B1D1EA76B10008DA122 /* DeviceCapabilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCapabilities.swift; sourceTree = "<group>"; };
+		A7104B1F1EA90834008DA122 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		A721FA661C2281A2007DEE24 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		A72319871BCAD5DC00C82A38 /* dslrbrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dslrbrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A723198A1BCAD5DC00C82A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +181,9 @@
 				A79359191E23906E00543B6E /* DataController.swift */,
 				A793591D1E24B61200543B6E /* ThumbnailCacheManager.swift */,
 				A7D3D64F1E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift */,
+				A7104B1B1EA4CDCE008DA122 /* DownloadToAlbumController.swift */,
+				A7104B1D1EA76B10008DA122 /* DeviceCapabilities.swift */,
+				A7104B1F1EA90834008DA122 /* FeedbackViewController.swift */,
 			);
 			path = dslrbrowser;
 			sourceTree = "<group>";
@@ -399,15 +408,18 @@
 			files = (
 				A7736D001C35276A00B2C2CA /* CameraDetailViewController.swift in Sources */,
 				A7AF69771C125260001F9417 /* CameraTableViewController.swift in Sources */,
+				A7104B1C1EA4CDCE008DA122 /* DownloadToAlbumController.swift in Sources */,
 				A79739491C1794AB005B236C /* ImageQuality.swift in Sources */,
 				A7415F601C2DE67B009F54E9 /* DownloadSessionDelegate.swift in Sources */,
 				A7D3D6501E7FC6CF005163E1 /* RecursiveContentDirectoryBrowserError.swift in Sources */,
 				A723198B1BCAD5DC00C82A38 /* AppDelegate.swift in Sources */,
 				A7F806B01BE4B2940045F297 /* RecursiveContentDirectoryBrowser.swift in Sources */,
 				A79739471C178CCB005B236C /* CameraCollectionManager.swift in Sources */,
+				A7104B1E1EA76B10008DA122 /* DeviceCapabilities.swift in Sources */,
 				A79359181E20FA8000543B6E /* Model.xcdatamodeld in Sources */,
 				A7FB8EB11E1E49D700835130 /* SettingsViewController.swift in Sources */,
 				A721FA671C2281A2007DEE24 /* PhotoDetailViewController.swift in Sources */,
+				A7104B201EA90834008DA122 /* FeedbackViewController.swift in Sources */,
 				A72A882E1C31780F00CB0D97 /* DownloadProgressNotification.swift in Sources */,
 				A7E8DDB11C063C8100AE1BFF /* MediaServer1BasicObjectCollection.swift in Sources */,
 				A793591E1E24B61200543B6E /* ThumbnailCacheManager.swift in Sources */,
