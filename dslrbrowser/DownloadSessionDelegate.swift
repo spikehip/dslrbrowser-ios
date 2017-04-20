@@ -20,6 +20,7 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     var geoLocation:CLLocation?
     var hasLocationFromPhone:Bool = false
     let locationManager:CLLocationManager = CLLocationManager()
+    let prefs = UserDefaults.standard
     
     init(withItem item:MediaServer1ItemObject) {
         self.item = item
@@ -75,15 +76,16 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     func addAssetToPhotoLibrary(_ location: URL) {
         let photoLibrary = PHPhotoLibrary.shared()
         let dc:DataController = DataController()
+        var assetIdentifier:String = ""
         
         photoLibrary.performChanges(
             {() -> Void in
                 print("Photos creating request for image at url \(location.absoluteString)")
-                let prefs = UserDefaults.standard
-                let insertGPS = prefs.bool(forKey: "insertGPS")
-                let creationRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: location)
-                let assetIdentifier = creationRequest?.placeholderForCreatedAsset?.localIdentifier
                 
+                let insertGPS = self.prefs.bool(forKey: "insertGPS")
+                let creationRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: location)
+                assetIdentifier = creationRequest?.placeholderForCreatedAsset?.localIdentifier ?? ""
+
                 if (insertGPS && self.hasLocationFromPhone && creationRequest?.location == nil) {
                     creationRequest?.location = self.geoLocation
                 }
@@ -94,7 +96,7 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                 photoEntity.localIdentifier = assetIdentifier
                 photoEntity.title = self.item.title
                 print("Database entity prepared: ", photoEntity)
-
+                
             }, completionHandler: {
                 (success: Bool, error: Error?) -> Void in
                 if (success) {
@@ -102,7 +104,14 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                     do {
                         dc.waitUntilInitialized()
                         try dc.managedObjectContext.save()
-                        print("PhotoEntity persisted ")                        
+                        print("PhotoEntity persisted ")
+                        let downloadToAlbum:Bool = self.prefs.bool(forKey: "downloadToAlbum")
+                        if (downloadToAlbum) {
+                            let assets:PHFetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [assetIdentifier], options: nil)
+                            if let asset:PHAsset = assets.firstObject {
+                                self.addAssetToAlbum(withAsset: asset)
+                            }
+                        }
                     }
                     catch {
                         print("Error persisting PhotoEntity ", error)
@@ -114,6 +123,52 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                 
                 self.cleanUp(withURLs: [location])
         })
+    }
+    
+    func addAssetToAlbum(withAsset asset:PHAsset) {
+        let photoLibrary = PHPhotoLibrary.shared()
+        let albumName:String = prefs.string(forKey: "albumName") ?? "DSLRBrowser items"
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.predicate = NSPredicate(format: "title = %@", albumName)
+        let collection : PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
+        var assetCollectionLocalIdentifier:String = ""
+        
+        if ( collection.firstObject == nil) {
+            //Create Album and add PhotoEntity to Album
+            photoLibrary.performChanges({
+                let createAlbumRequest : PHAssetCollectionChangeRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: albumName)
+                assetCollectionLocalIdentifier = createAlbumRequest.placeholderForCreatedAssetCollection.localIdentifier
+            }, completionHandler: { success, error in
+                if (success) {
+                    let collectionFetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [assetCollectionLocalIdentifier], options: nil)
+                    print(collectionFetchResult)
+                    let assetCollection:PHAssetCollection = collectionFetchResult.firstObject! as PHAssetCollection
+                    self.addAssetToAlbum(withAsset: asset, toAlbum: assetCollection)
+                }
+            })
+        }
+        else {
+            //Add PhotoEntity to Album
+            let album:PHAssetCollection = collection.firstObject! as PHAssetCollection
+            addAssetToAlbum(withAsset: asset, toAlbum: album)
+        }
+    }
+    
+    func addAssetToAlbum(withAsset asset:PHAsset, toAlbum album:PHAssetCollection) {
+        let photoLibrary = PHPhotoLibrary.shared()
+        photoLibrary.performChanges({
+            guard let addAssetRequest = PHAssetCollectionChangeRequest(for: album)
+                else {
+                    print("Error creating PHAssetCollectionChangeRequest for ", album.localizedTitle ?? "No Title")
+                    return
+            }
+            addAssetRequest.addAssets([asset] as NSArray)
+        }, completionHandler: { success, error in
+            if (success) {
+                print(asset, "saved into", album)
+            }
+        })
+
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
