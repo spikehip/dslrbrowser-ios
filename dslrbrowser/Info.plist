@@ -44,7 +44,6 @@
 	<string>Enable the app to store downloaded camera photo items in your Photo Library.</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>external-accessory</string>
 		<string>fetch</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
