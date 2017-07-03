@@ -58,3 +58,6 @@ Select View images on DLNA devices and complete the wizard. Use the same access 
 
 ![screen 2] (dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings_2.png)
 
+## Download 
+
+https://itunes.apple.com/de/app/dslr-browser/id1193690451?l=en&mt=8 
