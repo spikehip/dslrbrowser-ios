@@ -7,6 +7,11 @@ The app supports primarily the Canon EOS DSLR range and the Canon WFT Wireless T
 However with a switch you can enable discovering other vendor's devices as well.   
 Tested with the Canon EOS 6d and the Canon EOS 7d equipped with the WFT-E5 transmitter.
 
+## Download 
+
+https://itunes.apple.com/de/app/dslr-browser/id1193690451?l=en&mt=8 
+
+
 # Testing instuctions
 
 - Select "View images on DLNA devices" in your camera's Wi-Fi function settings
@@ -58,6 +63,3 @@ Select View images on DLNA devices and complete the wizard. Use the same access 
 
 ![screen 2] (dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings_2.png)
 
-## Download 
-
-https://itunes.apple.com/de/app/dslr-browser/id1193690451?l=en&mt=8 
