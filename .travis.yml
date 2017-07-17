@@ -2,5 +2,7 @@ language: objective-c
 osx_image: xcode8.3
 xcode_workspace: dslrbrowser.xcworkspace
 xcode_scheme: dslrbrowserTests
+script:
+    - xcodebuild clean build -workspace ${xcode_workspace} -scheme ${xcode_scheme} CODE_SIGNING_REQUIRED=NO
 
 
