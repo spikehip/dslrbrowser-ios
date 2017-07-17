@@ -4,6 +4,6 @@ xcode_workspace: dslrbrowser.xcworkspace
 xcode_scheme: dslrbrowserTests
 script:
   - pod install
-  - xcodebuild clean build -sdk iphoneos10.3 -workspace dslrbrowser.xcworkspace -scheme dslrbrowserTests CODE_SIGNING_REQUIRED=NO
+  - xcodebuild clean build -sdk iphoneos10.3 -workspace dslrbrowser.xcworkspace -scheme dslrbrowser CODE_SIGNING_REQUIRED=NO
 
 
