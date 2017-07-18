@@ -1,5 +1,7 @@
 # DSLR Browser for iOS
 
+[![Build Status](https://travis-ci.org/spikehip/dslrbrowser-ios.svg?branch=master)](https://travis-ci.org/spikehip/dslrbrowser-ios)
+
 Use the DSLR Browser app to discover and connect to your Wi-Fi and DLNA enabled camera and download your photos directly into your iPhone or iPad's Camera Roll via Wi-Fi. 
 You can connect to and download images from more than one device at a time. 
 You can either select your images one-by-one or opt for a mass download of all images from a certain device.
