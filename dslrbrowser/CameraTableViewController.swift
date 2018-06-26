@@ -355,7 +355,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         DispatchQueue.main.async {
             let badgeValue = CameraCollectionManager.getTotalImageCount()
             if (self.tabBarController?.selectedIndex != 1 && badgeValue > 0) {
-                let tabArray = self.tabBarController?.tabBar.items as NSArray!
+                let tabArray = self.tabBarController?.tabBar.items as NSArray?
                 let tabItem = tabArray?.object(at: 1) as! UITabBarItem
                 tabItem.badgeValue = String(badgeValue)
             }
