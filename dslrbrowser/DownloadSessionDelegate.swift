@@ -65,7 +65,7 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     
     //MARK: session delegate
     func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
-        print("session error: \(error?.localizedDescription).")
+        print("session error: \(error?.localizedDescription ?? "unknown error" ).")
         
     }
     
@@ -118,7 +118,7 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
                     }
                 }
                 else {
-                    print("Photos change error \(error?.localizedDescription)")
+                    print("Photos change error \(error?.localizedDescription ?? "unknown error")")
                 }
                 
                 self.cleanUp(withURLs: [location])
@@ -231,13 +231,13 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if error == nil {
-            print("session \(session.configuration.identifier) download completed \(item.title)")
+            print("session \(session.configuration.identifier ?? "default session identifier") download completed \(item.title)")
             //DownloadFinished notification
             let progressNotification:DownloadProgressNotification = DownloadProgressNotification.init(withItem: item, bytesWritten: 0, totalBytesWritten: 0, totalBytesExpectedToWrite: 0)
             NotificationCenter.default.post(name: Notification.Name(rawValue: "DownloadFinished"), object: progressNotification)
             
         } else {
-            print("session \(session) download failed with error \(error?.localizedDescription)")
+            print("session \(session) download failed with error \(error?.localizedDescription ?? "unknown error")")
         }
     }
     
