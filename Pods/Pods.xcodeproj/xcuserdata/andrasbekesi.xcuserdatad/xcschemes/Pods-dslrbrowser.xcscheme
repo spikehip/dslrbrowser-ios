@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "742A8104D2F56B15931CA9BE017E16FE"
+               BlueprintIdentifier = "1E4213318CC61E37B052363DA2057B95"
                BuildableName = "libPods-dslrbrowser.a"
                BlueprintName = "Pods-dslrbrowser"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "742A8104D2F56B15931CA9BE017E16FE"
+            BlueprintIdentifier = "1E4213318CC61E37B052363DA2057B95"
             BuildableName = "libPods-dslrbrowser.a"
             BlueprintName = "Pods-dslrbrowser"
             ReferencedContainer = "container:Pods.xcodeproj">
