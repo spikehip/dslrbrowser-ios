@@ -69,7 +69,7 @@ class CameraTableViewController: UITableViewController, UPnPDBObserver {
         print("manager?.ssdp.searchSSDP response:", response ?? 0)
     }
     
-    func refreshView(sender:AnyObject) {
+    @objc func refreshView(sender:AnyObject) {
         let response = manager?.ssdp.searchSSDP
         print("refresh: manager?.ssdp.searchSSDP response:", response ?? 0)
         
