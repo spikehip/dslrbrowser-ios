@@ -64,7 +64,7 @@ open class MediaServer1BasicObjectCollection {
         var url : String = ""
         if (object.uriCollection.count >= quality+1) {
             for protocolInfo in uriDictionary.keys {
-                let protocolInfos:[String] = protocolInfo.characters.split{$0 == ";"}.map(String.init)
+                let protocolInfos:[String] = protocolInfo.split{$0 == ";"}.map(String.init)
                 let uri = uriDictionary[protocolInfo]
                 if (protocolInfos.count > 1 && protocolInfos[0] == ImageQuality.IMAGE_QUALITY_PROTOCOL_INFO[quality]) {
                     print("Found protocolInfo quality ", protocolInfos[0])

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E841B9140FFBA078DE96C3D75944BD5"
+               BlueprintIdentifier = "41474DDF4CD6B9CD65E9FF04B2552BFB"
                BuildableName = "libupnpx.a"
                BlueprintName = "upnpx"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E841B9140FFBA078DE96C3D75944BD5"
+            BlueprintIdentifier = "41474DDF4CD6B9CD65E9FF04B2552BFB"
             BuildableName = "libupnpx.a"
             BlueprintName = "upnpx"
             ReferencedContainer = "container:Pods.xcodeproj">

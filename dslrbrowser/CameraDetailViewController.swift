@@ -17,7 +17,7 @@ class CameraDetailViewController: UIViewController {
         
         //Disable download all photos button if all photos are already downloaded
         //or there are no photos to download 
-        if ( self.cameraKey.characters.count > 0 ) {
+        if ( self.cameraKey.count > 0 ) {
             let total = CameraCollectionManager.getImageCountFor(cameraKey: self.cameraKey)
             let dlprgrs = CameraCollectionManager.getDownloadProgressFor(cameraKey: self.cameraKey)
             if (dlprgrs == 1.0 || total == 0) {
@@ -29,7 +29,7 @@ class CameraDetailViewController: UIViewController {
         
         //add notification listener to update progress view upon a download has been completed
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "DownloadFinished"), object: nil, queue: OperationQueue.main, using: { (notification: Notification) -> Void in
-            if ( self.cameraKey.characters.count > 0 ) {
+            if ( self.cameraKey.count > 0 ) {
                 if let
                     label2 : UILabel = self.view.viewWithTag(3000) as? UILabel,
                     let progress : UIProgressView = self.view.viewWithTag(4000) as? UIProgressView

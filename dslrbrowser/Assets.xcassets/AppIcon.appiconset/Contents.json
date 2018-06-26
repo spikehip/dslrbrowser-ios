@@ -71,8 +71,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "dslrbrowser_app_icon_blue_40-2.png",
       "scale" : "1x"
     },
     {
@@ -98,6 +99,12 @@
       "idiom" : "ipad",
       "filename" : "dslrbrowser_app_icon_blue_167.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "dslrbrowser_app_icon_blue_1024.png",
+      "scale" : "1x"
     }
   ],
   "info" : {
