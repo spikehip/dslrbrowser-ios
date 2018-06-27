@@ -189,10 +189,13 @@ class PhotoCollectionViewController: UICollectionViewController {
         let imageCollection:MediaServer1BasicObjectCollection = CameraCollectionManager.getItemCollectionFor(cameraKey: cameraKeyForSection)
 
         let imageData :MediaServer1ItemObject = imageCollection.getItemAt((indexPath as NSIndexPath).item)
+        let index:Int = (indexPath as NSIndexPath).item
+        
         segue.destination.navigationItem.title = imageData.title
         let detailViewController : PhotoDetailViewController = (segue.destination as! PhotoDetailViewController)
         detailViewController.imageData = imageData
         detailViewController.cameraKey = cameraKeyForSection
+        detailViewController.index = index
         
         print("Segue identifier ", segue.identifier ?? "empty")
         
@@ -203,7 +206,6 @@ class PhotoCollectionViewController: UICollectionViewController {
                 progressView.isHidden = true
             }
         }
-        
         
         if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
             let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
@@ -224,7 +226,6 @@ class PhotoCollectionViewController: UICollectionViewController {
                         data = FileManager.default.contents(atPath: cacheFileName.path)!
                     }
                     else {
-                        do {
                             //get file and save to cache
                             do {
                                 data = try Data(contentsOf: url)
@@ -238,7 +239,6 @@ class PhotoCollectionViewController: UICollectionViewController {
                                 }
                                 data = Data(count: 0)
                             }
-                        }
                     }
                     
                     if ( data.count > 0 ) {
