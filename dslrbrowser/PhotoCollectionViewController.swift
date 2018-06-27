@@ -207,50 +207,9 @@ class PhotoCollectionViewController: UICollectionViewController {
             }
         }
         
-        if let imageView : UIImageView = segue.destination.view.viewWithTag(1000) as? UIImageView,
-            let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
+        if let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: (indexPath as NSIndexPath).item, quality: ImageQuality.IMAGE_QUALITY_LOW))
         {
-            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.peek", qos: .userInteractive)
-            let filename:String = "dslrbrowser_preview_" + (url.absoluteString.data(using: .utf8)?.base64EncodedString())! + ".jpg"
-            let cacheDirectory:URL = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
-            let cacheFileName:URL = URL.init(fileURLWithPath: cacheDirectory.path + "/" + filename )
-            
-            backgroundQueue.async {
-                if (ThumbnailCacheManager.defaultManager.isPreviewAvailableFor(cameraKey: cameraKeyForSection, title: imageData.title)) {
-                    imageView.image = ThumbnailCacheManager.defaultManager.getPreviewImageFor(cameraKey: cameraKeyForSection, title: imageData.title)
-                }
-                else {
-                    var data:Data
-                    if (FileManager.default.fileExists(atPath: cacheFileName.path)) {
-                        //load file
-                        data = FileManager.default.contents(atPath: cacheFileName.path)!
-                    }
-                    else {
-                            //get file and save to cache
-                            do {
-                                data = try Data(contentsOf: url)
-                                if ( data.count > 0 ) {
-                                    FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
-                                }
-                            }
-                            catch {
-                                DispatchQueue.main.async {
-                                    imageView.image = #imageLiteral(resourceName: "camera_wifi")
-                                }
-                                data = Data(count: 0)
-                            }
-                    }
-                    
-                    if ( data.count > 0 ) {
-                        DispatchQueue.main.async {
-                            let image : UIImage = UIImage(data: data)!
-                            imageView.image = image
-                            let size = data.count / 1024 / 1024
-                            print("Loaded image to peek view", (indexPath as NSIndexPath).item, " from ", url, " size(Mb) ", size)
-                        }
-                    }
-                }
-            }
+            detailViewController.url = url
         }
         
     }

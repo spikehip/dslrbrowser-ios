@@ -139,7 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="Ngi-l3-cE5" id="yZb-Dx-ZpE"/>
+                        <outlet property="imageView" destination="Ngi-l3-cE5" id="UZp-wJ-2yg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsu-UR-Rmd" userLabel="First Responder" sceneMemberID="firstResponder"/>

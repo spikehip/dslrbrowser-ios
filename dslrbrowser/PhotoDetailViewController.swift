@@ -10,9 +10,12 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
     
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     var imageData : MediaServer1ItemObject?
     var cameraKey : String?
+    var index : Int = 0
+    var url : URL?
+    
     // Preview action items.
     lazy var previewActions: [UIPreviewActionItem] = {
         
@@ -46,8 +49,6 @@ class PhotoDetailViewController: UIViewController {
     override var previewActionItems : [UIPreviewActionItem] {
         return previewActions
     }
-    
-    
 
     @IBAction func downloadPhotoAction(_ sender: UIButton) {
         sender.isEnabled = false
@@ -77,6 +78,11 @@ class PhotoDetailViewController: UIViewController {
             }
         }
         
+        if ( url == nil ) {
+            self.url = URL(string:CameraCollectionManager.getItemCollectionFor(cameraKey: self.cameraKey!).getImageURLAt(withPosition: self.index, quality: ImageQuality.IMAGE_QUALITY_LOW))
+        }
+        
+        loadPreviewInBackground()
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
@@ -87,22 +93,105 @@ class PhotoDetailViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let gesture:UISwipeGestureRecognizer = sender as! UISwipeGestureRecognizer
         
         switch gesture.direction {
         case UISwipeGestureRecognizerDirection.left:
-            (segue.destination as! PhotoDetailViewController).imageData = imageData
+            if ( index < CameraCollectionManager.getTotalImageCount()-1 ) {
+                return true
+            }
+            else {
+                print("already at last item")
+                return false
+            }
+        case UISwipeGestureRecognizerDirection.right:
+            if (index > 0) {
+                return true
+            }
+            else {
+                print("already at first item")
+                return false
+            }
+        default:
+            return true
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let gesture:UISwipeGestureRecognizer = sender as! UISwipeGestureRecognizer
+        let imageCollection:MediaServer1BasicObjectCollection = CameraCollectionManager.getItemCollectionFor(cameraKey: cameraKey!)
+
+        switch gesture.direction {
+        case UISwipeGestureRecognizerDirection.left:
             (segue.destination as! PhotoDetailViewController).cameraKey = cameraKey
+            (segue.destination as! PhotoDetailViewController).index = index+1
+            let imageDataNext :MediaServer1ItemObject = imageCollection.getItemAt(index+1)
+            (segue.destination as! PhotoDetailViewController).imageData = imageDataNext
+            segue.destination.navigationItem.title = imageDataNext.title
+            let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: index+1, quality: ImageQuality.IMAGE_QUALITY_LOW))!
+            (segue.destination as! PhotoDetailViewController).url = url
             print("segue swiping left")
             break
         case UISwipeGestureRecognizerDirection.right:
-            (segue.destination as! PhotoDetailViewController).imageData = imageData
+            let imageDataNext :MediaServer1ItemObject = imageCollection.getItemAt(index-1) 
+            (segue.destination as! PhotoDetailViewController).imageData = imageDataNext
             (segue.destination as! PhotoDetailViewController).cameraKey = cameraKey
+            (segue.destination as! PhotoDetailViewController).index = index-1
+            segue.destination.navigationItem.title = imageDataNext.title
+            let url : URL = URL(string: imageCollection.getImageURLAt(withPosition: index-1, quality: ImageQuality.IMAGE_QUALITY_LOW))!
+            (segue.destination as! PhotoDetailViewController).url = url
             print("segue swiping right")
             break
         default:
-            print("default swipe, probably down")
+            print("default swipe")
+        }
+    }
+    
+    private func loadPreviewInBackground() {
+        if ( self.url != nil ) {
+            let backgroundQueue = DispatchQueue(label: "hu.bikeonet.dslrbrowser.photocollectionviewcontroller.peek", qos: .userInteractive)
+            let filename:String = "dslrbrowser_preview_" + (url!.absoluteString.data(using: .utf8)?.base64EncodedString())! + ".jpg"
+            let cacheDirectory:URL = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
+            let cacheFileName:URL = URL.init(fileURLWithPath: cacheDirectory.path + "/" + filename )
+            
+            backgroundQueue.async {
+                if (ThumbnailCacheManager.defaultManager.isPreviewAvailableFor(cameraKey: self.cameraKey!, title: (self.imageData?.title)!)) {
+                    self.imageView.image = ThumbnailCacheManager.defaultManager.getPreviewImageFor(cameraKey: self.cameraKey!, title: (self.imageData?.title)!)
+                }
+                else {
+                    var data:Data
+                    if (FileManager.default.fileExists(atPath: cacheFileName.path)) {
+                        //load file
+                        data = FileManager.default.contents(atPath: cacheFileName.path)!
+                    }
+                    else {
+                        //get file and save to cache
+                        do {
+                            data = try Data(contentsOf: self.url!)
+                            if ( data.count > 0 ) {
+                                FileManager.default.createFile(atPath: cacheFileName.path, contents: data, attributes: nil)
+                            }
+                        }
+                        catch {
+                            DispatchQueue.main.async {
+                                self.imageView.image = #imageLiteral(resourceName: "camera_wifi")
+                            }
+                            data = Data(count: 0)
+                        }
+                    }
+                    
+                    if ( data.count > 0 && self.imageView != nil) {
+                        DispatchQueue.main.async {
+                            let image : UIImage = UIImage(data: data)!
+                            self.imageView.image = image
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            self.imageView.image = #imageLiteral(resourceName: "camera_wifi")
         }
     }
     
