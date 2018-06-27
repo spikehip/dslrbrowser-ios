@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoDetailViewController: UIViewController {
     
+    @IBOutlet weak var image: UIImageView!
     var imageData : MediaServer1ItemObject?
     var cameraKey : String?
     // Preview action items.
@@ -39,8 +40,7 @@ class PhotoDetailViewController: UIViewController {
         let groupedActions = UIPreviewActionGroup(title: "Sub Actions…", style: .Default, actions: [subAction1, subAction2] )
         */
         return [downloadAction]
-    }()
-    
+    }()    
     // MARK: Preview actions
     
     override var previewActionItems : [UIPreviewActionItem] {
@@ -77,6 +77,33 @@ class PhotoDetailViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func swipeLeft(_ sender: Any) {
+    }    
+    @IBAction func swipeRight(_ sender: Any) {
+    }
+    @IBAction func swipeDown(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let gesture:UISwipeGestureRecognizer = sender as! UISwipeGestureRecognizer
+        
+        switch gesture.direction {
+        case UISwipeGestureRecognizerDirection.left:
+            (segue.destination as! PhotoDetailViewController).imageData = imageData
+            (segue.destination as! PhotoDetailViewController).cameraKey = cameraKey
+            print("segue swiping left")
+            break
+        case UISwipeGestureRecognizerDirection.right:
+            (segue.destination as! PhotoDetailViewController).imageData = imageData
+            (segue.destination as! PhotoDetailViewController).cameraKey = cameraKey
+            print("segue swiping right")
+            break
+        default:
+            print("default swipe, probably down")
+        }
     }
     
 }

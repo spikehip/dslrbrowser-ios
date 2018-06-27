@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -116,6 +116,12 @@
                             </button>
                             <imageView multipleTouchEnabled="YES" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lens" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-l3-cE5">
                                 <rect key="frame" x="24" y="72" width="327" height="488"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pzi-FV-bcH" appends="YES" id="Pu6-P3-QO2"/>
+                                    <outletCollection property="gestureRecognizers" destination="t3b-Ar-RAy" appends="YES" id="qpc-7I-6av"/>
+                                    <outletCollection property="gestureRecognizers" destination="kAL-IJ-R0o" appends="YES" id="NHW-aw-WX3"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,8 +138,28 @@
                             <constraint firstItem="KOa-fu-BMR" firstAttribute="leading" secondItem="iCd-E8-wP2" secondAttribute="leadingMargin" constant="8" id="uJa-IY-QUk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="Ngi-l3-cE5" id="yZb-Dx-ZpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsu-UR-Rmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="pzi-FV-bcH">
+                    <connections>
+                        <action selector="swipeRight:" destination="jLw-vB-JJv" id="sJh-YV-flj"/>
+                        <segue destination="jLw-vB-JJv" kind="show" id="BFp-au-mI2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="t3b-Ar-RAy">
+                    <connections>
+                        <action selector="swipeLeft:" destination="jLw-vB-JJv" id="hIV-4f-xyS"/>
+                        <segue destination="jLw-vB-JJv" kind="show" id="BEs-ec-WdW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="kAL-IJ-R0o">
+                    <connections>
+                        <action selector="swipeDown:" destination="jLw-vB-JJv" id="C1d-NU-jVV"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2250" y="-1030"/>
         </scene>
@@ -143,7 +169,7 @@
                 <navigationController title="Cameras Navigation" id="bwX-6D-ojR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cameras" image="photo-camera" id="6hW-gY-w2t"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hhT-oZ-pbn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -159,7 +185,7 @@
             <objects>
                 <tableViewController title="Cameras Table" id="qq7-BN-7L0" customClass="CameraTableViewController" customModule="dslrbrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="gx5-BX-h4a">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -178,7 +204,7 @@
                                             </constraints>
                                         </imageView>
                                         <progressView opaque="NO" tag="2000" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-bW-bPy">
-                                            <rect key="frame" x="8" y="66" width="312" height="2"/>
+                                            <rect key="frame" x="8" y="66" width="304" height="2"/>
                                         </progressView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-nW-fLJ">
                                             <rect key="frame" x="64" y="8" width="118" height="21"/>
@@ -193,7 +219,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9U-5A-vRw">
-                                            <rect key="frame" x="327.5" y="61" width="31.5" height="12"/>
+                                            <rect key="frame" x="319.5" y="61" width="31.5" height="12"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -315,7 +341,7 @@
                     <tabBarItem key="tabBarItem" title="Photos" image="picture" id="W0H-PR-eU4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KtQ-ZP-cOL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -345,7 +371,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-bh-KEP">
-                                                    <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="302" y="9" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchOnlyCanonChangedWithSender:" destination="cPD-Uz-PoG" eventType="touchUpInside" id="4rR-cs-AXK"/>
                                                     </connections>
@@ -372,7 +398,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv6-tG-JLH">
-                                                    <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="302" y="9" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchInsertGPSChangedWithSender:" destination="cPD-Uz-PoG" eventType="touchUpInside" id="BbM-pV-8TB"/>
                                                     </connections>
@@ -406,7 +432,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bcj-Qc-clm">
-                                                    <rect key="frame" x="311" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="303" y="9" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchDownloadToAlbumChangedWithSender:" destination="cPD-Uz-PoG" eventType="valueChanged" id="bC8-lj-vW5"/>
                                                     </connections>
@@ -656,7 +682,7 @@ Feedback and Issues: https://github.com/spikehip/dslrbrowser-ios/issues</string>
                         <viewControllerLayoutGuide type="bottom" id="klH-5Y-2hv"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ptm-JS-sEI">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-6X-9ym">
@@ -793,7 +819,7 @@ Feedback and Issues: https://github.com/spikehip/dslrbrowser-ios/issues</string>
                 <navigationController title="Settings" id="X8f-dv-A8F" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Poy-3J-lqT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZ7-LT-cLb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
