@@ -51,6 +51,17 @@ https://itunes.apple.com/de/app/dslr-browser/id1193690451?l=en&mt=8
 - do some other tests with and without granting location access
 and with or without camera gps data
 
+# Testing swipe gestures
+
+- navigate to the photos tab
+- open one photo and check that the preview is loading
+- swipe left for the next image on the camera
+- check that the preview image is loading
+- swipe right for the previous image on the camera
+- swipe continously left until the last image and check that it stops there
+- swipe continously right until the first image and check that it stops there
+
+
 ## Launch a DLNA service
 brew install ushare
 ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
