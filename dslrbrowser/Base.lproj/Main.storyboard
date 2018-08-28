@@ -808,11 +808,18 @@ Feedback and Issues: https://github.com/spikehip/dslrbrowser-ios/issues</string>
         <scene sceneID="mLd-D5-Ayu">
             <objects>
                 <viewController id="a4e-cj-hkg" customClass="FeedbackViewController" customModule="dslrbrowser" customModuleProvider="target" sceneMemberID="viewController">
-                    <webView key="view" contentMode="scaleToFill" id="fb0-AW-ckU">
+                    <wkWebView key="view" contentMode="scaleToFill" id="5ry-ow-nlD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </webView>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
+                    <connections>
+                        <outlet property="webView" destination="5ry-ow-nlD" id="fiF-fu-vGB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tva-d3-JNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

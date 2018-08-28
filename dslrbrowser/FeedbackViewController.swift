@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import WebKit
 
 class FeedbackViewController : UIViewController {
     
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         let feedbackUrl:String = "https://github.com/spikehip/dslrbrowser-ios/issues"
-        (self.view as! UIWebView).loadRequest(URLRequest(url: URL(string: feedbackUrl)!))
+        webView.load(URLRequest(url: URL(string: feedbackUrl)!))        
     }
     
 }
