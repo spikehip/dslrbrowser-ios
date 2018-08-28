@@ -59,9 +59,8 @@ ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
 
 Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu.
 
-![screen 1] (dslrbrowser/Assets.xcassets/_wifi_settings.imageset/_wifi_settings_2.png)
+![screen 1](./dslrbrowser/Assets.xcassets/_wifi_settings.imageset/_wifi_settings_2.png)
 
 Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to.
 
-![screen 2] (dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings_2.png)
-
+![screen 2](./dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings_2.png)
