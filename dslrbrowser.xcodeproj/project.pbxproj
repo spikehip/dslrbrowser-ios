@@ -574,8 +574,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bcf69872-7687-4a82-bdd5-bbb9f8403420";
-				PROVISIONING_PROFILE_SPECIFIER = "DSLR Browser Distribution Profile";
+				PROVISIONING_PROFILE = "bcea8d12-4b98-4397-80ab-cbec6b1c8d8e";
+				PROVISIONING_PROFILE_SPECIFIER = "DSLR Browser iOS Distribution Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "dslrbrowser/dslrbrowser-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -600,8 +600,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bikeonet.ios.dslrbrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bcf69872-7687-4a82-bdd5-bbb9f8403420";
-				PROVISIONING_PROFILE_SPECIFIER = "DSLR Browser Distribution Profile";
+				PROVISIONING_PROFILE = "bcea8d12-4b98-4397-80ab-cbec6b1c8d8e";
+				PROVISIONING_PROFILE_SPECIFIER = "DSLR Browser iOS Distribution Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "dslrbrowser/dslrbrowser-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
