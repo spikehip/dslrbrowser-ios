@@ -51,6 +51,17 @@ https://itunes.apple.com/de/app/dslr-browser/id1193690451?l=en&mt=8
 - do some other tests with and without granting location access
 and with or without camera gps data
 
+# Testing swipe gestures
+
+- navigate to the photos tab
+- open one photo and check that the preview is loading
+- swipe left for the next image on the camera
+- check that the preview image is loading
+- swipe right for the previous image on the camera
+- swipe continously left until the last image and check that it stops there
+- swipe continously right until the first image and check that it stops there
+
+
 ## Launch a DLNA service
 brew install ushare
 ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
@@ -59,9 +70,8 @@ ushare -i en0 -q 10000 -w -n "MacBook" -c ushare
 
 Locate the Wi-Fi settings on your camera and enable Wi-Fi. Enter the Wi-Fi functions menu.
 
-![screen 1] (dslrbrowser/Assets.xcassets/_wifi_settings.imageset/_wifi_settings_2.png)
+![screen 1](./dslrbrowser/Assets.xcassets/_wifi_settings.imageset/_wifi_settings_2.png)
 
 Select View images on DLNA devices and complete the wizard. Use the same access point as your phone is connected to.
 
-![screen 2] (dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings_2.png)
-
+![screen 2](./dslrbrowser/Assets.xcassets/_dlna_settings.imageset/_dlna_settings_2.png)
