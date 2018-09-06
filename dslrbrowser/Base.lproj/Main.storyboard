@@ -86,7 +86,13 @@
                             <outlet property="delegate" destination="Wyv-DU-UVO" id="6Z0-LT-KDp"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Photos" id="UC4-jz-r65"/>
+                    <navigationItem key="navigationItem" title="Photos" id="UC4-jz-r65">
+                        <barButtonItem key="rightBarButtonItem" title="Select" id="g5B-8H-zX6">
+                            <connections>
+                                <action selector="enterSelectionMode:" destination="Wyv-DU-UVO" id="Uxi-Xk-iq1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99i-Cl-FAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

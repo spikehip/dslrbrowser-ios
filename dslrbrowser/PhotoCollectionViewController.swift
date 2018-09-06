@@ -15,6 +15,7 @@ class PhotoCollectionViewController: UICollectionViewController {
     var titleToPositionMap : [String: IndexPath] = [String: IndexPath]()
     var indexToProgressMap : [IndexPath : Float] = [IndexPath: Float]()
     var isLowOnMemory : Bool = false
+    var isSelectionMode : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -212,5 +213,16 @@ class PhotoCollectionViewController: UICollectionViewController {
             detailViewController.url = url
         }
         
+    }
+    
+    @IBAction func enterSelectionMode(_ sender: UIBarButtonItem) {
+        if ( isSelectionMode ) {
+            sender.title = "Select"
+            isSelectionMode = false
+        }
+        else {
+            sender.title = "Download"
+            isSelectionMode = true
+        }
     }
 }
