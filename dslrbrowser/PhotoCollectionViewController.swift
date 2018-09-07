@@ -14,8 +14,11 @@ class PhotoCollectionViewController: UICollectionViewController {
     
     var titleToPositionMap : [String: IndexPath] = [String: IndexPath]()
     var indexToProgressMap : [IndexPath : Float] = [IndexPath: Float]()
+    var selectedImages : [IndexPath] = [IndexPath]()
     var isLowOnMemory : Bool = false
     var isSelectionMode : Bool = false
+    @IBOutlet
+    var photosCollectionView : UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,7 @@ class PhotoCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.parent!.tabBarItem.badgeValue = nil        
+        self.parent!.tabBarItem.badgeValue = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,6 +67,10 @@ class PhotoCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
         let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: (indexPath as NSIndexPath).section)
         let imageCollection:MediaServer1BasicObjectCollection = CameraCollectionManager.getItemCollectionFor(cameraKey: cameraKeyForSection)
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.blue
+        cell.selectedBackgroundView = backgroundView
         
         // Configure the cell
         let title: String = imageCollection.getImageTitleAt(withPosition: (indexPath as NSIndexPath).item)
@@ -219,10 +226,46 @@ class PhotoCollectionViewController: UICollectionViewController {
         if ( isSelectionMode ) {
             sender.title = "Select"
             isSelectionMode = false
+            collectionView?.allowsMultipleSelection = false
+            for index in (collectionView?.indexPathsForSelectedItems)! {
+                collectionView?.deselectItem(at: index, animated: false)
+            }
+            for index in selectedImages {
+                let cameraKeyForSection:String = CameraCollectionManager.getCameraKeyFor(section: (index as NSIndexPath).section)
+                let imageCollection:MediaServer1BasicObjectCollection = CameraCollectionManager.getItemCollectionFor(cameraKey: cameraKeyForSection)
+                let imageData :MediaServer1ItemObject = imageCollection.getItemAt((index as NSIndexPath).item)
+                let url:String = MediaServer1BasicObjectCollection.getImageURL(fromObject: imageData, quality: ImageQuality.IMAGE_QUALITY_ORIGINAL_ROTATED)
+                let downloadItem : DownloadItem = DownloadItem.init(withURL: url, item: imageData)
+                downloadItem.download()
+            }
+            selectedImages.removeAll()
         }
         else {
             sender.title = "Download"
             isSelectionMode = true
+            collectionView?.allowsMultipleSelection = true
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if ( isSelectionMode && identifier == "photoDetail" ) {
+            return false
+        }
+        
+        return true
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if ( isSelectionMode ) {
+            print("item selected", indexPath.section, indexPath.row)
+            selectedImages.append(indexPath)
+        }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("item deselected", indexPath.section, indexPath.row)
+        if ( selectedImages.index(of: indexPath)! >= 0 ) {
+            selectedImages.remove(at: selectedImages.index(of: indexPath)!)
         }
     }
 }
