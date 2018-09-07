@@ -173,7 +173,9 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         print("session \(session) has finished the download task \(downloadTask) of URL \(location).")
-        
+        let progressNotification:DownloadProgressNotification = DownloadProgressNotification.init(withItem: item, bytesWritten: 100, totalBytesWritten: 100, totalBytesExpectedToWrite: 100)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "DownloadProgress"), object: progressNotification)
+
 //        let image : CIImage = CIImage(contentsOfURL: location)!
 //        for property in image.properties.keys {
 //            let value:String = image.properties[property] as! String
@@ -220,9 +222,14 @@ class DownloadSessionDelegate : NSObject, URLSessionDelegate, URLSessionDownload
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         print("\(item.title) wrote an additional \(bytesWritten) bytes (total \(totalBytesWritten) bytes) out of an expected \(totalBytesExpectedToWrite) bytes.")
         //send notification about progress
-        let progressNotification:DownloadProgressNotification = DownloadProgressNotification.init(withItem: item, bytesWritten: bytesWritten, totalBytesWritten: totalBytesWritten, totalBytesExpectedToWrite: totalBytesExpectedToWrite)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "DownloadProgress"), object: progressNotification)
-        
+        if ( totalBytesExpectedToWrite >= 0 && totalBytesExpectedToWrite >= totalBytesWritten) {
+            let progressNotification:DownloadProgressNotification = DownloadProgressNotification.init(withItem: item, bytesWritten: bytesWritten, totalBytesWritten: totalBytesWritten, totalBytesExpectedToWrite: totalBytesExpectedToWrite)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "DownloadProgress"), object: progressNotification)
+        }
+        else {
+            let progressNotification:DownloadProgressNotification = DownloadProgressNotification.init(withItem: item, bytesWritten: bytesWritten, totalBytesWritten: totalBytesWritten, totalBytesExpectedToWrite: totalBytesWritten + bytesWritten)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "DownloadProgress"), object: progressNotification)
+        }
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didResumeAtOffset fileOffset: Int64, expectedTotalBytes: Int64) {
